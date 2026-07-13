@@ -1,0 +1,146 @@
+{
+  "benchmark": "drop_pack",
+  "records": 500,
+  "aggregates": [
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.0,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.826,
+      "ci95": [
+        0.790317702710052,
+        0.856711046007799
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.0,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.824,
+      "ci95": [
+        0.788185127237469,
+        0.8548741199545055
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.25,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.84,
+      "ci95": [
+        0.8052911368285649,
+        0.8695241225704207
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.25,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.698,
+      "ci95": [
+        0.6563715243917267,
+        0.7366091266700354
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.5,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.526,
+      "ci95": [
+        0.4822008460547351,
+        0.569402673781658
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.5,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.196,
+      "ci95": [
+        0.16357755483279346,
+        0.23305821323399578
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.75,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.254,
+      "ci95": [
+        0.2178196276777558,
+        0.2939316846394487
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.75,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.204,
+      "ci95": [
+        0.17099770962966332,
+        0.24151606454063146
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.9,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.056,
+      "ci95": [
+        0.03902536261505807,
+        0.07974529864038413
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "proportion": 0.9,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.024,
+      "ci95": [
+        0.013781177149521822,
+        0.04147745969189818
+      ],
+      "task_truncated_rate": 1.0
+    }
+  ]
+}

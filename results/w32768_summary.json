@@ -1,0 +1,194 @@
+[
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.0,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.25,
+    "n": 20,
+    "mean_effective": 0.9625
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.5,
+    "n": 20,
+    "mean_effective": 0.96875
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.75,
+    "n": 20,
+    "mean_effective": 0.9875
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.9,
+    "n": 20,
+    "mean_effective": 0.975
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.95,
+    "n": 20,
+    "mean_effective": 0.9625
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.975,
+    "n": 20,
+    "mean_effective": 0.96875
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "budget": 32768,
+    "proportion": 0.99,
+    "n": 20,
+    "mean_effective": 0.725
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.0,
+    "n": 20,
+    "mean_effective": 0.9
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.25,
+    "n": 20,
+    "mean_effective": 0.94375
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.5,
+    "n": 20,
+    "mean_effective": 0.875
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.75,
+    "n": 20,
+    "mean_effective": 0.89375
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.9,
+    "n": 20,
+    "mean_effective": 0.81875
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.95,
+    "n": 20,
+    "mean_effective": 0.9
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.975,
+    "n": 20,
+    "mean_effective": 0.84375
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "budget": 32768,
+    "proportion": 0.99,
+    "n": 20,
+    "mean_effective": 0.45625
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.0,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.25,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.5,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.75,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.9,
+    "n": 20,
+    "mean_effective": 1.0
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.95,
+    "n": 20,
+    "mean_effective": 0.9875
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.975,
+    "n": 20,
+    "mean_effective": 0.9875
+  },
+  {
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "budget": 32768,
+    "proportion": 0.99,
+    "n": 20,
+    "mean_effective": 0.61875
+  }
+]

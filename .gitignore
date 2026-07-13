@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+*.log
+*.pid
+results/rcwt_controlled.png
+results/rcwt_cross_provider.png
+results/rcwt_curve_fits.png

@@ -1,0 +1,16 @@
+benchmark,model,provider,proportion,n,accuracy,ci95_low,ci95_high,task_truncated_rate,logistic_midpoint,logistic_k,logistic_r_squared
+drop_pack,gpt-4.1-mini,openai,0.0,100,0.74,0.64629,0.81595,0.0,0.62436,7.24604,0.99104
+drop_pack,gpt-4.1-mini,openai,0.25,100,0.74,0.64629,0.81595,0.0,0.62436,7.24604,0.99104
+drop_pack,gpt-4.1-mini,openai,0.5,100,0.52,0.42316,0.61536,1.0,0.62436,7.24604,0.99104
+drop_pack,gpt-4.1-mini,openai,0.75,100,0.25,0.17545,0.34305,1.0,0.62436,7.24604,0.99104
+drop_pack,gpt-4.1-mini,openai,0.9,100,0.06,0.02779,0.12477,1.0,0.62436,7.24604,0.99104
+drop_pack,claude-haiku-4-5-20251001,anthropic,0.0,100,0.82,0.73332,0.883,0.0,0.48087,5.7847,0.96815
+drop_pack,claude-haiku-4-5-20251001,anthropic,0.25,100,0.77,0.67845,0.84157,0.0,0.48087,5.7847,0.96815
+drop_pack,claude-haiku-4-5-20251001,anthropic,0.5,100,0.36,0.27271,0.45765,1.0,0.48087,5.7847,0.96815
+drop_pack,claude-haiku-4-5-20251001,anthropic,0.75,100,0.23,0.15843,0.32155,1.0,0.48087,5.7847,0.96815
+drop_pack,claude-haiku-4-5-20251001,anthropic,0.9,100,0.04,0.01566,0.09837,1.0,0.48087,5.7847,0.96815
+drop_pack,gemini-2.5-flash,google,0.0,100,0.85,0.76716,0.90694,0.0,0.51876,6.25106,0.99234
+drop_pack,gemini-2.5-flash,google,0.25,100,0.77,0.67845,0.84157,0.0,0.51876,6.25106,0.99234
+drop_pack,gemini-2.5-flash,google,0.5,100,0.45,0.35614,0.54756,1.0,0.51876,6.25106,0.99234
+drop_pack,gemini-2.5-flash,google,0.75,100,0.21,0.14166,0.2998,1.0,0.51876,6.25106,0.99234
+drop_pack,gemini-2.5-flash,google,0.9,100,0.04,0.01566,0.09837,1.0,0.51876,6.25106,0.99234

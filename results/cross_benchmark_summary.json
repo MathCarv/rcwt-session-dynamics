@@ -1,0 +1,282 @@
+[
+  {
+    "benchmark": "gsm8k",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 5000,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 1000,
+        "hits": 969,
+        "accuracy": 0.969,
+        "ci95": [
+          0.95633,
+          0.97808
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 1000,
+        "hits": 957,
+        "accuracy": 0.957,
+        "ci95": [
+          0.94258,
+          0.96792
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 1000,
+        "hits": 957,
+        "accuracy": 0.957,
+        "ci95": [
+          0.94258,
+          0.96792
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 1000,
+        "hits": 961,
+        "accuracy": 0.961,
+        "ci95": [
+          0.94713,
+          0.97134
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 1000,
+        "hits": 959,
+        "accuracy": 0.959,
+        "ci95": [
+          0.94485,
+          0.96964
+        ],
+        "task_truncated_rate": 0.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.961,
+      "k": 70.3314,
+      "midpoint": 0.98777,
+      "r_squared": 0.03226,
+      "rmse": 0.00438
+    }
+  },
+  {
+    "benchmark": "gsm8k",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 5000,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 1000,
+        "hits": 964,
+        "accuracy": 0.964,
+        "ci95": [
+          0.95056,
+          0.97388
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 1000,
+        "hits": 827,
+        "accuracy": 0.827,
+        "ci95": [
+          0.80232,
+          0.84918
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 1000,
+        "hits": 867,
+        "accuracy": 0.867,
+        "ci95": [
+          0.84454,
+          0.88665
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 1000,
+        "hits": 942,
+        "accuracy": 0.942,
+        "ci95": [
+          0.92575,
+          0.95487
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 1000,
+        "hits": 920,
+        "accuracy": 0.92,
+        "ci95": [
+          0.90153,
+          0.93525
+        ],
+        "task_truncated_rate": 0.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.904,
+      "k": 200.0,
+      "midpoint": 1.0,
+      "r_squared": -0.0,
+      "rmse": 0.0502
+    }
+  },
+  {
+    "benchmark": "mmlu_pro",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 5000,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 1000,
+        "hits": 540,
+        "accuracy": 0.54,
+        "ci95": [
+          0.50901,
+          0.57068
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 1000,
+        "hits": 530,
+        "accuracy": 0.53,
+        "ci95": [
+          0.49901,
+          0.56076
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 1000,
+        "hits": 502,
+        "accuracy": 0.502,
+        "ci95": [
+          0.47106,
+          0.53292
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 1000,
+        "hits": 515,
+        "accuracy": 0.515,
+        "ci95": [
+          0.48403,
+          0.54586
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 1000,
+        "hits": 526,
+        "accuracy": 0.526,
+        "ci95": [
+          0.49501,
+          0.55679
+        ],
+        "task_truncated_rate": 0.06
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.5226,
+      "k": 199.99998,
+      "midpoint": 1.0,
+      "r_squared": -0.0,
+      "rmse": 0.01305
+    }
+  },
+  {
+    "benchmark": "mmlu_pro",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 5000,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 1000,
+        "hits": 538,
+        "accuracy": 0.538,
+        "ci95": [
+          0.50701,
+          0.5687
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 1000,
+        "hits": 591,
+        "accuracy": 0.591,
+        "ci95": [
+          0.56024,
+          0.62107
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 1000,
+        "hits": 590,
+        "accuracy": 0.59,
+        "ci95": [
+          0.55923,
+          0.62008
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 1000,
+        "hits": 573,
+        "accuracy": 0.573,
+        "ci95": [
+          0.54212,
+          0.60332
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 1000,
+        "hits": 548,
+        "accuracy": 0.548,
+        "ci95": [
+          0.51703,
+          0.5786
+        ],
+        "task_truncated_rate": 0.06
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.57301,
+      "k": 47.3517,
+      "midpoint": 0.9652,
+      "r_squared": 0.21386,
+      "rmse": 0.01917
+    }
+  }
+]

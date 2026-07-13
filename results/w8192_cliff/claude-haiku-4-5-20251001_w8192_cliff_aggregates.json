@@ -1,0 +1,310 @@
+[
+  {
+    "model": "gemini-2.0-flash",
+    "provider": "google",
+    "total_budget": 8192,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "total_budget": 8192,
+    "n_trials_per_cell": 20,
+    "elapsed_seconds": 1713.9,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [
+      {
+        "proportion": 0.92,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.8625,
+        "std_effective": 0.147373,
+        "ci95_effective": [
+          0.79375,
+          0.925
+        ],
+        "mean_raw": 0.855,
+        "std_raw": 0.132193,
+        "ci95_raw": [
+          0.795,
+          0.9099999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.75,
+          "mls_rfc": 0.9,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.8,
+          "redis_pubsub_rate": 0.8,
+          "redis_streams_latency": 0.8,
+          "prosemirror_richtext": 0.7,
+          "backend_rampup": 0.8,
+          "infra_migration_weeks": 1.0
+        }
+      },
+      {
+        "proportion": 0.92,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.83125,
+        "std_effective": 0.081729,
+        "ci95_effective": [
+          0.79375,
+          0.8625
+        ],
+        "mean_raw": 0.72,
+        "std_raw": 0.09798,
+        "ci95_raw": [
+          0.6799999999999998,
+          0.7649999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.2,
+          "mls_rfc": 0.35,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.9,
+          "redis_pubsub_rate": 1.0,
+          "redis_streams_latency": 1.0,
+          "prosemirror_richtext": 0.2,
+          "backend_rampup": 0.95,
+          "infra_migration_weeks": 0.6
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.74375,
+        "std_effective": 0.083619,
+        "ci95_effective": [
+          0.70625,
+          0.78125
+        ],
+        "mean_raw": 0.66,
+        "std_raw": 0.106771,
+        "ci95_raw": [
+          0.6149999999999999,
+          0.7099999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.15,
+          "mls_rfc": 0.5,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 1.0,
+          "redis_streams_latency": 1.0,
+          "prosemirror_richtext": 0.05,
+          "backend_rampup": 0.15,
+          "infra_migration_weeks": 0.8
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.7,
+        "std_effective": 0.1,
+        "ci95_effective": [
+          0.65625,
+          0.74375
+        ],
+        "mean_raw": 0.645,
+        "std_raw": 0.111692,
+        "ci95_raw": [
+          0.595,
+          0.695
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.3,
+          "mls_rfc": 0.55,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 0.9,
+          "redis_streams_latency": 0.9,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.1,
+          "infra_migration_weeks": 0.75
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.51875,
+        "std_effective": 0.13273,
+        "ci95_effective": [
+          0.45625,
+          0.56875
+        ],
+        "mean_raw": 0.51,
+        "std_raw": 0.13,
+        "ci95_raw": [
+          0.445,
+          0.5549999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.7,
+          "mls_rfc": 0.25,
+          "three_encryption_options": 0.95,
+          "recommends_option_b": 0.9,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 0.95,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.4
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.575,
+        "std_effective": 0.139194,
+        "ci95_effective": [
+          0.50625,
+          0.61875
+        ],
+        "mean_raw": 0.515,
+        "std_raw": 0.131434,
+        "ci95_raw": [
+          0.45,
+          0.5599999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.3,
+          "mls_rfc": 0.25,
+          "three_encryption_options": 0.95,
+          "recommends_option_b": 0.95,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 0.95,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.8
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.075,
+        "std_effective": 0.082916,
+        "ci95_effective": [
+          0.0375,
+          0.1125
+        ],
+        "mean_raw": 0.255,
+        "std_raw": 0.058949,
+        "ci95_raw": [
+          0.23000000000000004,
+          0.28
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.95,
+          "mls_rfc": 1.0,
+          "three_encryption_options": 0.0,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.1,
+          "infra_migration_weeks": 0.5
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.11875,
+        "std_effective": 0.048007,
+        "ci95_effective": [
+          0.1,
+          0.1375
+        ],
+        "mean_raw": 0.285,
+        "std_raw": 0.072629,
+        "ci95_raw": [
+          0.24999999999999994,
+          0.31
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.95,
+          "mls_rfc": 0.95,
+          "three_encryption_options": 0.0,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.9
+        }
+      }
+    ],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "total_budget": 8192,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  }
+]

@@ -1,0 +1,310 @@
+[
+  {
+    "model": "gemini-2.0-flash",
+    "provider": "google",
+    "total_budget": 4096,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "total_budget": 4096,
+    "n_trials_per_cell": 20,
+    "elapsed_seconds": 1720.9,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [
+      {
+        "proportion": 0.92,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.45625,
+        "std_effective": 0.059621,
+        "ci95_effective": [
+          0.43125,
+          0.48125
+        ],
+        "mean_raw": 0.46,
+        "std_raw": 0.05831,
+        "ci95_raw": [
+          0.43500000000000005,
+          0.48500000000000004
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.8,
+          "mls_rfc": 0.15,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.7
+        }
+      },
+      {
+        "proportion": 0.92,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.425,
+        "std_effective": 0.164886,
+        "ci95_effective": [
+          0.35,
+          0.4875
+        ],
+        "mean_raw": 0.425,
+        "std_raw": 0.184052,
+        "ci95_raw": [
+          0.33999999999999997,
+          0.5
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.55,
+          "mls_rfc": 0.3,
+          "three_encryption_options": 0.75,
+          "recommends_option_b": 0.8,
+          "pg_limit": 0.9,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.9
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.0875,
+        "std_effective": 0.080039,
+        "ci95_effective": [
+          0.05625,
+          0.125
+        ],
+        "mean_raw": 0.245,
+        "std_raw": 0.066895,
+        "ci95_raw": [
+          0.21500000000000002,
+          0.275
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.95,
+          "mls_rfc": 0.8,
+          "three_encryption_options": 0.15,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.55
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.1375,
+        "std_effective": 0.067315,
+        "ci95_effective": [
+          0.10625,
+          0.16875
+        ],
+        "mean_raw": 0.27,
+        "std_raw": 0.11,
+        "ci95_raw": [
+          0.21999999999999997,
+          0.315
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.8,
+          "mls_rfc": 0.8,
+          "three_encryption_options": 0.2,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.9
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.06875,
+        "std_effective": 0.073686,
+        "ci95_effective": [
+          0.0375,
+          0.1
+        ],
+        "mean_raw": 0.245,
+        "std_raw": 0.058949,
+        "ci95_raw": [
+          0.22000000000000003,
+          0.2700000000000001
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.9,
+          "mls_rfc": 1.0,
+          "three_encryption_options": 0.0,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.5
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.1375,
+        "std_effective": 0.067315,
+        "ci95_effective": [
+          0.1125,
+          0.16875
+        ],
+        "mean_raw": 0.295,
+        "std_raw": 0.086458,
+        "ci95_raw": [
+          0.25499999999999995,
+          0.32999999999999996
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.9,
+          "mls_rfc": 0.95,
+          "three_encryption_options": 0.05,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.1,
+          "infra_migration_weeks": 0.95
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.01875,
+        "std_effective": 0.044634,
+        "ci95_effective": [
+          0.0,
+          0.0375
+        ],
+        "mean_raw": 0.03,
+        "std_raw": 0.071414,
+        "ci95_raw": [
+          0.0,
+          0.06000000000000001
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.15,
+          "three_encryption_options": 0.0,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.15
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.05625,
+        "std_effective": 0.062187,
+        "ci95_effective": [
+          0.03125,
+          0.08125
+        ],
+        "mean_raw": 0.095,
+        "std_raw": 0.09734,
+        "ci95_raw": [
+          0.05,
+          0.14000000000000004
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.5,
+          "three_encryption_options": 0.0,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.45
+        }
+      }
+    ],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "total_budget": 4096,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  }
+]

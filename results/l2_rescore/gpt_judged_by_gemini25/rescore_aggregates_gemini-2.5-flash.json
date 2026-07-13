@@ -1,0 +1,102 @@
+[
+  {
+    "proportion": 0.0,
+    "original_judge": {
+      "mean_effective": 1.0,
+      "ci95": [
+        0.9881374103882884,
+        0.9999999999999999
+      ],
+      "n": 40
+    },
+    "new_judge": {
+      "model": "gemini-2.5-flash",
+      "mean_effective": 1.0,
+      "ci95": [
+        0.9881374103882884,
+        0.9999999999999999
+      ],
+      "n": 40
+    }
+  },
+  {
+    "proportion": 0.25,
+    "original_judge": {
+      "mean_effective": 0.971875,
+      "ci95": [
+        0.9474203622253072,
+        0.9851343188286401
+      ],
+      "n": 40
+    },
+    "new_judge": {
+      "model": "gemini-2.5-flash",
+      "mean_effective": 0.965625,
+      "ci95": [
+        0.9395037038130347,
+        0.9806992596110589
+      ],
+      "n": 40
+    }
+  },
+  {
+    "proportion": 0.5,
+    "original_judge": {
+      "mean_effective": 0.9875,
+      "ci95": [
+        0.9683053480913877,
+        0.9951286270371937
+      ],
+      "n": 40
+    },
+    "new_judge": {
+      "model": "gemini-2.5-flash",
+      "mean_effective": 0.96875,
+      "ci95": [
+        0.9434399424204257,
+        0.9829388798185948
+      ],
+      "n": 40
+    }
+  },
+  {
+    "proportion": 0.75,
+    "original_judge": {
+      "mean_effective": 0.98125,
+      "ci95": [
+        0.9597030630683673,
+        0.9913791944303604
+      ],
+      "n": 40
+    },
+    "new_judge": {
+      "model": "gemini-2.5-flash",
+      "mean_effective": 0.959375,
+      "ci95": [
+        0.9317437495068543,
+        0.9761074962873857
+      ],
+      "n": 40
+    }
+  },
+  {
+    "proportion": 0.9,
+    "original_judge": {
+      "mean_effective": 0.853125,
+      "ci95": [
+        0.8101550683998912,
+        0.8877169776868378
+      ],
+      "n": 40
+    },
+    "new_judge": {
+      "model": "gemini-2.5-flash",
+      "mean_effective": 0.765625,
+      "ci95": [
+        0.7162290892753393,
+        0.8087189099934389
+      ],
+      "n": 40
+    }
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "benchmark": "gsm8k_pack",
+  "records": 500,
+  "aggregates": [
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.0,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.528,
+      "ci95": [
+        0.4841949689615891,
+        0.5713780524006803
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.0,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.522,
+      "ci95": [
+        0.4782146879120214,
+        0.565449828872619
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.25,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.514,
+      "ci95": [
+        0.47025071185469686,
+        0.557535798826438
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.25,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.486,
+      "ci95": [
+        0.4424642011735621,
+        0.5297492881453032
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.5,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.542,
+      "ci95": [
+        0.4981733601090301,
+        0.5851861719343742
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.5,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.5,
+      "ci95": [
+        0.45634046916507415,
+        0.5436595308349258
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.75,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.496,
+      "ci95": [
+        0.4523723541138067,
+        0.5396886428344405
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.75,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.56,
+      "ci95": [
+        0.5161960663856535,
+        0.6028889793906382
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.9,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.166,
+      "ci95": [
+        0.13595723820567882,
+        0.20113600697296466
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.9,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.144,
+      "ci95": [
+        0.11593760751948218,
+        0.177491120874521
+      ],
+      "task_truncated_rate": 1.0
+    }
+  ]
+}

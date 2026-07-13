@@ -1,0 +1,212 @@
+[
+  {
+    "benchmark": "drop_pack",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 74,
+        "accuracy": 0.74,
+        "ci95": [
+          0.64629,
+          0.81595
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 74,
+        "accuracy": 0.74,
+        "ci95": [
+          0.64629,
+          0.81595
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 52,
+        "accuracy": 0.52,
+        "ci95": [
+          0.42316,
+          0.61536
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 25,
+        "accuracy": 0.25,
+        "ci95": [
+          0.17545,
+          0.34305
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 6,
+        "accuracy": 0.06,
+        "ci95": [
+          0.02779,
+          0.12477
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.76194,
+      "k": 7.24604,
+      "midpoint": 0.62436,
+      "r_squared": 0.99104,
+      "rmse": 0.02556
+    }
+  },
+  {
+    "benchmark": "drop_pack",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 82,
+        "accuracy": 0.82,
+        "ci95": [
+          0.73332,
+          0.883
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 77,
+        "accuracy": 0.77,
+        "ci95": [
+          0.67845,
+          0.84157
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 36,
+        "accuracy": 0.36,
+        "ci95": [
+          0.27271,
+          0.45765
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 23,
+        "accuracy": 0.23,
+        "ci95": [
+          0.15843,
+          0.32155
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 4,
+        "accuracy": 0.04,
+        "ci95": [
+          0.01566,
+          0.09837
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.89936,
+      "k": 5.7847,
+      "midpoint": 0.48087,
+      "r_squared": 0.96815,
+      "rmse": 0.05435
+    }
+  },
+  {
+    "benchmark": "drop_pack",
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 85,
+        "accuracy": 0.85,
+        "ci95": [
+          0.76716,
+          0.90694
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 77,
+        "accuracy": 0.77,
+        "ci95": [
+          0.67845,
+          0.84157
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 45,
+        "accuracy": 0.45,
+        "ci95": [
+          0.35614,
+          0.54756
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 21,
+        "accuracy": 0.21,
+        "ci95": [
+          0.14166,
+          0.2998
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 4,
+        "accuracy": 0.04,
+        "ci95": [
+          0.01566,
+          0.09837
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.89202,
+      "k": 6.25106,
+      "midpoint": 0.51876,
+      "r_squared": 0.99234,
+      "rmse": 0.02732
+    }
+  }
+]

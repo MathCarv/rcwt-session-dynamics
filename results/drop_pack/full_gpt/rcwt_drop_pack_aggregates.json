@@ -1,0 +1,146 @@
+{
+  "benchmark": "drop_pack",
+  "records": 500,
+  "aggregates": [
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.0,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.74,
+      "ci95": [
+        0.6998252722118725,
+        0.7765149108932938
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.0,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.744,
+      "ci95": [
+        0.7039862648123214,
+        0.7802929213445977
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.25,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.74,
+      "ci95": [
+        0.6998252722118725,
+        0.7765149108932938
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.25,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.746,
+      "ci95": [
+        0.7060683153605514,
+        0.7821803723222442
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.5,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.516,
+      "ci95": [
+        0.4722406641485616,
+        0.5595153480584495
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.5,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.518,
+      "ci95": [
+        0.4742313107295171,
+        0.5614942030033705
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.75,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.242,
+      "ci95": [
+        0.20651719550386513,
+        0.28141710765808103
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.75,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.256,
+      "ci95": [
+        0.21970707865540234,
+        0.29601373518767854
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.9,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.06,
+      "ci95": [
+        0.042348086000950205,
+        0.08436157830624476
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "provider": "openai",
+      "proportion": 0.9,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.062,
+      "ci95": [
+        0.04401893261361028,
+        0.08666023321946106
+      ],
+      "task_truncated_rate": 1.0
+    }
+  ]
+}

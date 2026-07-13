@@ -1,0 +1,146 @@
+{
+  "benchmark": "mmlu_pro_pack",
+  "records": 500,
+  "aggregates": [
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.0,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.688,
+      "ci95": [
+        0.646085405329654,
+        0.7270477381027262
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.0,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.682,
+      "ci95": [
+        0.639924207823618,
+        0.7213004310311333
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.25,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.722,
+      "ci95": [
+        0.6811506232701695,
+        0.7594640461021093
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.25,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.694,
+      "ci95": [
+        0.6522544304326852,
+        0.7327872175773242
+      ],
+      "task_truncated_rate": 0.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.5,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.642,
+      "ci95": [
+        0.5990414871027679,
+        0.6827931212344555
+      ],
+      "task_truncated_rate": 0.6
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.5,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.638,
+      "ci95": [
+        0.5949709219022378,
+        0.6789246833832329
+      ],
+      "task_truncated_rate": 0.6
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.75,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.364,
+      "ci95": [
+        0.323010706915662,
+        0.4070631893247437
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.75,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.35,
+      "ci95": [
+        0.3094794545296122,
+        0.3928079310296588
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.9,
+      "order": "coord_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.106,
+      "ci95": [
+        0.08195666053446123,
+        0.1360515388678906
+      ],
+      "task_truncated_rate": 1.0
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "provider": "google",
+      "proportion": 0.9,
+      "order": "reason_first",
+      "n": 50,
+      "score_total": 500,
+      "accuracy": 0.144,
+      "ci95": [
+        0.11593760751948218,
+        0.177491120874521
+      ],
+      "task_truncated_rate": 1.0
+    }
+  ]
+}

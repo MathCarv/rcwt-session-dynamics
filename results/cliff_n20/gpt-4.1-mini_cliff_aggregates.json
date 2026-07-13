@@ -1,0 +1,310 @@
+[
+  {
+    "model": "gemini-2.0-flash",
+    "provider": "google",
+    "total_budget": 4096,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "total_budget": 4096,
+    "n_trials_per_cell": null,
+    "elapsed_seconds": 0.0,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "total_budget": 4096,
+    "n_trials_per_cell": 20,
+    "elapsed_seconds": 2708.1,
+    "noise_items_excluded": [
+      "crdt_throughput",
+      "mls_rfc"
+    ],
+    "effective_items": [
+      "three_encryption_options",
+      "recommends_option_b",
+      "pg_limit",
+      "redis_pubsub_rate",
+      "redis_streams_latency",
+      "prosemirror_richtext",
+      "backend_rampup",
+      "infra_migration_weeks"
+    ],
+    "aggregates": [
+      {
+        "proportion": 0.92,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.625,
+        "std_effective": 0.096825,
+        "ci95_effective": [
+          0.58125,
+          0.6625
+        ],
+        "mean_raw": 0.545,
+        "std_raw": 0.086458,
+        "ci95_raw": [
+          0.51,
+          0.5849999999999999
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.45,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.75,
+          "redis_pubsub_rate": 0.1,
+          "redis_streams_latency": 0.2,
+          "prosemirror_richtext": 1.0,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.95
+        }
+      },
+      {
+        "proportion": 0.92,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.59375,
+        "std_effective": 0.054127,
+        "ci95_effective": [
+          0.56875,
+          0.6125
+        ],
+        "mean_raw": 0.485,
+        "std_raw": 0.047697,
+        "ci95_raw": [
+          0.465,
+          0.505
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.1,
+          "three_encryption_options": 1.0,
+          "recommends_option_b": 1.0,
+          "pg_limit": 0.95,
+          "redis_pubsub_rate": 0.0,
+          "redis_streams_latency": 0.0,
+          "prosemirror_richtext": 0.9,
+          "backend_rampup": 0.0,
+          "infra_migration_weeks": 0.9
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.4125,
+        "std_effective": 0.163459,
+        "ci95_effective": [
+          0.3375,
+          0.48125
+        ],
+        "mean_raw": 0.375,
+        "std_raw": 0.129904,
+        "ci95_raw": [
+          0.31500000000000006,
+          0.43
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.45,
+          "three_encryption_options": 0.95,
+          "recommends_option_b": 0.65,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.15,
+          "redis_streams_latency": 0.25,
+          "prosemirror_richtext": 0.6,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.65
+        }
+      },
+      {
+        "proportion": 0.94,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.4125,
+        "std_effective": 0.1375,
+        "ci95_effective": [
+          0.35,
+          0.46875
+        ],
+        "mean_raw": 0.365,
+        "std_raw": 0.123592,
+        "ci95_raw": [
+          0.30999999999999994,
+          0.41999999999999993
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.05,
+          "mls_rfc": 0.3,
+          "three_encryption_options": 0.6,
+          "recommends_option_b": 0.7,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.05,
+          "redis_streams_latency": 0.1,
+          "prosemirror_richtext": 0.9,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.9
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.29375,
+        "std_effective": 0.126707,
+        "ci95_effective": [
+          0.2375,
+          0.35
+        ],
+        "mean_raw": 0.335,
+        "std_raw": 0.101366,
+        "ci95_raw": [
+          0.295,
+          0.38
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 1.0,
+          "three_encryption_options": 0.7,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.25,
+          "redis_streams_latency": 0.3,
+          "prosemirror_richtext": 0.15,
+          "backend_rampup": 0.15,
+          "infra_migration_weeks": 0.8
+        }
+      },
+      {
+        "proportion": 0.96,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.275,
+        "std_effective": 0.122474,
+        "ci95_effective": [
+          0.225,
+          0.33125
+        ],
+        "mean_raw": 0.32,
+        "std_raw": 0.09798,
+        "ci95_raw": [
+          0.2750000000000001,
+          0.365
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 1.0,
+          "three_encryption_options": 0.5,
+          "recommends_option_b": 0.05,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.05,
+          "redis_streams_latency": 0.05,
+          "prosemirror_richtext": 0.6,
+          "backend_rampup": 0.05,
+          "infra_migration_weeks": 0.9
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "coord_first",
+        "n_trials": 20,
+        "mean_effective": 0.34375,
+        "std_effective": 0.141835,
+        "ci95_effective": [
+          0.28125,
+          0.40625
+        ],
+        "mean_raw": 0.375,
+        "std_raw": 0.113468,
+        "ci95_raw": [
+          0.325,
+          0.4250000000000001
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 1.0,
+          "three_encryption_options": 0.8,
+          "recommends_option_b": 0.0,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.2,
+          "redis_streams_latency": 0.35,
+          "prosemirror_richtext": 0.4,
+          "backend_rampup": 0.25,
+          "infra_migration_weeks": 0.75
+        }
+      },
+      {
+        "proportion": 0.98,
+        "order": "reason_first",
+        "n_trials": 20,
+        "mean_effective": 0.31875,
+        "std_effective": 0.139614,
+        "ci95_effective": [
+          0.2625,
+          0.38125
+        ],
+        "mean_raw": 0.35,
+        "std_raw": 0.10247,
+        "ci95_raw": [
+          0.305,
+          0.395
+        ],
+        "scores_by_dimension": {
+          "crdt_throughput": 0.0,
+          "mls_rfc": 0.95,
+          "three_encryption_options": 0.35,
+          "recommends_option_b": 0.05,
+          "pg_limit": 0.0,
+          "redis_pubsub_rate": 0.05,
+          "redis_streams_latency": 0.3,
+          "prosemirror_richtext": 0.85,
+          "backend_rampup": 0.1,
+          "infra_migration_weeks": 0.85
+        }
+      }
+    ],
+    "ci_method": "percentile bootstrap over call-level mean scores",
+    "ci_resamples": 10000,
+    "ci_unit": "call"
+  }
+]

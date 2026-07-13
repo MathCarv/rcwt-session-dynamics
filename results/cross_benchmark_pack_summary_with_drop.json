@@ -1,0 +1,632 @@
+[
+  {
+    "benchmark": "gsm8k_pack",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 44,
+        "accuracy": 0.44,
+        "ci95": [
+          0.34672,
+          0.53772
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 43,
+        "accuracy": 0.43,
+        "ci95": [
+          0.33733,
+          0.52785
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 42,
+        "accuracy": 0.42,
+        "ci95": [
+          0.32798,
+          0.51794
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 40,
+        "accuracy": 0.4,
+        "ci95": [
+          0.3094,
+          0.498
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 12,
+        "accuracy": 0.12,
+        "ci95": [
+          0.06999,
+          0.19812
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.43006,
+      "k": 23.56299,
+      "midpoint": 0.85972,
+      "r_squared": 0.99732,
+      "rmse": 0.0063
+    }
+  },
+  {
+    "benchmark": "gsm8k_pack",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 60,
+        "accuracy": 0.6,
+        "ci95": [
+          0.502,
+          0.6906
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 40,
+        "accuracy": 0.4,
+        "ci95": [
+          0.3094,
+          0.498
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 38,
+        "accuracy": 0.38,
+        "ci95": [
+          0.29097,
+          0.4779
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 38,
+        "accuracy": 0.38,
+        "ci95": [
+          0.29097,
+          0.4779
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 16,
+        "accuracy": 0.16,
+        "ci95": [
+          0.10095,
+          0.2442
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.46597,
+      "k": 12.2161,
+      "midpoint": 0.85312,
+      "r_squared": 0.70134,
+      "rmse": 0.07617
+    }
+  },
+  {
+    "benchmark": "gsm8k_pack",
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 52,
+        "accuracy": 0.52,
+        "ci95": [
+          0.42316,
+          0.61536
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 50,
+        "accuracy": 0.5,
+        "ci95": [
+          0.40383,
+          0.59617
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 52,
+        "accuracy": 0.52,
+        "ci95": [
+          0.42316,
+          0.61536
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 53,
+        "accuracy": 0.53,
+        "ci95": [
+          0.43289,
+          0.62489
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 15,
+        "accuracy": 0.15,
+        "ci95": [
+          0.09306,
+          0.23284
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.5175,
+      "k": 130.34194,
+      "midpoint": 0.89313,
+      "r_squared": 0.99562,
+      "rmse": 0.00975
+    }
+  },
+  {
+    "benchmark": "mmlu_pro_pack",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 56,
+        "accuracy": 0.56,
+        "ci95": [
+          0.46228,
+          0.65328
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 56,
+        "accuracy": 0.56,
+        "ci95": [
+          0.46228,
+          0.65328
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 47,
+        "accuracy": 0.47,
+        "ci95": [
+          0.37511,
+          0.56711
+        ],
+        "task_truncated_rate": 0.6
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 28,
+        "accuracy": 0.28,
+        "ci95": [
+          0.2014,
+          0.37488
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 9,
+        "accuracy": 0.09,
+        "ci95": [
+          0.04807,
+          0.16226
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.559,
+      "k": 8.44843,
+      "midpoint": 0.73297,
+      "r_squared": 0.99196,
+      "rmse": 0.01635
+    }
+  },
+  {
+    "benchmark": "mmlu_pro_pack",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 48,
+        "accuracy": 0.48,
+        "ci95": [
+          0.38464,
+          0.57684
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 64,
+        "accuracy": 0.64,
+        "ci95": [
+          0.54235,
+          0.72729
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 53,
+        "accuracy": 0.53,
+        "ci95": [
+          0.43289,
+          0.62489
+        ],
+        "task_truncated_rate": 0.6
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 26,
+        "accuracy": 0.26,
+        "ci95": [
+          0.18405,
+          0.35371
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 9,
+        "accuracy": 0.09,
+        "ci95": [
+          0.04807,
+          0.16226
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.56151,
+      "k": 11.30557,
+      "midpoint": 0.74118,
+      "r_squared": 0.93243,
+      "rmse": 0.05154
+    }
+  },
+  {
+    "benchmark": "mmlu_pro_pack",
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 68,
+        "accuracy": 0.68,
+        "ci95": [
+          0.58337,
+          0.76331
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 71,
+        "accuracy": 0.71,
+        "ci95": [
+          0.61461,
+          0.78985
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 64,
+        "accuracy": 0.64,
+        "ci95": [
+          0.54235,
+          0.72729
+        ],
+        "task_truncated_rate": 0.6
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 36,
+        "accuracy": 0.36,
+        "ci95": [
+          0.27271,
+          0.45765
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 12,
+        "accuracy": 0.12,
+        "ci95": [
+          0.06999,
+          0.19812
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.6933,
+      "k": 10.51658,
+      "midpoint": 0.75507,
+      "r_squared": 0.99736,
+      "rmse": 0.01172
+    }
+  },
+  {
+    "benchmark": "drop_pack",
+    "model": "gpt-4.1-mini",
+    "provider": "openai",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 74,
+        "accuracy": 0.74,
+        "ci95": [
+          0.64629,
+          0.81595
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 74,
+        "accuracy": 0.74,
+        "ci95": [
+          0.64629,
+          0.81595
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 52,
+        "accuracy": 0.52,
+        "ci95": [
+          0.42316,
+          0.61536
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 25,
+        "accuracy": 0.25,
+        "ci95": [
+          0.17545,
+          0.34305
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 6,
+        "accuracy": 0.06,
+        "ci95": [
+          0.02779,
+          0.12477
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.76194,
+      "k": 7.24604,
+      "midpoint": 0.62436,
+      "r_squared": 0.99104,
+      "rmse": 0.02556
+    }
+  },
+  {
+    "benchmark": "drop_pack",
+    "model": "claude-haiku-4-5-20251001",
+    "provider": "anthropic",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 82,
+        "accuracy": 0.82,
+        "ci95": [
+          0.73332,
+          0.883
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 77,
+        "accuracy": 0.77,
+        "ci95": [
+          0.67845,
+          0.84157
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 36,
+        "accuracy": 0.36,
+        "ci95": [
+          0.27271,
+          0.45765
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 23,
+        "accuracy": 0.23,
+        "ci95": [
+          0.15843,
+          0.32155
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 4,
+        "accuracy": 0.04,
+        "ci95": [
+          0.01566,
+          0.09837
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.89936,
+      "k": 5.7847,
+      "midpoint": 0.48087,
+      "r_squared": 0.96815,
+      "rmse": 0.05435
+    }
+  },
+  {
+    "benchmark": "drop_pack",
+    "model": "gemini-2.5-flash",
+    "provider": "google",
+    "records": 500,
+    "pooled": [
+      {
+        "proportion": 0.0,
+        "n": 100,
+        "hits": 85,
+        "accuracy": 0.85,
+        "ci95": [
+          0.76716,
+          0.90694
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.25,
+        "n": 100,
+        "hits": 77,
+        "accuracy": 0.77,
+        "ci95": [
+          0.67845,
+          0.84157
+        ],
+        "task_truncated_rate": 0.0
+      },
+      {
+        "proportion": 0.5,
+        "n": 100,
+        "hits": 45,
+        "accuracy": 0.45,
+        "ci95": [
+          0.35614,
+          0.54756
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.75,
+        "n": 100,
+        "hits": 21,
+        "accuracy": 0.21,
+        "ci95": [
+          0.14166,
+          0.2998
+        ],
+        "task_truncated_rate": 1.0
+      },
+      {
+        "proportion": 0.9,
+        "n": 100,
+        "hits": 4,
+        "accuracy": 0.04,
+        "ci95": [
+          0.01566,
+          0.09837
+        ],
+        "task_truncated_rate": 1.0
+      }
+    ],
+    "logistic_fit": {
+      "r0": 0.89202,
+      "k": 6.25106,
+      "midpoint": 0.51876,
+      "r_squared": 0.99234,
+      "rmse": 0.02732
+    }
+  }
+]
