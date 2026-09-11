@@ -339,7 +339,10 @@ def _accessible_svg(svg: str, data: PlotData) -> str:
     accessible, replacements = _SVG_ROOT_RE.subn(replace_root, without_metadata, count=1)
     if replacements != 1:
         raise ValueError("Matplotlib produced an SVG without a root element")
-    return accessible.replace("\r\n", "\n").replace("\r", "\n").rstrip() + "\n"
+    normalized = accessible.replace("\r\n", "\n").replace("\r", "\n")
+    # Matplotlib emits cosmetic spaces at the ends of multiline SVG path data.
+    # Removing them keeps generated artifacts friendly to diff/check tooling.
+    return "\n".join(line.rstrip() for line in normalized.splitlines()).rstrip() + "\n"
 
 
 def render_svg(data: PlotData) -> bytes:

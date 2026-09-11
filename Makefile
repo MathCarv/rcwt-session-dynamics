@@ -1,11 +1,12 @@
 .PHONY: analyze-window check-python fit-curves rebuild-intervals rescore-intact session-generate session-run session-score session-plot test verify verify-session
 
 PYTHON ?= python3
-PY_FILES := $(shell find src -name '*.py' | sort)
 SESSION_RESULTS ?= results/session_v1
+export PYTHONUTF8 := 1
+export PYTHONIOENCODING := utf-8
 
 check-python:
-	$(PYTHON) -m py_compile $(PY_FILES)
+	$(PYTHON) -m compileall -q src
 
 test:
 	PYTHONPATH=src $(PYTHON) -m unittest discover -s tests -p 'test_*.py'
