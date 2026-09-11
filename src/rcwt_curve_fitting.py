@@ -137,7 +137,14 @@ def _aic(y_true: np.ndarray, y_pred: np.ndarray, n_params: int) -> float:
 
 
 def _c_star(form_name: str, params: list[float]) -> float:
-    """Estimate c* as the proportion where |dR/dp| is maximised (steepest drop)."""
+    """Locate steepest decline; piecewise reports its non-unique ramp's onset.
+
+    The piecewise ramp has constant slope. A finite-difference argmin there
+    selects floating-point noise, not an identifiable maximum. Use p_star as
+    the explicit onset convention instead of pretending the maximum is unique.
+    """
+    if form_name == "piecewise":
+        return float(params[1])
     p_grid = np.linspace(0.0, 0.99, 2000)
     fn = FUNCTIONAL_FORMS[form_name][0]
     r_vals = fn(p_grid, *params)
@@ -304,7 +311,7 @@ def print_summary(results: dict[str, dict]) -> None:
         print(row + f"  {best_form}")
 
     print("\n" + "=" * 90)
-    print("c* ESTIMATES (inflection of steepest drop, per best-fit model)")
+    print("c* ESTIMATES (steepest decline; piecewise reports decline onset)")
     print("=" * 90)
     for model_id, res in results.items():
         valid = {f: d for f, d in res["fits"].items() if "r_squared" in d}

@@ -1,5 +1,11 @@
 # RCWT + RCWT-S: Measuring Coordination Overhead and Session-State Survival
 
+[![Verify](https://github.com/MathCarv/rcwt-session-dynamics/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/MathCarv/rcwt-session-dynamics/actions/workflows/verify.yml)
+
+An independent extension of [CloudWalk's RCWT artifact](https://github.com/cloudwalk/rcwt-agent-coordination)
+by [Matheus Carvalho](https://github.com/MathCarv). The original authors' MIT
+license and attribution are preserved.
+
 This repository contains the code and aggregate data needed to reproduce the
 reported RCWT measurements.
 
@@ -80,6 +86,10 @@ entity, field, supersession, and dependency metadata already exist. RCWT-S does
 not measure semantic extraction from raw conversations, tool reliability,
 customer outcomes, or the net value of multi-agent coordination. A cold first
 load may populate tiktoken's pinned vocabulary cache over HTTPS.
+
+Each checkpoint is rebuilt from the original session prefix. The previous
+compacted context is not fed into the next checkpoint, so this version does
+not measure accumulated loss from repeated online compaction.
 
 ## Contents
 
@@ -223,6 +233,20 @@ This compiles all Python scripts, runs regression tests, reconstructs and scores
 RCWT-S, regenerates its deterministic SVG, reruns deterministic scoring for the
 intact-task ablation, regenerates the main curve fits over realized `c/W`, and
 checks call-level bootstrap and window-scaling summaries.
+
+CI requires byte-identical regeneration of the deterministic artifacts,
+including all RCWT-S evidence. The legacy SciPy curve-fit JSON is compared
+numerically with the committed baseline: structure and empirical data must
+match exactly, all numbers must be finite, and the best AIC model must remain
+unchanged. Only one unit of the last published decimal place is allowed for
+fit outputs (`1e-5` for parameters, predictions, R-squared and RMSE; `1e-4`
+for AIC and c-star). Larger differences fail verification.
+
+For the legacy piecewise-linear fit, the declining segment has constant slope,
+so a unique steepest point cannot be identified. Its reported c-star now uses
+the explicit decline-onset convention, p-star. This replaces a finite-difference
+argmin that selected numerical noise within the ramp. The original emailed
+version remains available at tag `rcwt-session-v1`; RCWT-S results are unchanged.
 
 ## Scope
 

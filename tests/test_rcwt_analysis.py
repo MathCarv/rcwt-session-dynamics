@@ -6,6 +6,7 @@ import json
 import unittest
 
 from rcwt_intact_scoring import score_response
+from rcwt_curve_fitting import _c_star
 from rcwt_token_accounting import fixed_budget_allocation
 
 
@@ -36,6 +37,17 @@ class TokenAccountingTests(unittest.TestCase):
         self.assertEqual(allocation.reference_tokens, 376)
         self.assertEqual(allocation.residual_task_tokens, 713)
         self.assertAlmostEqual(allocation.coordination_share, 3383 / 4096)
+
+
+class CurveLocationTests(unittest.TestCase):
+    """A linear ramp has no uniquely identifiable maximum-slope point."""
+
+    def test_piecewise_reports_decline_onset_independent_of_slope(self) -> None:
+        onset = 0.61327
+        for baseline in (0.6, 0.95, 1.1):
+            for slope in (0.5, 3.0, 10.0):
+                with self.subTest(baseline=baseline, slope=slope):
+                    self.assertEqual(_c_star("piecewise", [baseline, onset, slope]), onset)
 
 
 if __name__ == "__main__":

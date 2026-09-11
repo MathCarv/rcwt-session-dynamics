@@ -37,5 +37,8 @@ jobs:
       - name: Rebuild and verify all released evidence
         run: make verify
 
-      - name: Require byte-stable generated artifacts
-        run: git diff --exit-code
+      - name: Require byte-stable deterministic artifacts
+        run: git diff --exit-code -- . ':(exclude)results/rcwt_curve_fits.json'
+
+      - name: Verify legacy curve fits at their published precision
+        run: python src/verify_curve_fit_artifact.py
