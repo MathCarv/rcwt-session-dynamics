@@ -1,7 +1,8 @@
-.PHONY: analyze-window check-python fit-curves rebuild-intervals rescore-intact test verify
+.PHONY: analyze-window check-python fit-curves rebuild-intervals rescore-intact session-generate session-run session-score session-plot test verify verify-session
 
 PYTHON ?= python3
 PY_FILES := $(shell find src -name '*.py' | sort)
+SESSION_RESULTS ?= results/session_v1
 
 check-python:
 	$(PYTHON) -m py_compile $(PY_FILES)
@@ -23,4 +24,35 @@ fit-curves:
 analyze-window:
 	PYTHONPATH=src $(PYTHON) src/analyze_new_results.py
 
-verify: check-python test rescore-intact rebuild-intervals fit-curves analyze-window
+session-generate:
+	PYTHONPATH=src $(PYTHON) src/rcwt_session_generate.py \
+		--seed 20260911 \
+		--cases 64 \
+		--turns 64 \
+		--output-dir $(SESSION_RESULTS)
+
+session-run:
+	PYTHONPATH=src $(PYTHON) src/rcwt_session_run.py \
+		--cases $(SESSION_RESULTS)/public_cases.jsonl \
+		--manifest $(SESSION_RESULTS)/manifest.json \
+		--treatments tail,state_latest,state_first \
+		--checkpoints 8,16,32,64 \
+		--budgets 256,512,1024 \
+		--output $(SESSION_RESULTS)/contexts.jsonl
+
+session-score:
+	PYTHONPATH=src $(PYTHON) src/rcwt_session_score.py \
+		--contexts $(SESSION_RESULTS)/contexts.jsonl \
+		--cases $(SESSION_RESULTS)/public_cases.jsonl \
+		--oracle $(SESSION_RESULTS)/oracle_cases.jsonl \
+		--manifest $(SESSION_RESULTS)/manifest.json \
+		--output $(SESSION_RESULTS)/aggregates.json
+
+session-plot:
+	PYTHONPATH=src $(PYTHON) src/plot_session_results.py \
+		--aggregates $(SESSION_RESULTS)/aggregates.json \
+		--output $(SESSION_RESULTS)/decision_readiness.svg
+
+verify-session: session-generate session-run session-score session-plot
+
+verify: check-python verify-session test rescore-intact rebuild-intervals fit-curves analyze-window
