@@ -353,8 +353,9 @@ if __name__ == "__main__":
     out_dir.mkdir(parents=True, exist_ok=True)
 
     out_json = out_dir / "rcwt_curve_fits.json"
-    with open(out_json, "w") as f:
+    with open(out_json, "w", encoding="utf-8", newline="\n") as f:
         json.dump(results, f, indent=2)
+        f.write("\n")
     print(f"Results saved: {out_json}")
 
     print_summary(results)
