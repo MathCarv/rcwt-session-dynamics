@@ -1,0 +1,69 @@
+{
+  "schema": "rcwt-v4-interruption-observation/1",
+  "kind": "posthoc_observation_not_runner_abort_or_completion",
+  "status": "INCOMPLETE",
+  "gain": "NOT_EVALUATED",
+  "prefix_verification": {
+    "status": "PARTIAL_VERIFIED",
+    "verified_steps": 173,
+    "verified_complete_trajectory_summaries": 21,
+    "inference_calls": 0,
+    "tool": "tools/verify_online_v4_partial.py",
+    "tool_sha256": "2b06468959c7e7ccf0b20cd3c371d879c160d1124cbc5099f7d5b43968a4c95f"
+  },
+  "regression_tests": {
+    "status": "PASS",
+    "count": 511,
+    "elapsed_seconds": 114.580,
+    "scope": "Software tests, not confirmatory model-performance evidence"
+  },
+  "scheduled_steps": 512,
+  "persisted_steps": 173,
+  "missing_steps": 339,
+  "complete_episode_arm_summaries": 21,
+  "partial_last_trajectory": {
+    "episode_id": "rcwta-test-78c3b2c6-a",
+    "policy": "summary",
+    "persisted_step_indices": [0, 1, 2, 3, 4]
+  },
+  "confirmation_started_at_utc": "2026-09-12T00:55:29.685194+00:00",
+  "traces_last_write_time_utc": "2026-09-12T01:18:07.6759998Z",
+  "server_log_last_write_time_utc": "2026-09-12T01:18:11.6989938Z",
+  "process_absence_observed_at_utc": "2026-09-12T01:25:13Z",
+  "owned_server_pid": 22728,
+  "owned_server_present": false,
+  "rcwt_runner_present": false,
+  "listener_18085_present": false,
+  "runner_completion_present": false,
+  "runner_abort_receipt_present": false,
+  "runner_partial_step_receipt_present": false,
+  "cause": "UNKNOWN",
+  "last_server_task_id": 197522,
+  "last_server_task_cancel_logged": true,
+  "last_server_task_final_response_persisted": false,
+  "last_server_task_final_usage_known": false,
+  "persisted_confirmation_calls": 421,
+  "persisted_confirmation_prompt_tokens": 646649,
+  "persisted_confirmation_completion_tokens": 76320,
+  "persisted_v4_campaign_calls": 1045,
+  "persisted_v4_campaign_tokens": 1679254,
+  "server_parent_task_starts": 1046,
+  "unmatched_final_canceled_server_tasks": 1,
+  "resource_totals_complete": false,
+  "api_cost_usd": 0,
+  "total_monetary_cost_usd": null,
+  "retry_performed": false,
+  "complete_campaign_audit": "BLOCKED_MISSING_COMPLETION",
+  "original_archive_copy": {
+    "files": 49,
+    "bytes": 16782247,
+    "every_file_sha256_matched": true
+  },
+  "sha256": {
+    "protocol.json": "b09076db9d9311e7699d072a223bbd62d95b112fbb7973bbab87c950af101654",
+    "traces.jsonl": "beb01cde1aa808cc2204344bd9adef27fc0ac7ac10f0da8434c14501b2607676",
+    "episodes.jsonl": "3a450546223c188c2cd139dcc418e0a91ddc4e39b7858100888c3a67a0183d4f",
+    "runtime/server.stderr.log": "cd8f2cd409a502936db005d3d31360f0c81ce3ffd88740f28d20b95e5fbb5785"
+  },
+  "scope": "Observed local artifacts and scoped process/log checks; not independent hardware attestation or proof of global non-repetition. This is not a completed experiment or a confirmatory quality verdict."
+}

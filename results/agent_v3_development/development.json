@@ -1,0 +1,919 @@
+{
+  "attempt_count": 5,
+  "attempts": [
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Executes the recorded trusted project source; not independent hardware or token attestation",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "5098c6856d86ca4b9b439bfd0c058393104c9a921becaabc0f2d11cccd3dc732",
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 64
+        }
+      },
+      "attempt": "attempt_01",
+      "baseline": "Unmodified v2 actor, environment, sampler and LLM rolling-summary policy",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.4375,
+          "completion_tokens": 4549,
+          "episode_wall_seconds": 97.96766529997694,
+          "episodes": 4,
+          "inference_seconds": 96.36095570001635,
+          "model_calls": 32,
+          "prompt_tokens": 31451,
+          "steps": 32,
+          "successes": 14,
+          "total_tokens": 36000,
+          "unsafe_actions": 5,
+          "unsafe_booked_cents": 272904
+        },
+        "summary": {
+          "accuracy": 0.4375,
+          "completion_tokens": 7714,
+          "episode_wall_seconds": 146.9205286000215,
+          "episodes": 4,
+          "inference_seconds": 146.36154070016346,
+          "model_calls": 60,
+          "prompt_tokens": 51143,
+          "steps": 32,
+          "successes": 14,
+          "total_tokens": 58857,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 101840
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 32,
+            "successes": 14,
+            "unsafe_actions": 5,
+            "unsafe_booked_cents": 272904
+          },
+          "summary": {
+            "steps": 32,
+            "successes": 14,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 101840
+          }
+        }
+      },
+      "dataset_seed": 2026091201,
+      "expenditure_total": {
+        "completion_tokens": 12263,
+        "episode_wall_seconds": 244.88819389999844,
+        "inference_seconds": 242.7224964001798,
+        "model_calls": 92,
+        "prompt_tokens": 82594,
+        "total_tokens": 94857
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_01/protocol.json",
+          "sha256": "5098c6856d86ca4b9b439bfd0c058393104c9a921becaabc0f2d11cccd3dc732"
+        },
+        {
+          "path": "attempt_01/public.json",
+          "sha256": "b2d93ef02c9850b48a8af2f11fdfde5cd9d4ee9a85ab960cc1ed4399c38f8fdb"
+        },
+        {
+          "path": "attempt_01/oracle.json",
+          "sha256": "3369eaa9601987c5fc35cbef07e68ce6bf68361853dfc849d03f97891f5872ce"
+        },
+        {
+          "path": "attempt_01/schedule.json",
+          "sha256": "f3e73f66a08c11a660605f1b7c87f6453b5cab6dfab4bb5e0aaca6e36801ecf1"
+        },
+        {
+          "path": "attempt_01/freeze.json",
+          "sha256": "a9332de3c582a48569d740fb7a115fb9837c393afe42120dd6f27151cc2a399a"
+        },
+        {
+          "path": "attempt_01/started.json",
+          "sha256": "5ed5d5a7aeb227cbc224a296ea7e32979e49e8502d7171e9f1964b6782dbee29"
+        },
+        {
+          "path": "attempt_01/traces.jsonl",
+          "sha256": "399c66e4191512cbeb3387ff27fbba0418045a1e8f784f7049cdb1a45dd6aa7b"
+        },
+        {
+          "path": "attempt_01/episodes.jsonl",
+          "sha256": "e06b7c0574afebd94b941912442141b28ae22c3d376e848a9a36c0f0c10f6b28"
+        },
+        {
+          "path": "attempt_01/completion.json",
+          "sha256": "8f2308299a009a2a885a958592eeafa095a930549b86e6226b788beba47073b4"
+        },
+        {
+          "path": "attempt_01/development-screen.json",
+          "sha256": "1048d670decdf70b6b434e583bd14b018f01c4b0d2b89bfe6a65f59b84d1dbc8"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_analysis_v3.py",
+          "sha256": "b3a93cee805f51d2a1809056b70fc44c505d87495177aed8d9e46b5a111819d0"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_memory_v3.py",
+          "sha256": "8396d1ac0de61d2a84278580894f5e7943956715c12adc7773a7df9f3467ba02"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_online_v3.py",
+          "sha256": "49c8edeebfb6ca44ed1804f726e27f6864f883709d64d35e62dc996dffded1b8"
+        }
+      ],
+      "intervention": "Engineered memory repair informed by disclosed v2 failures and development; not autonomous RSI",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/3",
+      "protocol_sha256": "5098c6856d86ca4b9b439bfd0c058393104c9a921becaabc0f2d11cccd3dc732",
+      "run_path": "attempt_01",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    },
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Executes the recorded trusted project source; not independent hardware or token attestation",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "eff0f9dea3ed8c8dd4e101de32db300356d4ac234bea2dace6d0dc73828c9c0f",
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 64
+        }
+      },
+      "attempt": "attempt_02",
+      "baseline": "Unmodified v2 actor, environment, sampler and LLM rolling-summary policy",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.46875,
+          "completion_tokens": 4699,
+          "episode_wall_seconds": 258.5700014999893,
+          "episodes": 4,
+          "inference_seconds": 257.2467563000682,
+          "model_calls": 32,
+          "prompt_tokens": 31017,
+          "steps": 32,
+          "successes": 15,
+          "total_tokens": 35716,
+          "unsafe_actions": 10,
+          "unsafe_booked_cents": 435007
+        },
+        "summary": {
+          "accuracy": 0.4375,
+          "completion_tokens": 7714,
+          "episode_wall_seconds": 378.2527786999999,
+          "episodes": 4,
+          "inference_seconds": 377.6062375001202,
+          "model_calls": 60,
+          "prompt_tokens": 51143,
+          "steps": 32,
+          "successes": 14,
+          "total_tokens": 58857,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 101840
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 32,
+            "successes": 15,
+            "unsafe_actions": 10,
+            "unsafe_booked_cents": 435007
+          },
+          "summary": {
+            "steps": 32,
+            "successes": 14,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 101840
+          }
+        }
+      },
+      "dataset_seed": 2026091201,
+      "expenditure_total": {
+        "completion_tokens": 12413,
+        "episode_wall_seconds": 636.8227801999892,
+        "inference_seconds": 634.8529938001884,
+        "model_calls": 92,
+        "prompt_tokens": 82160,
+        "total_tokens": 94573
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_02/protocol.json",
+          "sha256": "eff0f9dea3ed8c8dd4e101de32db300356d4ac234bea2dace6d0dc73828c9c0f"
+        },
+        {
+          "path": "attempt_02/public.json",
+          "sha256": "b2d93ef02c9850b48a8af2f11fdfde5cd9d4ee9a85ab960cc1ed4399c38f8fdb"
+        },
+        {
+          "path": "attempt_02/oracle.json",
+          "sha256": "3369eaa9601987c5fc35cbef07e68ce6bf68361853dfc849d03f97891f5872ce"
+        },
+        {
+          "path": "attempt_02/schedule.json",
+          "sha256": "f3e73f66a08c11a660605f1b7c87f6453b5cab6dfab4bb5e0aaca6e36801ecf1"
+        },
+        {
+          "path": "attempt_02/freeze.json",
+          "sha256": "e032c5828d6fae5b33280ea7be5cfdd380a2c7d68716c53c89d6dd3f1fbba50e"
+        },
+        {
+          "path": "attempt_02/started.json",
+          "sha256": "2319d710bfb14600971a105e3577617ae65515bd79808acdd1b75ee9cebca425"
+        },
+        {
+          "path": "attempt_02/traces.jsonl",
+          "sha256": "02b3053d6c9068a118f76e3761e0f72cadf6b88d2ab42aaaad53e907f0710534"
+        },
+        {
+          "path": "attempt_02/episodes.jsonl",
+          "sha256": "5346b1ec90bc340b2052d8a7bf45e900562fa6df6c5df4f53cea4eb9da135d2d"
+        },
+        {
+          "path": "attempt_02/completion.json",
+          "sha256": "1d329862f1202e11893ee12e4db81f53707890087aff756d8b92b098f8621f5a"
+        },
+        {
+          "path": "attempt_02/development-screen.json",
+          "sha256": "70c70438a5aa041193696ed4a55772d0cb14d4aa2098b56143de74313060cf6e"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_analysis_v3.py",
+          "sha256": "b3a93cee805f51d2a1809056b70fc44c505d87495177aed8d9e46b5a111819d0"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_online_v3.py",
+          "sha256": "49c8edeebfb6ca44ed1804f726e27f6864f883709d64d35e62dc996dffded1b8"
+        }
+      ],
+      "intervention": "Engineered memory repair informed by disclosed v2 failures and development; not autonomous RSI",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/3",
+      "protocol_sha256": "eff0f9dea3ed8c8dd4e101de32db300356d4ac234bea2dace6d0dc73828c9c0f",
+      "run_path": "attempt_02",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    },
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Executes the recorded trusted project source; not independent hardware or token attestation",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "6a2383fa03ad20f09ad9cca4726b382e7d4e2bc15721a7d74f3d53e9727888f8",
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 64
+        }
+      },
+      "attempt": "attempt_03",
+      "baseline": "Unmodified v2 actor, environment, sampler and LLM rolling-summary policy",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.59375,
+          "completion_tokens": 4774,
+          "episode_wall_seconds": 92.37983909997274,
+          "episodes": 4,
+          "inference_seconds": 91.31864999997197,
+          "model_calls": 32,
+          "prompt_tokens": 28478,
+          "steps": 32,
+          "successes": 19,
+          "total_tokens": 33252,
+          "unsafe_actions": 5,
+          "unsafe_booked_cents": 163684
+        },
+        "summary": {
+          "accuracy": 0.4375,
+          "completion_tokens": 7714,
+          "episode_wall_seconds": 144.86298030000762,
+          "episodes": 4,
+          "inference_seconds": 144.35456619982142,
+          "model_calls": 60,
+          "prompt_tokens": 51143,
+          "steps": 32,
+          "successes": 14,
+          "total_tokens": 58857,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 101840
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 32,
+            "successes": 19,
+            "unsafe_actions": 5,
+            "unsafe_booked_cents": 163684
+          },
+          "summary": {
+            "steps": 32,
+            "successes": 14,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 101840
+          }
+        }
+      },
+      "dataset_seed": 2026091201,
+      "expenditure_total": {
+        "completion_tokens": 12488,
+        "episode_wall_seconds": 237.24281939998036,
+        "inference_seconds": 235.6732161997934,
+        "model_calls": 92,
+        "prompt_tokens": 79621,
+        "total_tokens": 92109
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_03/protocol.json",
+          "sha256": "6a2383fa03ad20f09ad9cca4726b382e7d4e2bc15721a7d74f3d53e9727888f8"
+        },
+        {
+          "path": "attempt_03/public.json",
+          "sha256": "b2d93ef02c9850b48a8af2f11fdfde5cd9d4ee9a85ab960cc1ed4399c38f8fdb"
+        },
+        {
+          "path": "attempt_03/oracle.json",
+          "sha256": "3369eaa9601987c5fc35cbef07e68ce6bf68361853dfc849d03f97891f5872ce"
+        },
+        {
+          "path": "attempt_03/schedule.json",
+          "sha256": "f3e73f66a08c11a660605f1b7c87f6453b5cab6dfab4bb5e0aaca6e36801ecf1"
+        },
+        {
+          "path": "attempt_03/freeze.json",
+          "sha256": "ed3023bb0708c3ae03eed31e71513ce0d36b94e27ea1517488de4e090af5939d"
+        },
+        {
+          "path": "attempt_03/started.json",
+          "sha256": "15d9eb081ffba9077718718f096767afc9972e9c5477a076301b812dcd0ac3ae"
+        },
+        {
+          "path": "attempt_03/traces.jsonl",
+          "sha256": "40c4deda215966a3dbced2f20768b53f1a2037054de4e2c480577c22dcf9a115"
+        },
+        {
+          "path": "attempt_03/episodes.jsonl",
+          "sha256": "acb4bd43aa9477da4e968cc58fa83968734cb7ebb6c643d764d9fa515187b609"
+        },
+        {
+          "path": "attempt_03/completion.json",
+          "sha256": "d86507fd2a075aab801a89299bd68984f3c504f92a140541dedfd1f6c57027a0"
+        },
+        {
+          "path": "attempt_03/development-screen.json",
+          "sha256": "d775966fb56d58cbce7784f2b0b18cd1f0fe43c163d032c7a02dcfc6362da133"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_analysis_v3.py",
+          "sha256": "3563783f6ea83b305b1e9ec868bc08c75350b330646268fae5fda4f573614495"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_online_v3.py",
+          "sha256": "0e6449b2b4b941f617c5d632e15ee374116e5f50beb311657c4cce61d0348cd4"
+        },
+        {
+          "path": "attempt_03/sources/rcwt_retrieval_v3.py",
+          "sha256": "7ebad5d41b2e6a2b71940ac402245eb803877164c9beb6f0ca7e15eee3306a62"
+        }
+      ],
+      "intervention": "Deterministic post-action storage plus pre-action selection of retained case facts and invalidation of old fields; current observation values are not imported into the memory view",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/3.1",
+      "protocol_sha256": "6a2383fa03ad20f09ad9cca4726b382e7d4e2bc15721a7d74f3d53e9727888f8",
+      "run_path": "attempt_03",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    },
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Executes the recorded trusted project source; not independent hardware or token attestation",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "845d06701d9c36226b711f9a6de5a430170455a3c81fed8a7123637087d17934",
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 64
+        }
+      },
+      "attempt": "attempt_04",
+      "baseline": "Original v2 first-pass prompt, environment, sampler and summary reducer, with the same model self-review added to both arms",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.625,
+          "completion_tokens": 9521,
+          "episode_wall_seconds": 177.21120899997186,
+          "episodes": 4,
+          "inference_seconds": 175.05846559998463,
+          "model_calls": 64,
+          "prompt_tokens": 68498,
+          "steps": 32,
+          "successes": 20,
+          "total_tokens": 78019,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 135731
+        },
+        "summary": {
+          "accuracy": 0.53125,
+          "completion_tokens": 11782,
+          "episode_wall_seconds": 273.1991682999651,
+          "episodes": 4,
+          "inference_seconds": 272.2204647999897,
+          "model_calls": 92,
+          "prompt_tokens": 89796,
+          "steps": 32,
+          "successes": 17,
+          "total_tokens": 101578,
+          "unsafe_actions": 2,
+          "unsafe_booked_cents": 73887
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 32,
+            "successes": 20,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 135731
+          },
+          "summary": {
+            "steps": 32,
+            "successes": 17,
+            "unsafe_actions": 2,
+            "unsafe_booked_cents": 73887
+          }
+        }
+      },
+      "dataset_seed": 2026091201,
+      "expenditure_total": {
+        "completion_tokens": 21303,
+        "episode_wall_seconds": 450.41037729993695,
+        "inference_seconds": 447.27893039997434,
+        "model_calls": 156,
+        "prompt_tokens": 158294,
+        "total_tokens": 179597
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_04/protocol.json",
+          "sha256": "845d06701d9c36226b711f9a6de5a430170455a3c81fed8a7123637087d17934"
+        },
+        {
+          "path": "attempt_04/public.json",
+          "sha256": "b2d93ef02c9850b48a8af2f11fdfde5cd9d4ee9a85ab960cc1ed4399c38f8fdb"
+        },
+        {
+          "path": "attempt_04/oracle.json",
+          "sha256": "3369eaa9601987c5fc35cbef07e68ce6bf68361853dfc849d03f97891f5872ce"
+        },
+        {
+          "path": "attempt_04/schedule.json",
+          "sha256": "f3e73f66a08c11a660605f1b7c87f6453b5cab6dfab4bb5e0aaca6e36801ecf1"
+        },
+        {
+          "path": "attempt_04/freeze.json",
+          "sha256": "b4b271ff7fde6cb86c6e6fcafef7fa5fa54e28666694f412cdd00c01467f667f"
+        },
+        {
+          "path": "attempt_04/started.json",
+          "sha256": "434fdfec897833f64836f14b270624985760dcd9eb37d064a7753f686dc9d64c"
+        },
+        {
+          "path": "attempt_04/traces.jsonl",
+          "sha256": "bdccda5a56a3ab121d847b7fb96146c8db9977728941ef3780707a8e1f7ad73b"
+        },
+        {
+          "path": "attempt_04/episodes.jsonl",
+          "sha256": "fe9ee0df0072a4f372f2570743ce282c7b0d14429293cede6aab8ca68e6cdba1"
+        },
+        {
+          "path": "attempt_04/completion.json",
+          "sha256": "8a263a7c69170f06e86ae564e0c12091685bf76e20fe76c571c3772a799837cd"
+        },
+        {
+          "path": "attempt_04/development-screen.json",
+          "sha256": "2ddd32e7734763a6941b677db1ca00de78dd9ba3a77e2e625b52e2926cdc8d2a"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_analysis_v3.py",
+          "sha256": "3b1727136735e25207a5e44d1dfca0ac87dd937a52e1ac36daaf17b960c168fa"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_online_v3.py",
+          "sha256": "2ea4e4edbe5b6edd6cc608579f2e664fbb18e2fbb047d74d767b4edc4fd875e3"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_retrieval_v3.py",
+          "sha256": "7ebad5d41b2e6a2b71940ac402245eb803877164c9beb6f0ca7e15eee3306a62"
+        },
+        {
+          "path": "attempt_04/sources/rcwt_review_v3.py",
+          "sha256": "19ba2997cd95599cb3dd2efc7f7bbb71354a9336629c620f9e0800ac0401ba96"
+        }
+      ],
+      "intervention": "Deterministic post-action storage plus pre-action selection of retained case facts and invalidation of old fields; current observation values are not imported into the memory view",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/3.2",
+      "protocol_sha256": "845d06701d9c36226b711f9a6de5a430170455a3c81fed8a7123637087d17934",
+      "run_path": "attempt_04",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    },
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Executes the recorded trusted project source; not independent hardware or token attestation",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "949624e0c1f59efd40f6dd10e0b3b06acc8b601559dc536342ef07a2ae4701df",
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 64
+        }
+      },
+      "attempt": "attempt_05",
+      "baseline": "Original v2 public rules, final JSON envelope, environment, sampler and summary reducer, with the same text-planning then final-JSON actor in both arms",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.71875,
+          "completion_tokens": 12099,
+          "episode_wall_seconds": 209.4749865999911,
+          "episodes": 4,
+          "inference_seconds": 207.71642630005954,
+          "model_calls": 64,
+          "prompt_tokens": 75271,
+          "steps": 32,
+          "successes": 23,
+          "total_tokens": 87370,
+          "unsafe_actions": 2,
+          "unsafe_booked_cents": 86451
+        },
+        "summary": {
+          "accuracy": 0.5,
+          "completion_tokens": 17253,
+          "episode_wall_seconds": 300.6951474000234,
+          "episodes": 4,
+          "inference_seconds": 299.71233169999323,
+          "model_calls": 92,
+          "prompt_tokens": 100597,
+          "steps": 32,
+          "successes": 16,
+          "total_tokens": 117850,
+          "unsafe_actions": 1,
+          "unsafe_booked_cents": 27953
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 32,
+            "successes": 23,
+            "unsafe_actions": 2,
+            "unsafe_booked_cents": 86451
+          },
+          "summary": {
+            "steps": 32,
+            "successes": 16,
+            "unsafe_actions": 1,
+            "unsafe_booked_cents": 27953
+          }
+        }
+      },
+      "dataset_seed": 2026091201,
+      "expenditure_total": {
+        "completion_tokens": 29352,
+        "episode_wall_seconds": 510.1701340000145,
+        "inference_seconds": 507.42875800005277,
+        "model_calls": 156,
+        "prompt_tokens": 175868,
+        "total_tokens": 205220
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_05/protocol.json",
+          "sha256": "949624e0c1f59efd40f6dd10e0b3b06acc8b601559dc536342ef07a2ae4701df"
+        },
+        {
+          "path": "attempt_05/public.json",
+          "sha256": "b2d93ef02c9850b48a8af2f11fdfde5cd9d4ee9a85ab960cc1ed4399c38f8fdb"
+        },
+        {
+          "path": "attempt_05/oracle.json",
+          "sha256": "3369eaa9601987c5fc35cbef07e68ce6bf68361853dfc849d03f97891f5872ce"
+        },
+        {
+          "path": "attempt_05/schedule.json",
+          "sha256": "f3e73f66a08c11a660605f1b7c87f6453b5cab6dfab4bb5e0aaca6e36801ecf1"
+        },
+        {
+          "path": "attempt_05/freeze.json",
+          "sha256": "e571807f8b73736d3b01a0406a786e0935a2ff6646d5c576782b4eaacbf87262"
+        },
+        {
+          "path": "attempt_05/started.json",
+          "sha256": "90a16414aee354a39df3c247b82c2babfe68b8df5616aea5628b22ee6abc8c4e"
+        },
+        {
+          "path": "attempt_05/traces.jsonl",
+          "sha256": "cf19df1816926d7b94c45333e97433e7358a899aea369c20705287e0813598e5"
+        },
+        {
+          "path": "attempt_05/episodes.jsonl",
+          "sha256": "cc540ff010f83450c51a4948a72ca205fa2c35c1054a223090f66517498d1664"
+        },
+        {
+          "path": "attempt_05/completion.json",
+          "sha256": "f6282459d16aab0cb38b22be5812de3d523c1ef7da5aa704c0d2bbe8b3d46cfb"
+        },
+        {
+          "path": "attempt_05/development-screen.json",
+          "sha256": "3f057dbc8c22025be2ca740567def135856a0719f7f445d78b2af028fe4169b5"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_analysis_v3.py",
+          "sha256": "d1b6e29f1fba0011c0783bd3f3f6ffd37f7bf8bf9ec1fbc117133c9db6fb589c"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_online_v3.py",
+          "sha256": "e09d8f98a42da5fb9b3ddeafeb22d0e1d5109747f54f93f10e57bc052c478465"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_retrieval_v3.py",
+          "sha256": "7ebad5d41b2e6a2b71940ac402245eb803877164c9beb6f0ca7e15eee3306a62"
+        },
+        {
+          "path": "attempt_05/sources/rcwt_review_v3.py",
+          "sha256": "c16a865da6f9e448d56f34f44700f7f1c48afead153694d6df56ae8699095033"
+        }
+      ],
+      "intervention": "Deterministic post-action storage plus pre-action selection of retained case facts and invalidation of old fields; current observation values are not imported into the memory view",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/3.3",
+      "protocol_sha256": "949624e0c1f59efd40f6dd10e0b3b06acc8b601559dc536342ef07a2ae4701df",
+      "run_path": "attempt_05",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    }
+  ],
+  "development_expenditure": {
+    "all_policies": {
+      "completion_tokens": 87819,
+      "episode_wall_seconds": 2079.5343047999195,
+      "inference_seconds": 2067.9563948001887,
+      "model_calls": 588,
+      "prompt_tokens": 578537,
+      "total_tokens": 666356
+    },
+    "api_cost_usd": 0,
+    "by_policy": {
+      "structured": {
+        "completion_tokens": 35642,
+        "episode_wall_seconds": 835.603701499902,
+        "inference_seconds": 827.7012539001007,
+        "model_calls": 224,
+        "prompt_tokens": 234715,
+        "total_tokens": 270357
+      },
+      "summary": {
+        "completion_tokens": 52177,
+        "episode_wall_seconds": 1243.9306033000175,
+        "inference_seconds": 1240.255140900088,
+        "model_calls": 364,
+        "prompt_tokens": 343822,
+        "total_tokens": 395999
+      }
+    },
+    "scope": "Costs only; repeated tasks are counted as actual recorded work, not independent evidence",
+    "total_monetary_cost_usd": null
+  },
+  "limitations": [
+    "Development-only index, not a confirmatory analysis, confidence interval, or generalization claim.",
+    "Each attempt is reported separately. Reused training episodes and adaptive revisions must not be pooled as independent quality evidence.",
+    "PASS/FAIL denotes the development screen, not held-out success. Failed attempts remain visible.",
+    "Only expenditure is summed across attempts; no pooled accuracy, unsafe-attempt rate, or unsafe-booking total is reported.",
+    "Episode wall time is the sum of recorded episode_seconds, including episode overhead; it is not elapsed calendar time across runs.",
+    "Token/call/inference totals include all completion calls recorded by the archived runner, including compression and draft/review stages when present.",
+    "API charges are zero under the local-only protocol; energy, hardware and total monetary cost are not measured.",
+    "Verification replays trusted archived project code and recorded local telemetry, not independent attestation of physical inference or token counts.",
+    "The index covers exactly the explicitly supplied run directories; it does not discover or silently omit additional attempts."
+  ],
+  "new_model_calls_for_this_report": 0,
+  "provenance": {
+    "archive_verifier_baseline_inputs": [
+      {
+        "path": "../agent_v2/protocol.json",
+        "sha256": "fba390f2cc15254cfb740f44b69972c2eb62b17a688ebcc97d2419728f3537d3"
+      },
+      {
+        "path": "../agent_v2/RESULTS.md",
+        "sha256": "0cb52e7ed1639c0e9af7d64e2b2f28c9c6e629786f04127dfd39dc759efde990"
+      },
+      {
+        "path": "../agent_v2/DIAGNOSIS.md",
+        "sha256": "04af4372d572774ed9fb8d278b2b8546139b8a577451e86749e150ca8efd592f"
+      }
+    ],
+    "archive_verifier_source": {
+      "path": "../../tools/verify_online_v3_archive.py",
+      "sha256": "69d7373f855cd4b1f881b072b4fe3aacd9031ee6ab624f251c4b8f538986e0d4"
+    },
+    "report_source": {
+      "path": "../../tools/report_online_development.py",
+      "sha256": "c643a829653fa198a03b9a682b5c620829a72c2e8b4624f584a96ec27925bd4f"
+    }
+  },
+  "schema": "rcwt-online-development-index/1",
+  "scope": "adaptive development accounting only; no pooled quality or confirmatory inference"
+}

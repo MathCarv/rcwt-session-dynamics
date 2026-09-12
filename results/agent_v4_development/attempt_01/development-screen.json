@@ -1,0 +1,18 @@
+{
+  "passed": false,
+  "totals": {
+    "summary": {
+      "successes": 31,
+      "steps": 64,
+      "unsafe_actions": 4,
+      "unsafe_booked_cents": 89182
+    },
+    "structured": {
+      "successes": 53,
+      "steps": 64,
+      "unsafe_actions": 5,
+      "unsafe_booked_cents": 131738
+    }
+  },
+  "scope": "development-only screening; not held-out evidence"
+}

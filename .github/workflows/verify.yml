@@ -14,11 +14,20 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
     env:
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
       PYTHONHASHSEED: "0"
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     steps:
       - name: Check out repository
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -34,8 +43,51 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install -r requirements.txt
 
+      - name: Cache deterministic tokenizer before offline tests
+        run: python -c "import tiktoken; tiktoken.get_encoding('cl100k_base')"
+
       - name: Rebuild and verify all released evidence
+        if: runner.os == 'Linux'
         run: make verify
+
+      - name: Run the complete suite offline on Windows
+        if: runner.os == 'Windows'
+        run: python -B tools/run_tests_offline.py
+
+      - name: Compile all Python entrypoints on Windows
+        if: runner.os == 'Windows'
+        run: python -m compileall -q src tools
+
+      - name: Replay local-agent evidence without inference
+        run: python -B src/rcwt_agent_run.py --stage verify --output-dir results/agent_v2
+
+      - name: Recompute the post-hoc diagnosis without inference
+        run: python tools/inspect_agent_traces.py --run-dir results/agent_v2 --output-dir results/agent_v2 --verify
+
+      - name: Verify all v3 development evidence without inference
+        run: |
+          python -B src/rcwt_online_v3.py --stage verify --output-dir results/agent_v3_development/attempt_05
+          python -B tools/report_online_development.py --runs results/agent_v3_development/attempt_01 results/agent_v3_development/attempt_02 results/agent_v3_development/attempt_03 results/agent_v3_development/attempt_04 results/agent_v3_development/attempt_05 --output-dir results/agent_v3_development --verify
+          python -B tools/inspect_online_v3.py --run-dir results/agent_v3_development/attempt_05 --output-dir results/agent_v3_development/attempt_05/diagnosis --verify
+
+      - name: Require preserved v4 development and interruption without inference
+        run: |
+          python -B tools/report_online_v4_development.py --runs results/agent_v4_development/attempt_01 results/agent_v4_development/attempt_02 --output-dir results/agent_v4_development --verify
+          python -B tools/verify_online_v4_diagnosis_archive.py --run-dir results/agent_v4_development/attempt_01 --diagnosis-dir results/agent_v4_development/attempt_01/diagnosis_verified
+          python -B tools/verify_online_v4_diagnosis_archive.py --run-dir results/agent_v4_development/attempt_02 --diagnosis-dir results/agent_v4_development/attempt_02/diagnosis
+          python -B tools/verify_online_v4_partial.py --run-dir results/agent_v4_interrupted
+
+      - name: Require the complete published R1 report without inference
+        run: python -B tools/verify_v4_replication_report.py --run-dir results/agent_v4_replication
+
+      - name: Replay the fixed first R1 episode without inference
+        run: python -B tools/replay_v4_replication.py --run-dir results/agent_v4_replication
+
+      - name: Verify the published R1 demonstration bytes
+        run: python -B tools/export_r1_demo.py --run-dir results/agent_v4_replication --output-dir results/agent_v4_replication_demo --verify
+
+      - name: Reconcile all R1 calls against the public redacted server log
+        run: python -B tools/audit_v4_replication_calls.py --run-dir results/agent_v4_replication --server-log results/agent_v4_replication_public_runtime/server.redacted.txt --output-dir results/agent_v4_replication_public_accounting --verify
 
       - name: Require byte-stable deterministic artifacts
         run: git diff --exit-code -- . ':(exclude)results/rcwt_curve_fits.json'

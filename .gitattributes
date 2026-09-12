@@ -9,3 +9,11 @@
 Makefile text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+
+# Historical and R1 evidence hashes bind original bytes, including line endings.
+# Never normalize these files while adding or checking out the public archive.
+/src/*.py -text
+/tools/*.py -text
+/docs/rcwt_*.md -text
+/docs/rcwt_agent_runtime.json -text
+/results/agent*/** -text

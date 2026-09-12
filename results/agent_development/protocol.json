@@ -1,0 +1,81 @@
+{
+  "schema": "rcwt-online-agent/1",
+  "created_at_utc": "2026-09-11T19:55:10.441777+00:00",
+  "seed": 20260911,
+  "counts": {
+    "train": 4,
+    "validation": 4,
+    "test": 16
+  },
+  "memory_budget": 256,
+  "model": "rcwt-local-qwen3-4b",
+  "source_sha256": {
+    "src/rcwt_agent_analysis.py": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994",
+    "src/rcwt_agent_env.py": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88",
+    "src/rcwt_agent_memory.py": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e",
+    "src/rcwt_agent_run.py": "36bf5ae13920f5fce0de2dc6ebb87f785b6606b2ad973fdf36120616564e16e1",
+    "src/rcwt_local_model.py": "7b436356a3dea63171828086dffee4a9f08a6e2ad30def9dc184b136a3a72e85"
+  },
+  "actor_instruction_sha256": "813ae3a7dbf7f994ee982169d455f9528780afc983dfb95f7443500eb9636a1c",
+  "action_schema_sha256": "a2abce28dfa311ce0d9da2ab76089ed111cfba4d1c1aea2489fbfe82e2de5a7c",
+  "primary_endpoint": "paired episode mean exact-action success: learned minus summary",
+  "improvement_gate": "95% paired episode bootstrap lower bound > 0 against summary",
+  "selection": "validation macro success desc, unsafe actions asc, output tokens asc, name asc",
+  "inference": {
+    "local_only": true,
+    "api_cost_usd": 0,
+    "temperature": 0,
+    "seed": 20260911,
+    "max_action_tokens": 192,
+    "enable_thinking": false,
+    "cache_prompt": false
+  },
+  "limitations": [
+    "new instances and combinations, not unseen task families",
+    "four synthetic families, one quantized local model, no weight updates",
+    "unknown energy, depreciation, and total monetary costs"
+  ],
+  "runtime": {
+    "inference_policy": "local_only_no_paid_api",
+    "runtime_repository": "https://github.com/ggml-org/llama.cpp",
+    "runtime_release": "b10809",
+    "runtime_commit": "5266f24da75dc449bd56cbed7addb9c8e4a6a73e",
+    "executable_sha256": "cb29f66008d4d73cce17cab2c2569ab318eb244b0b2ca2a15024b44d90dfcd3f",
+    "model_repository": "https://huggingface.co/Qwen/Qwen3-4B-GGUF",
+    "model_revision": "bc640142c66e1fdd12af0bd68f40445458f3869b",
+    "model_file": "Qwen3-4B-Q4_K_M.gguf",
+    "model_sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5",
+    "model_alias": "rcwt-local-qwen3-4b",
+    "context_tokens": 4096,
+    "gpu_layers": 99,
+    "parallel": 1,
+    "flash_attn": "on",
+    "cache_type_k": "q8_0",
+    "cache_type_v": "q8_0",
+    "batch_size": 512,
+    "ubatch_size": 128,
+    "threads": 6,
+    "cache_ram": 0,
+    "cache_prompt": false,
+    "reasoning_budget": 0,
+    "offline": true,
+    "host": "127.0.0.1",
+    "port": 18085,
+    "hardware": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB VRAM; 32 GiB system RAM; Windows",
+    "verification": "Official pinned downloads passed SHA256 checks; health, tokenizer roundtrip and schema-constrained local inference passed. This receipt records local measurements, not third-party attestation."
+  },
+  "corpora": {
+    "train": {
+      "public_sha256": "12b013cb16145c24f220fd0ef0497b58fd2f7682ef59e0fed1f9114abfe2343d",
+      "oracle_sha256": "ce8db096084bc2c8d0b9d37a0ec579a2c0bdfc42324b5846476e36bcf6738d53"
+    },
+    "validation": {
+      "public_sha256": "9323a585cb90565f486fccf05f498ce4c720ecd434e1cae5caa11748e44dcd35",
+      "oracle_sha256": "7c6c39fd77357050866a383d9acd45c3211a1dacabeecf5277cf00adf0101912"
+    },
+    "test": {
+      "public_sha256": "e97f6cd5c07be37f52f1b606211c97397915907486159d84e3e51e04dc7fd067",
+      "oracle_sha256": "cdd9aa8fb76f6601bec3331cccc042d3b84cfde4bd763fdbea737a9eb25645e3"
+    }
+  }
+}

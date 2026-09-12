@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "verified_steps": 64,
+  "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+  "limitations": [
+    "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+    "No causal attribution of every failure; no production or cross-model claim"
+  ]
+}

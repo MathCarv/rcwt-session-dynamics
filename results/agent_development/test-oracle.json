@@ -1,0 +1,1250 @@
+[
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-0",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-0-1",
+        "operation": "payout",
+        "amount_cents": 10742,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-0-2",
+        "operation": "payout",
+        "amount_cents": 16048,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-0-1",
+        "operation": "refund",
+        "amount_cents": 10742,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-0-0",
+        "operation": "refund",
+        "amount_cents": 99207,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-0-2",
+        "operation": "payout",
+        "amount_cents": 16048,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-0-1",
+        "operation": "refund",
+        "amount_cents": 10742,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-0-2",
+        "operation": "refund",
+        "amount_cents": 16048,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-0-1",
+        "operation": "refund",
+        "amount_cents": 10742,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-1",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-1-1",
+        "operation": "payout",
+        "amount_cents": 120945,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-1-3",
+        "operation": "payout",
+        "amount_cents": 105033,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-1-3",
+        "operation": "payout",
+        "amount_cents": 105033,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-1-1",
+        "operation": "refund",
+        "amount_cents": 120945,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-1-0",
+        "operation": "refund",
+        "amount_cents": 116913,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-1-0",
+        "operation": "refund",
+        "amount_cents": 116913,
+        "account_status": "active",
+        "ownership_match": false,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-1-0",
+        "operation": "refund",
+        "amount_cents": 116913,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-1-1",
+        "operation": "payout",
+        "amount_cents": 120945,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-2",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-2-3",
+        "operation": "payout",
+        "amount_cents": 37322,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-2-0",
+        "operation": "refund",
+        "amount_cents": 95347,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-2-2",
+        "operation": "payout",
+        "amount_cents": 58780,
+        "account_status": "blocked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-2-3",
+        "operation": "refund",
+        "amount_cents": 37322,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-2-0",
+        "operation": "payout",
+        "amount_cents": 95347,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-2-2",
+        "operation": "payout",
+        "amount_cents": 58780,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-2-1",
+        "operation": "payout",
+        "amount_cents": 83026,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-2-0",
+        "operation": "refund",
+        "amount_cents": 95347,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-3",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-3-0",
+        "operation": "payout",
+        "amount_cents": 65165,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-3-3",
+        "operation": "refund",
+        "amount_cents": 93286,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-3-0",
+        "operation": "payout",
+        "amount_cents": 65165,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "unknown",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-3-2",
+        "operation": "refund",
+        "amount_cents": 106292,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-3-3",
+        "operation": "refund",
+        "amount_cents": 93286,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-3-0",
+        "operation": "payout",
+        "amount_cents": 65165,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-3-3",
+        "operation": "refund",
+        "amount_cents": 93286,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "unknown"
+      },
+      {
+        "case_id": "inv-test-135282f-3-3",
+        "operation": "refund",
+        "amount_cents": 93286,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-4",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-4-2",
+        "operation": "payout",
+        "amount_cents": 44835,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-4-3",
+        "operation": "payout",
+        "amount_cents": 131974,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-4-2",
+        "operation": "refund",
+        "amount_cents": 44835,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-4-1",
+        "operation": "refund",
+        "amount_cents": 70846,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-4-3",
+        "operation": "payout",
+        "amount_cents": 131974,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-4-2",
+        "operation": "refund",
+        "amount_cents": 44835,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-4-3",
+        "operation": "refund",
+        "amount_cents": 131974,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-4-2",
+        "operation": "refund",
+        "amount_cents": 44835,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-5",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-5-3",
+        "operation": "payout",
+        "amount_cents": 31724,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-5-1",
+        "operation": "payout",
+        "amount_cents": 33510,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-5-1",
+        "operation": "payout",
+        "amount_cents": 33510,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-5-3",
+        "operation": "refund",
+        "amount_cents": 31724,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-5-2",
+        "operation": "refund",
+        "amount_cents": 49608,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-5-2",
+        "operation": "refund",
+        "amount_cents": 49608,
+        "account_status": "active",
+        "ownership_match": false,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-5-2",
+        "operation": "refund",
+        "amount_cents": 49608,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-5-3",
+        "operation": "payout",
+        "amount_cents": 31724,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-6",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-6-0",
+        "operation": "payout",
+        "amount_cents": 22981,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-6-2",
+        "operation": "refund",
+        "amount_cents": 116577,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-6-3",
+        "operation": "payout",
+        "amount_cents": 113788,
+        "account_status": "blocked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-6-0",
+        "operation": "refund",
+        "amount_cents": 22981,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-6-2",
+        "operation": "payout",
+        "amount_cents": 116577,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-6-3",
+        "operation": "payout",
+        "amount_cents": 113788,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-6-1",
+        "operation": "payout",
+        "amount_cents": 36353,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-6-2",
+        "operation": "refund",
+        "amount_cents": 116577,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-7",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-7-0",
+        "operation": "payout",
+        "amount_cents": 78993,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-7-2",
+        "operation": "refund",
+        "amount_cents": 106504,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-7-0",
+        "operation": "payout",
+        "amount_cents": 78993,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "unknown",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-7-1",
+        "operation": "refund",
+        "amount_cents": 81339,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-7-2",
+        "operation": "refund",
+        "amount_cents": 106504,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-7-0",
+        "operation": "payout",
+        "amount_cents": 78993,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-7-2",
+        "operation": "refund",
+        "amount_cents": 106504,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "unknown"
+      },
+      {
+        "case_id": "inv-test-135282f-7-2",
+        "operation": "refund",
+        "amount_cents": 106504,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-8",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-8-2",
+        "operation": "payout",
+        "amount_cents": 29144,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-8-3",
+        "operation": "payout",
+        "amount_cents": 62358,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-8-2",
+        "operation": "refund",
+        "amount_cents": 29144,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-8-1",
+        "operation": "refund",
+        "amount_cents": 18278,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-8-3",
+        "operation": "payout",
+        "amount_cents": 62358,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-8-2",
+        "operation": "refund",
+        "amount_cents": 29144,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-8-3",
+        "operation": "refund",
+        "amount_cents": 62358,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-8-2",
+        "operation": "refund",
+        "amount_cents": 29144,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-9",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-9-1",
+        "operation": "payout",
+        "amount_cents": 105127,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-9-3",
+        "operation": "payout",
+        "amount_cents": 69334,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-9-3",
+        "operation": "payout",
+        "amount_cents": 69334,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-9-1",
+        "operation": "refund",
+        "amount_cents": 105127,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-9-2",
+        "operation": "refund",
+        "amount_cents": 83312,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-9-2",
+        "operation": "refund",
+        "amount_cents": 83312,
+        "account_status": "active",
+        "ownership_match": false,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-9-2",
+        "operation": "refund",
+        "amount_cents": 83312,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-9-1",
+        "operation": "payout",
+        "amount_cents": 105127,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-a",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-a-2",
+        "operation": "payout",
+        "amount_cents": 103254,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-a-3",
+        "operation": "refund",
+        "amount_cents": 122804,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-a-1",
+        "operation": "payout",
+        "amount_cents": 33926,
+        "account_status": "blocked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-a-2",
+        "operation": "refund",
+        "amount_cents": 103254,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-a-3",
+        "operation": "payout",
+        "amount_cents": 122804,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-a-1",
+        "operation": "payout",
+        "amount_cents": 33926,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-a-0",
+        "operation": "payout",
+        "amount_cents": 31239,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-a-3",
+        "operation": "refund",
+        "amount_cents": 122804,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-b",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-b-0",
+        "operation": "payout",
+        "amount_cents": 120917,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-b-2",
+        "operation": "refund",
+        "amount_cents": 122666,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-b-0",
+        "operation": "payout",
+        "amount_cents": 120917,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "unknown",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-b-1",
+        "operation": "refund",
+        "amount_cents": 23823,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-b-2",
+        "operation": "refund",
+        "amount_cents": 122666,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-b-0",
+        "operation": "payout",
+        "amount_cents": 120917,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-b-2",
+        "operation": "refund",
+        "amount_cents": 122666,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "unknown"
+      },
+      {
+        "case_id": "inv-test-135282f-b-2",
+        "operation": "refund",
+        "amount_cents": 122666,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-c",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-c-2",
+        "operation": "payout",
+        "amount_cents": 146099,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-c-1",
+        "operation": "payout",
+        "amount_cents": 91298,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-c-2",
+        "operation": "refund",
+        "amount_cents": 146099,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-c-3",
+        "operation": "refund",
+        "amount_cents": 3205,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-c-1",
+        "operation": "payout",
+        "amount_cents": 91298,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-c-2",
+        "operation": "refund",
+        "amount_cents": 146099,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-c-1",
+        "operation": "refund",
+        "amount_cents": 91298,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-c-2",
+        "operation": "refund",
+        "amount_cents": 146099,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-d",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-d-3",
+        "operation": "payout",
+        "amount_cents": 102522,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-d-2",
+        "operation": "payout",
+        "amount_cents": 42197,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-d-2",
+        "operation": "payout",
+        "amount_cents": 42197,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-d-3",
+        "operation": "refund",
+        "amount_cents": 102522,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      },
+      {
+        "case_id": "inv-test-135282f-d-0",
+        "operation": "refund",
+        "amount_cents": 140835,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-d-0",
+        "operation": "refund",
+        "amount_cents": 140835,
+        "account_status": "active",
+        "ownership_match": false,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-d-0",
+        "operation": "refund",
+        "amount_cents": 140835,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "unknown"
+      },
+      {
+        "case_id": "inv-test-135282f-d-3",
+        "operation": "payout",
+        "amount_cents": 102522,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "rejected"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-e",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-e-2",
+        "operation": "payout",
+        "amount_cents": 73858,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-e-0",
+        "operation": "refund",
+        "amount_cents": 44794,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-e-1",
+        "operation": "payout",
+        "amount_cents": 113515,
+        "account_status": "blocked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-e-2",
+        "operation": "refund",
+        "amount_cents": 73858,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-e-0",
+        "operation": "payout",
+        "amount_cents": 44794,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-e-1",
+        "operation": "payout",
+        "amount_cents": 113515,
+        "account_status": "revoked",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-e-3",
+        "operation": "payout",
+        "amount_cents": 48191,
+        "account_status": null,
+        "ownership_match": null,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-e-0",
+        "operation": "refund",
+        "amount_cents": 44794,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-f",
+    "oracle_steps": [
+      {
+        "case_id": "inv-test-135282f-f-3",
+        "operation": "payout",
+        "amount_cents": 75132,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": null,
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-f-0",
+        "operation": "refund",
+        "amount_cents": 78186,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-f-3",
+        "operation": "payout",
+        "amount_cents": 75132,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "unknown",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-f-1",
+        "operation": "refund",
+        "amount_cents": 54907,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": "accepted"
+      },
+      {
+        "case_id": "inv-test-135282f-f-0",
+        "operation": "refund",
+        "amount_cents": 78186,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-f-3",
+        "operation": "payout",
+        "amount_cents": 75132,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "pending",
+        "return_status": null
+      },
+      {
+        "case_id": "inv-test-135282f-f-0",
+        "operation": "refund",
+        "amount_cents": 78186,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "unknown"
+      },
+      {
+        "case_id": "inv-test-135282f-f-0",
+        "operation": "refund",
+        "amount_cents": 78186,
+        "account_status": "active",
+        "ownership_match": true,
+        "payment_status": "cleared",
+        "return_status": "accepted"
+      }
+    ]
+  }
+]

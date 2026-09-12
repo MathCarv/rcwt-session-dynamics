@@ -1,0 +1,1275 @@
+{
+  "scope": "training-only exploratory configuration diagnosis; excluded from benchmark",
+  "training_episode_id": "rcwta-train-135282f-1",
+  "family": "evidence-chain",
+  "public_step": {
+    "step_index": 0,
+    "observations": [
+      {
+        "event_id": "obs-train-135282f-1-1",
+        "source": "tool",
+        "tool": "read_invoice",
+        "content": {
+          "invoice_id": "inv-train-135282f-1-3",
+          "order_id": "ord-train-135282f-1-3",
+          "merchant_id": "merchant-train-135282f-1-3",
+          "account_id": "acct-train-135282f-1-3",
+          "total_cents": 56788,
+          "currency": "BRL"
+        }
+      },
+      {
+        "event_id": "obs-train-135282f-1-2",
+        "source": "tool",
+        "tool": "read_account",
+        "content": {
+          "account_id": "acct-train-135282f-1-3",
+          "verification_status": "active",
+          "holder_merchant_id": "merchant-train-135282f-1-3"
+        }
+      },
+      {
+        "event_id": "obs-train-135282f-1-3",
+        "source": "message",
+        "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+      }
+    ],
+    "task": {
+      "request_id": "req-train-135282f-1-0",
+      "case_id": "inv-train-135282f-1-3",
+      "operation": "payout",
+      "instruction": "Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence."
+    }
+  },
+  "private_oracle_accessed": false,
+  "future_steps_accessed": false,
+  "server": {
+    "schema_version": 1,
+    "started_at_utc": "2026-09-11T19:32:41.1274128Z",
+    "pid": 18528,
+    "executable": "<LOCAL_RUNTIME>\\llama-b10809\\llama-server.exe",
+    "executable_sha256": "cb29f66008d4d73cce17cab2c2569ab318eb244b0b2ca2a15024b44d90dfcd3f",
+    "model": "<LOCAL_RUNTIME>\\models\\Qwen3-4B-Q4_K_M.gguf",
+    "model_alias": "rcwt-local-qwen3-4b",
+    "base_url": "http://127.0.0.1:18085",
+    "arguments": "-m \"<LOCAL_RUNTIME>\\models\\Qwen3-4B-Q4_K_M.gguf\" --alias rcwt-local-qwen3-4b --host 127.0.0.1 --port 18085 --ctx-size 4096 --parallel 1 --gpu-layers 99 --fit off --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --batch-size 512 --ubatch-size 128 --threads 6 --threads-http 4 --cache-ram 0 --no-cache-prompt --offline --no-webui --no-agent --no-ui-mcp-proxy --cors-origins localhost --no-cors-credentials --jinja --reasoning-budget 0 --log-colors off --log-timestamps --perf",
+    "log_stdout": "<LOCAL_RUNTIME>\\logs\\server.stdout.log",
+    "log_stderr": "<LOCAL_RUNTIME>\\logs\\server.stderr.log",
+    "gpu_layers_requested": 99,
+    "context_tokens": 4096,
+    "inference_policy": "local_only_no_paid_api"
+  },
+  "source_sha256": {
+    "rcwt_agent_env.py": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88",
+    "rcwt_agent_run.py": "f5c30b48c929d3137b5f29805955316cff6fe67cb67c7c15eff430de873b79d5",
+    "rcwt_local_model.py": "5bafcd58ed928ec1b4e9a70054291f7917df8a731cb9e2fbe860891ca24fe2e2"
+  },
+  "records": [
+    {
+      "experiment": "literal_no_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return exactly {\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}. /no_think"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}"
+            }
+          }
+        ],
+        "created": 1789157291,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 50,
+          "total_tokens": 82,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-lhDZ5H243r9pu3MSDkeDzIlkHZxocqLu",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 50,
+          "prompt_ms": 74.151,
+          "prompt_per_token_ms": 1.48302,
+          "prompt_per_second": 674.2997397203004,
+          "predicted_n": 32,
+          "predicted_ms": 493.246,
+          "predicted_per_token_ms": 15.91116129032258,
+          "predicted_per_second": 62.848963803051625
+        }
+      },
+      "wall_seconds": 0.5936887999996543,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "x",
+          "decision": "ask_info",
+          "amount_cents": 0,
+          "reason_code": "missing_evidence"
+        }
+      },
+      "literal_exact_match": true
+    },
+    {
+      "experiment": "literal_action_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return exactly {\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}. /no_think"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}"
+            }
+          }
+        ],
+        "created": 1789157291,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 50,
+          "total_tokens": 82,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-2tevagSwdRkJuzyW1l3QQWuCHc2yMaoe",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 50,
+          "prompt_ms": 39.458,
+          "prompt_per_token_ms": 0.78916,
+          "prompt_per_second": 1267.1701556084952,
+          "predicted_n": 32,
+          "predicted_ms": 450.013,
+          "predicted_per_token_ms": 14.516548387096773,
+          "predicted_per_second": 68.8868988229229
+        }
+      },
+      "wall_seconds": 0.5081221000000369,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "x",
+          "decision": "ask_info",
+          "amount_cents": 0,
+          "reason_code": "missing_evidence"
+        }
+      },
+      "literal_exact_match": true
+    },
+    {
+      "experiment": "literal_reversed_enums",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Return exactly {\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}. /no_think"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "ask_info",
+                        "refund",
+                        "hold",
+                        "approve"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "return_rejected",
+                        "funds_unsettled",
+                        "missing_evidence",
+                        "ownership_mismatch",
+                        "account_restricted",
+                        "already_completed",
+                        "eligible_refund",
+                        "authorized_payout"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}"
+            }
+          }
+        ],
+        "created": 1789157292,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 50,
+          "total_tokens": 82,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-Q39UWOCAFcZ95LP9Lpu1MbRYv06odrKN",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 50,
+          "prompt_ms": 40.343,
+          "prompt_per_token_ms": 0.80686,
+          "prompt_per_second": 1239.3723818258434,
+          "predicted_n": 32,
+          "predicted_ms": 473.629,
+          "predicted_per_token_ms": 15.278354838709678,
+          "predicted_per_second": 65.45207324720404
+        }
+      },
+      "wall_seconds": 0.5265624999883585,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "x",
+          "decision": "ask_info",
+          "amount_cents": 0,
+          "reason_code": "missing_evidence"
+        }
+      },
+      "literal_exact_match": true
+    },
+    {
+      "experiment": "train_actual_action_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys."
+          },
+          {
+            "role": "user",
+            "content": "{\"current_step\": {\"observations\": [{\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"currency\": \"BRL\", \"invoice_id\": \"inv-train-135282f-1-3\", \"merchant_id\": \"merchant-train-135282f-1-3\", \"order_id\": \"ord-train-135282f-1-3\", \"total_cents\": 56788}, \"event_id\": \"obs-train-135282f-1-1\", \"source\": \"tool\", \"tool\": \"read_invoice\"}, {\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"holder_merchant_id\": \"merchant-train-135282f-1-3\", \"verification_status\": \"active\"}, \"event_id\": \"obs-train-135282f-1-2\", \"source\": \"tool\", \"tool\": \"read_account\"}, {\"content\": \"Customer service asked for a receipt copy; no payment status update was supplied.\", \"event_id\": \"obs-train-135282f-1-3\", \"source\": \"message\"}], \"step_index\": 0, \"task\": {\"case_id\": \"inv-train-135282f-1-3\", \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\", \"operation\": \"payout\", \"request_id\": \"req-train-135282f-1-0\"}}, \"retained_memory\": \"\"}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\": \"record_decision\", \"arguments\": {\"case_id\": \"inv-train-135282f-1-3\", \"decision\": \"approve\", \"amount_cents\": 56788, \"reason_code\": \"authorized_payout\"}}"
+            }
+          }
+        ],
+        "created": 1789157293,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 59,
+          "prompt_tokens": 756,
+          "total_tokens": 815,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-6CaFttwOvjxJWQaLvBj4pzBNL01ajjdI",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 756,
+          "prompt_ms": 312.932,
+          "prompt_per_token_ms": 0.4139312169312169,
+          "prompt_per_second": 2415.860314700957,
+          "predicted_n": 59,
+          "predicted_ms": 1060.249,
+          "predicted_per_token_ms": 18.280155172413792,
+          "predicted_per_second": 54.70413082209934
+        }
+      },
+      "wall_seconds": 1.388491600024281,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "inv-train-135282f-1-3",
+          "decision": "approve",
+          "amount_cents": 56788,
+          "reason_code": "authorized_payout"
+        }
+      },
+      "literal_exact_match": null
+    },
+    {
+      "experiment": "train_format_in_prompt_no_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys.\nReturn exactly one JSON object conforming to this output schema: {\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"tool\",\"arguments\"],\"properties\":{\"tool\":{\"const\":\"record_decision\"},\"arguments\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"case_id\",\"decision\",\"amount_cents\",\"reason_code\"],\"properties\":{\"case_id\":{\"type\":\"string\",\"minLength\":1},\"decision\":{\"enum\":[\"approve\",\"hold\",\"refund\",\"ask_info\"]},\"amount_cents\":{\"type\":\"integer\",\"minimum\":0},\"reason_code\":{\"enum\":[\"authorized_payout\",\"eligible_refund\",\"already_completed\",\"account_restricted\",\"ownership_mismatch\",\"missing_evidence\",\"funds_unsettled\",\"return_rejected\"]}}}}}"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_step\": {\"observations\": [{\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"currency\": \"BRL\", \"invoice_id\": \"inv-train-135282f-1-3\", \"merchant_id\": \"merchant-train-135282f-1-3\", \"order_id\": \"ord-train-135282f-1-3\", \"total_cents\": 56788}, \"event_id\": \"obs-train-135282f-1-1\", \"source\": \"tool\", \"tool\": \"read_invoice\"}, {\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"holder_merchant_id\": \"merchant-train-135282f-1-3\", \"verification_status\": \"active\"}, \"event_id\": \"obs-train-135282f-1-2\", \"source\": \"tool\", \"tool\": \"read_account\"}, {\"content\": \"Customer service asked for a receipt copy; no payment status update was supplied.\", \"event_id\": \"obs-train-135282f-1-3\", \"source\": \"message\"}], \"step_index\": 0, \"task\": {\"case_id\": \"inv-train-135282f-1-3\", \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\", \"operation\": \"payout\", \"request_id\": \"req-train-135282f-1-0\"}}, \"retained_memory\": \"\"}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\": \"record_decision\", \"arguments\": {\"case_id\": \"inv-train-135282f-1-3\", \"decision\": \"approve\", \"amount_cents\": 56788, \"reason_code\": \"authorized_payout\"}}}"
+            }
+          }
+        ],
+        "created": 1789157294,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 60,
+          "prompt_tokens": 898,
+          "total_tokens": 958,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-qNzOY7ugz6fWEA1WBKrOUtawuMB5fC6H",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 898,
+          "prompt_ms": 415.805,
+          "prompt_per_token_ms": 0.4630345211581292,
+          "prompt_per_second": 2159.666189680259,
+          "predicted_n": 60,
+          "predicted_ms": 835.318,
+          "predicted_per_token_ms": 14.15793220338983,
+          "predicted_per_second": 70.63178334478606
+        }
+      },
+      "wall_seconds": 1.2789124000119045,
+      "parsed": null,
+      "literal_exact_match": null
+    },
+    {
+      "experiment": "train_format_in_prompt_action_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys.\nReturn exactly one JSON object conforming to this output schema: {\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"tool\",\"arguments\"],\"properties\":{\"tool\":{\"const\":\"record_decision\"},\"arguments\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"case_id\",\"decision\",\"amount_cents\",\"reason_code\"],\"properties\":{\"case_id\":{\"type\":\"string\",\"minLength\":1},\"decision\":{\"enum\":[\"approve\",\"hold\",\"refund\",\"ask_info\"]},\"amount_cents\":{\"type\":\"integer\",\"minimum\":0},\"reason_code\":{\"enum\":[\"authorized_payout\",\"eligible_refund\",\"already_completed\",\"account_restricted\",\"ownership_mismatch\",\"missing_evidence\",\"funds_unsettled\",\"return_rejected\"]}}}}}"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_step\": {\"observations\": [{\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"currency\": \"BRL\", \"invoice_id\": \"inv-train-135282f-1-3\", \"merchant_id\": \"merchant-train-135282f-1-3\", \"order_id\": \"ord-train-135282f-1-3\", \"total_cents\": 56788}, \"event_id\": \"obs-train-135282f-1-1\", \"source\": \"tool\", \"tool\": \"read_invoice\"}, {\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"holder_merchant_id\": \"merchant-train-135282f-1-3\", \"verification_status\": \"active\"}, \"event_id\": \"obs-train-135282f-1-2\", \"source\": \"tool\", \"tool\": \"read_account\"}, {\"content\": \"Customer service asked for a receipt copy; no payment status update was supplied.\", \"event_id\": \"obs-train-135282f-1-3\", \"source\": \"message\"}], \"step_index\": 0, \"task\": {\"case_id\": \"inv-train-135282f-1-3\", \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\", \"operation\": \"payout\", \"request_id\": \"req-train-135282f-1-0\"}}, \"retained_memory\": \"\"}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\": \"record_decision\", \"arguments\": {\"case_id\": \"inv-train-135282f-1-3\", \"decision\": \"approve\", \"amount_cents\": 56788, \"reason_code\": \"authorized_payout\"}}"
+            }
+          }
+        ],
+        "created": 1789157296,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 59,
+          "prompt_tokens": 898,
+          "total_tokens": 957,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-t0xoOWoTGhZhksUaY8BEupZc5iusTfat",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 898,
+          "prompt_ms": 380.688,
+          "prompt_per_token_ms": 0.42392873051224944,
+          "prompt_per_second": 2358.8870676249317,
+          "predicted_n": 59,
+          "predicted_ms": 903.903,
+          "predicted_per_token_ms": 15.58453448275862,
+          "predicted_per_second": 64.16617712298776
+        }
+      },
+      "wall_seconds": 1.3023651000112295,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "inv-train-135282f-1-3",
+          "decision": "approve",
+          "amount_cents": 56788,
+          "reason_code": "authorized_payout"
+        }
+      },
+      "literal_exact_match": null
+    },
+    {
+      "experiment": "simple_missing_action_schema",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "A fictional payout can be approved only when its payment status is known and cleared. If payment status is missing, use decision ask_info, amount_cents 0, reason_code missing_evidence. Invoice x has total_cents 2500. Its account is verified and the holder matches its merchant. There is no payment status record. Return record_decision for case_id x. Output shape: {\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}. /no_think"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"x\",\"decision\":\"ask_info\",\"amount_cents\":0,\"reason_code\":\"missing_evidence\"}}"
+            }
+          }
+        ],
+        "created": 1789157296,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 128,
+          "total_tokens": 160,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-z2rwzqfAR1ZwZVgA6wcVGx1QTBTIg6q7",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 128,
+          "prompt_ms": 52.986,
+          "prompt_per_token_ms": 0.413953125,
+          "prompt_per_second": 2415.7324576303176,
+          "predicted_n": 32,
+          "predicted_ms": 501.148,
+          "predicted_per_token_ms": 16.166064516129033,
+          "predicted_per_second": 61.85797409148595
+        }
+      },
+      "wall_seconds": 0.569133300014073,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "x",
+          "decision": "ask_info",
+          "amount_cents": 0,
+          "reason_code": "missing_evidence"
+        }
+      },
+      "literal_exact_match": null
+    },
+    {
+      "experiment": "train_actual_presence_zero",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys."
+          },
+          {
+            "role": "user",
+            "content": "{\"current_step\": {\"observations\": [{\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"currency\": \"BRL\", \"invoice_id\": \"inv-train-135282f-1-3\", \"merchant_id\": \"merchant-train-135282f-1-3\", \"order_id\": \"ord-train-135282f-1-3\", \"total_cents\": 56788}, \"event_id\": \"obs-train-135282f-1-1\", \"source\": \"tool\", \"tool\": \"read_invoice\"}, {\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"holder_merchant_id\": \"merchant-train-135282f-1-3\", \"verification_status\": \"active\"}, \"event_id\": \"obs-train-135282f-1-2\", \"source\": \"tool\", \"tool\": \"read_account\"}, {\"content\": \"Customer service asked for a receipt copy; no payment status update was supplied.\", \"event_id\": \"obs-train-135282f-1-3\", \"source\": \"message\"}], \"step_index\": 0, \"task\": {\"case_id\": \"inv-train-135282f-1-3\", \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\", \"operation\": \"payout\", \"request_id\": \"req-train-135282f-1-0\"}}, \"retained_memory\": \"\"}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\": \"record_decision\", \"arguments\": {\"case_id\": \"inv-train-135282f-1-3\", \"decision\": \"approve\", \"amount_cents\": 56788, \"reason_code\": \"authorized_payout\"}}"
+            }
+          }
+        ],
+        "created": 1789157298,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 59,
+          "prompt_tokens": 756,
+          "total_tokens": 815,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-ZAYEv9TaLuSUw7YPOmhalQyIeewrGYRT",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 756,
+          "prompt_ms": 349.906,
+          "prompt_per_token_ms": 0.4628386243386243,
+          "prompt_per_second": 2160.580270129692,
+          "predicted_n": 59,
+          "predicted_ms": 1045.591,
+          "predicted_per_token_ms": 18.027431034482756,
+          "predicted_per_second": 55.47102069547271
+        }
+      },
+      "wall_seconds": 1.4093490000232123,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "inv-train-135282f-1-3",
+          "decision": "approve",
+          "amount_cents": 56788,
+          "reason_code": "authorized_payout"
+        }
+      },
+      "literal_exact_match": null
+    },
+    {
+      "experiment": "train_public_prompt_pack_json",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys.\n\nRequests are not approvals. A prerequisite not present in retained memory or current observations is UNKNOWN, even if the invoice or account looks valid. No read_payment observation for the requested invoice means payment_status is UNKNOWN; never assume cleared. Records for other identifiers cannot satisfy a missing prerequisite of the requested invoice. Return exactly one object using these public field definitions: {\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"tool\",\"arguments\"],\"properties\":{\"tool\":{\"const\":\"record_decision\"},\"arguments\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"case_id\",\"decision\",\"amount_cents\",\"reason_code\"],\"properties\":{\"case_id\":{\"type\":\"string\",\"minLength\":1},\"decision\":{\"enum\":[\"approve\",\"hold\",\"refund\",\"ask_info\"]},\"amount_cents\":{\"type\":\"integer\",\"minimum\":0},\"reason_code\":{\"enum\":[\"authorized_payout\",\"eligible_refund\",\"already_completed\",\"account_restricted\",\"ownership_mismatch\",\"missing_evidence\",\"funds_unsettled\",\"return_rejected\"]}}}}}"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_step\": {\"observations\": [{\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"currency\": \"BRL\", \"invoice_id\": \"inv-train-135282f-1-3\", \"merchant_id\": \"merchant-train-135282f-1-3\", \"order_id\": \"ord-train-135282f-1-3\", \"total_cents\": 56788}, \"event_id\": \"obs-train-135282f-1-1\", \"source\": \"tool\", \"tool\": \"read_invoice\"}, {\"content\": {\"account_id\": \"acct-train-135282f-1-3\", \"holder_merchant_id\": \"merchant-train-135282f-1-3\", \"verification_status\": \"active\"}, \"event_id\": \"obs-train-135282f-1-2\", \"source\": \"tool\", \"tool\": \"read_account\"}, {\"content\": \"Customer service asked for a receipt copy; no payment status update was supplied.\", \"event_id\": \"obs-train-135282f-1-3\", \"source\": \"message\"}], \"step_index\": 0, \"task\": {\"case_id\": \"inv-train-135282f-1-3\", \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\", \"operation\": \"payout\", \"request_id\": \"req-train-135282f-1-0\"}}, \"retained_memory\": \"\"}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\": \"record_decision\", \"arguments\": {\"case_id\": \"inv-train-135282f-1-3\", \"decision\": \"approve\", \"amount_cents\": 56788, \"reason_code\": \"authorized_payout\"}}"
+            }
+          }
+        ],
+        "created": 1789157474,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 59,
+          "prompt_tokens": 955,
+          "total_tokens": 1014,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-DCKBoaxOUvEwZMjRAzI8QRKTQXvVjFGI",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 955,
+          "prompt_ms": 966.388,
+          "prompt_per_token_ms": 1.011924607329843,
+          "prompt_per_second": 988.2159132770688,
+          "predicted_n": 59,
+          "predicted_ms": 1296.741,
+          "predicted_per_token_ms": 22.35760344827586,
+          "predicted_per_second": 44.7275130500231
+        }
+      },
+      "wall_seconds": 2.3619223999849055,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "inv-train-135282f-1-3",
+          "decision": "approve",
+          "amount_cents": 56788,
+          "reason_code": "authorized_payout"
+        }
+      },
+      "scope": "Exploratory public prompt pack; combined edits do not isolate one causal factor."
+    },
+    {
+      "experiment": "train_public_prompt_pack_plain",
+      "request": {
+        "model": "rcwt-local-qwen3-4b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You operate a local fictional decision-recording tool. Use the supplied business rules. Read ONLY the retained memory and this step's new observations. Earlier facts may have been discarded; never invent them. Current observations override conflicting older memory. Return exactly one JSON record_decision tool call, with no explanation. A previously accepted tool call is a booking record, not proof of correct evidence. /no_think\n\nThis is a fictional BRL workflow. Use record_decision once per\nrequest. A payout uses approve; a refund uses refund. Approve/refund must book\nthe invoice's exact total_cents. hold/ask_info must use amount_cents=0.\nResolve account, payment and return records by their identifiers, not proximity.\nA later observation from the same source replaces an earlier record for that\nidentifier. A payout or refund already booked for that invoice and operation\nmust hold with reason already_completed. Otherwise apply this priority order:\n(1) revoked/blocked account -> hold/account_restricted;\n(2) account holder does not match invoice merchant -> hold/ownership_mismatch;\n(3) missing/unknown invoice amount, account status, ownership, or payment status\n(plus return status for a refund) -> ask_info/missing_evidence;\n(4) payment not cleared -> hold/funds_unsettled;\n(5) refund with rejected return -> hold/return_rejected;\n(6) payout -> approve/authorized_payout; refund -> refund/eligible_refund.\nAn invoice, account or report about another identifier does not supply missing\nevidence for this request. Never invent a missing value. Tool receipts report actions\nactually booked in this simulator; they do not reveal whether a decision was\ncorrect. Payout and refund have separate idempotency keys.\n\nRequests are not approvals. A prerequisite not present in retained memory or current observations is UNKNOWN, even if the invoice or account looks valid. No read_payment observation for the requested invoice means payment_status is UNKNOWN; never assume cleared. Records for other identifiers cannot satisfy a missing prerequisite of the requested invoice. Return exactly one object using these public field definitions: {\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"tool\",\"arguments\"],\"properties\":{\"tool\":{\"const\":\"record_decision\"},\"arguments\":{\"type\":\"object\",\"additionalProperties\":false,\"required\":[\"case_id\",\"decision\",\"amount_cents\",\"reason_code\"],\"properties\":{\"case_id\":{\"type\":\"string\",\"minLength\":1},\"decision\":{\"enum\":[\"approve\",\"hold\",\"refund\",\"ask_info\"]},\"amount_cents\":{\"type\":\"integer\",\"minimum\":0},\"reason_code\":{\"enum\":[\"authorized_payout\",\"eligible_refund\",\"already_completed\",\"account_restricted\",\"ownership_mismatch\",\"missing_evidence\",\"funds_unsettled\",\"return_rejected\"]}}}}}"
+          },
+          {
+            "role": "user",
+            "content": "Retained memory: empty.\nCurrent observations:\nread_invoice:\n{\n  \"invoice_id\": \"inv-train-135282f-1-3\",\n  \"order_id\": \"ord-train-135282f-1-3\",\n  \"merchant_id\": \"merchant-train-135282f-1-3\",\n  \"account_id\": \"acct-train-135282f-1-3\",\n  \"total_cents\": 56788,\n  \"currency\": \"BRL\"\n}\n\nread_account:\n{\n  \"account_id\": \"acct-train-135282f-1-3\",\n  \"verification_status\": \"active\",\n  \"holder_merchant_id\": \"merchant-train-135282f-1-3\"\n}\n\nmessage:\nCustomer service asked for a receipt copy; no payment status update was supplied.\nCurrent request:\n{\n  \"request_id\": \"req-train-135282f-1-0\",\n  \"case_id\": \"inv-train-135282f-1-3\",\n  \"operation\": \"payout\",\n  \"instruction\": \"Record the payout decision for invoice inv-train-135282f-1-3 using the latest known evidence.\"\n}"
+          }
+        ],
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "presence_penalty": 1.5,
+        "seed": 20260911,
+        "stream": false,
+        "cache_prompt": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "diagnostic_action",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tool",
+                "arguments"
+              ],
+              "properties": {
+                "tool": {
+                  "const": "record_decision"
+                },
+                "arguments": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "case_id",
+                    "decision",
+                    "amount_cents",
+                    "reason_code"
+                  ],
+                  "properties": {
+                    "case_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "decision": {
+                      "enum": [
+                        "approve",
+                        "hold",
+                        "refund",
+                        "ask_info"
+                      ]
+                    },
+                    "amount_cents": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "reason_code": {
+                      "enum": [
+                        "authorized_payout",
+                        "eligible_refund",
+                        "already_completed",
+                        "account_restricted",
+                        "ownership_mismatch",
+                        "missing_evidence",
+                        "funds_unsettled",
+                        "return_rejected"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"tool\":\"record_decision\",\"arguments\":{\"case_id\":\"inv-train-135282f-1-3\",\"decision\":\"approve\",\"amount_cents\":56788,\"reason_code\":\"authorized_payout\"}}"
+            }
+          }
+        ],
+        "created": 1789157475,
+        "model": "rcwt-local-qwen3-4b",
+        "system_fingerprint": "b10809-5266f24da",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 49,
+          "prompt_tokens": 863,
+          "total_tokens": 912,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-vfo8t9Hf0aVckzgUVojGrq4ZTz56Ev0t",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 863,
+          "prompt_ms": 596.553,
+          "prompt_per_token_ms": 0.6912549246813442,
+          "prompt_per_second": 1446.6443048647816,
+          "predicted_n": 49,
+          "predicted_ms": 955.841,
+          "predicted_per_token_ms": 19.913354166666668,
+          "predicted_per_second": 50.21755710416272
+        }
+      },
+      "wall_seconds": 1.5853370999975596,
+      "parsed": {
+        "tool": "record_decision",
+        "arguments": {
+          "case_id": "inv-train-135282f-1-3",
+          "decision": "approve",
+          "amount_cents": 56788,
+          "reason_code": "authorized_payout"
+        }
+      },
+      "scope": "Exploratory public prompt pack; combined edits do not isolate one causal factor."
+    }
+  ]
+}

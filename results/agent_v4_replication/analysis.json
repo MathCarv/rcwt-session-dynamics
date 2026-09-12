@@ -1,0 +1,784 @@
+{
+  "schema_version": "rcwt-online-analysis/4",
+  "split": "test",
+  "input_sha256": "c343b8bd6533a180a93879ca0d0a6f99ba98ef5d91e88bc29d1cfe4fb1e1bd92",
+  "n_episodes": 32,
+  "expected_count": 32,
+  "steps_per_episode": 8,
+  "families": [
+    "evidence-chain",
+    "insufficient-evidence",
+    "topic-return",
+    "updated-state"
+  ],
+  "family_counts": {
+    "evidence-chain": 8,
+    "insufficient-evidence": 8,
+    "topic-return": 8,
+    "updated-state": 8
+  },
+  "policies": {
+    "summary": {
+      "n_episodes": 32,
+      "steps": 256,
+      "successes": 152,
+      "macro_episode_success_rate": 0.59375,
+      "micro_step_success_rate": 0.59375,
+      "full_success_episodes": 2,
+      "full_success_rate": 0.0625,
+      "failure_counts": {
+        "unnecessary_deferral": 67,
+        "unsafe_execution": 11,
+        "wrong_decision": 22,
+        "wrong_reason": 4
+      },
+      "valid_actions": 256,
+      "valid_action_rate": 1.0,
+      "unsafe_actions": 11,
+      "unsafe_action_rate": 0.04296875,
+      "unsafe_booked_cents": 743614,
+      "prompt_tokens": 1033346,
+      "completion_tokens": 132106,
+      "total_tokens": 1165452,
+      "prompt_tokens_per_step": 4036.5078125,
+      "completion_tokens_per_step": 516.0390625,
+      "tokens_per_step": 4552.546875,
+      "model_calls": 736,
+      "model_calls_per_step": 2.875,
+      "decision_latency_seconds": {
+        "mean": 8.532055653514135,
+        "p50": 8.442937799991341,
+        "p95": 12.520950199992512,
+        "total": 2184.2062472996186
+      },
+      "step_latency_seconds": {
+        "mean": 10.577615242187676,
+        "p50": 10.459859299997333,
+        "p95": 14.935898950010596,
+        "total": 2707.869502000045
+      },
+      "episode_latency_seconds": {
+        "mean": 84.65925974687525,
+        "p50": 82.74920049999491,
+        "p95": 111.31569630500744,
+        "total": 2709.096311900008
+      },
+      "memory_truncations": 8,
+      "memory_truncation_rate": 0.03125,
+      "api_cost_usd": 0.0,
+      "total_monetary_cost_usd": null,
+      "by_family": {
+        "evidence-chain": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 32,
+          "macro_episode_success_rate": 0.5,
+          "micro_step_success_rate": 0.5,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 13,
+            "unsafe_execution": 9,
+            "wrong_decision": 10
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 9,
+          "unsafe_action_rate": 0.140625,
+          "unsafe_booked_cents": 463514,
+          "prompt_tokens": 259834,
+          "completion_tokens": 36181,
+          "total_tokens": 296015,
+          "prompt_tokens_per_step": 4059.90625,
+          "completion_tokens_per_step": 565.328125,
+          "tokens_per_step": 4625.234375,
+          "model_calls": 184,
+          "model_calls_per_step": 2.875,
+          "decision_latency_seconds": {
+            "mean": 8.826659723437388,
+            "p50": 8.755394850013545,
+            "p95": 12.66979972001427,
+            "total": 564.9062222999928
+          },
+          "step_latency_seconds": {
+            "mean": 11.125522449999607,
+            "p50": 10.832508650011732,
+            "p95": 16.678203720015876,
+            "total": 712.0334367999749
+          },
+          "episode_latency_seconds": {
+            "mean": 89.03654762500082,
+            "p50": 81.03780709998682,
+            "p95": 115.11489884002076,
+            "total": 712.2923810000066
+          },
+          "memory_truncations": 5,
+          "memory_truncation_rate": 0.078125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "insufficient-evidence": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 51,
+          "macro_episode_success_rate": 0.796875,
+          "micro_step_success_rate": 0.796875,
+          "full_success_episodes": 2,
+          "full_success_rate": 0.25,
+          "failure_counts": {
+            "unnecessary_deferral": 9,
+            "unsafe_execution": 1,
+            "wrong_decision": 3
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.015625,
+          "unsafe_booked_cents": 142330,
+          "prompt_tokens": 254398,
+          "completion_tokens": 31575,
+          "total_tokens": 285973,
+          "prompt_tokens_per_step": 3974.96875,
+          "completion_tokens_per_step": 493.359375,
+          "tokens_per_step": 4468.328125,
+          "model_calls": 184,
+          "model_calls_per_step": 2.875,
+          "decision_latency_seconds": {
+            "mean": 8.583676423435918,
+            "p50": 8.605842600009055,
+            "p95": 12.517191935016307,
+            "total": 549.3552910998987
+          },
+          "step_latency_seconds": {
+            "mean": 10.526498534377424,
+            "p50": 10.319494200011832,
+            "p95": 14.615041990007738,
+            "total": 673.6959062001552
+          },
+          "episode_latency_seconds": {
+            "mean": 84.25050244999511,
+            "p50": 83.87108744999568,
+            "p95": 101.1790311849938,
+            "total": 674.0040195999609
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "topic-return": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 31,
+          "macro_episode_success_rate": 0.484375,
+          "micro_step_success_rate": 0.484375,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 19,
+            "unsafe_execution": 1,
+            "wrong_decision": 9,
+            "wrong_reason": 4
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.015625,
+          "unsafe_booked_cents": 137770,
+          "prompt_tokens": 258554,
+          "completion_tokens": 32526,
+          "total_tokens": 291080,
+          "prompt_tokens_per_step": 4039.90625,
+          "completion_tokens_per_step": 508.21875,
+          "tokens_per_step": 4548.125,
+          "model_calls": 184,
+          "model_calls_per_step": 2.875,
+          "decision_latency_seconds": {
+            "mean": 8.417693257809333,
+            "p50": 8.308829700006754,
+            "p95": 11.52130901498167,
+            "total": 538.7323684997973
+          },
+          "step_latency_seconds": {
+            "mean": 10.36914638437429,
+            "p50": 10.33372204999614,
+            "p95": 13.899766864992852,
+            "total": 663.6253685999545
+          },
+          "episode_latency_seconds": {
+            "mean": 82.98557562499991,
+            "p50": 85.97315764999075,
+            "p95": 96.21164919499424,
+            "total": 663.8846049999993
+          },
+          "memory_truncations": 2,
+          "memory_truncation_rate": 0.03125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "updated-state": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 38,
+          "macro_episode_success_rate": 0.59375,
+          "micro_step_success_rate": 0.59375,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 26
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 0,
+          "unsafe_action_rate": 0.0,
+          "unsafe_booked_cents": 0,
+          "prompt_tokens": 260560,
+          "completion_tokens": 31824,
+          "total_tokens": 292384,
+          "prompt_tokens_per_step": 4071.25,
+          "completion_tokens_per_step": 497.25,
+          "tokens_per_step": 4568.5,
+          "model_calls": 184,
+          "model_calls_per_step": 2.875,
+          "decision_latency_seconds": {
+            "mean": 8.300193209373901,
+            "p50": 8.306171549978899,
+            "p95": 11.47368395497469,
+            "total": 531.2123653999297
+          },
+          "step_latency_seconds": {
+            "mean": 10.289293599999382,
+            "p50": 10.185631749991444,
+            "p95": 14.248734064999732,
+            "total": 658.5147903999605
+          },
+          "episode_latency_seconds": {
+            "mean": 82.36441328750516,
+            "p50": 83.37774055000045,
+            "p95": 96.58248294000222,
+            "total": 658.9153063000413
+          },
+          "memory_truncations": 1,
+          "memory_truncation_rate": 0.015625,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        }
+      }
+    },
+    "structured": {
+      "n_episodes": 32,
+      "steps": 256,
+      "successes": 238,
+      "macro_episode_success_rate": 0.9296875,
+      "micro_step_success_rate": 0.9296875,
+      "full_success_episodes": 19,
+      "full_success_rate": 0.59375,
+      "failure_counts": {
+        "unnecessary_deferral": 7,
+        "unsafe_execution": 4,
+        "wrong_decision": 4,
+        "wrong_reason": 3
+      },
+      "valid_actions": 256,
+      "valid_action_rate": 1.0,
+      "unsafe_actions": 4,
+      "unsafe_action_rate": 0.015625,
+      "unsafe_booked_cents": 297683,
+      "prompt_tokens": 873122,
+      "completion_tokens": 98952,
+      "total_tokens": 972074,
+      "prompt_tokens_per_step": 3410.6328125,
+      "completion_tokens_per_step": 386.53125,
+      "tokens_per_step": 3797.1640625,
+      "model_calls": 512,
+      "model_calls_per_step": 2.0,
+      "decision_latency_seconds": {
+        "mean": 8.027018518750651,
+        "p50": 7.6837283999921056,
+        "p95": 11.463962699985132,
+        "total": 2054.9167408001667
+      },
+      "step_latency_seconds": {
+        "mean": 8.081246053515429,
+        "p50": 7.723202749999473,
+        "p95": 11.532084974991449,
+        "total": 2068.7989896999497
+      },
+      "episode_latency_seconds": {
+        "mean": 64.7410885593763,
+        "p50": 62.42758529999992,
+        "p95": 82.53624469000788,
+        "total": 2071.7148339000414
+      },
+      "memory_truncations": 10,
+      "memory_truncation_rate": 0.0390625,
+      "api_cost_usd": 0.0,
+      "total_monetary_cost_usd": null,
+      "by_family": {
+        "evidence-chain": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 62,
+          "macro_episode_success_rate": 0.96875,
+          "micro_step_success_rate": 0.96875,
+          "full_success_episodes": 6,
+          "full_success_rate": 0.75,
+          "failure_counts": {
+            "unnecessary_deferral": 1,
+            "unsafe_execution": 1
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.015625,
+          "unsafe_booked_cents": 136988,
+          "prompt_tokens": 215320,
+          "completion_tokens": 24304,
+          "total_tokens": 239624,
+          "prompt_tokens_per_step": 3364.375,
+          "completion_tokens_per_step": 379.75,
+          "tokens_per_step": 3744.125,
+          "model_calls": 128,
+          "model_calls_per_step": 2.0,
+          "decision_latency_seconds": {
+            "mean": 7.658113557813522,
+            "p50": 7.125263200010522,
+            "p95": 11.37790140999277,
+            "total": 490.1192677000654
+          },
+          "step_latency_seconds": {
+            "mean": 7.709031879685881,
+            "p50": 7.1713159999926575,
+            "p95": 11.46782709000108,
+            "total": 493.3780402998964
+          },
+          "episode_latency_seconds": {
+            "mean": 61.90152838750873,
+            "p50": 55.15207910000754,
+            "p95": 79.6896657750025,
+            "total": 495.21222710006987
+          },
+          "memory_truncations": 1,
+          "memory_truncation_rate": 0.015625,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "insufficient-evidence": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 62,
+          "macro_episode_success_rate": 0.96875,
+          "micro_step_success_rate": 0.96875,
+          "full_success_episodes": 6,
+          "full_success_rate": 0.75,
+          "failure_counts": {
+            "unsafe_execution": 2
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 2,
+          "unsafe_action_rate": 0.03125,
+          "unsafe_booked_cents": 160695,
+          "prompt_tokens": 218869,
+          "completion_tokens": 25726,
+          "total_tokens": 244595,
+          "prompt_tokens_per_step": 3419.828125,
+          "completion_tokens_per_step": 401.96875,
+          "tokens_per_step": 3821.796875,
+          "model_calls": 128,
+          "model_calls_per_step": 2.0,
+          "decision_latency_seconds": {
+            "mean": 8.434747795310614,
+            "p50": 8.062767549985438,
+            "p95": 11.406411269980888,
+            "total": 539.8238588998793
+          },
+          "step_latency_seconds": {
+            "mean": 8.488465793750947,
+            "p50": 8.104932100017322,
+            "p95": 11.460134149985967,
+            "total": 543.2618108000606
+          },
+          "episode_latency_seconds": {
+            "mean": 67.96070552499805,
+            "p50": 68.52464874999714,
+            "p95": 82.20023686000931,
+            "total": 543.6856441999844
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "topic-return": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 52,
+          "macro_episode_success_rate": 0.8125,
+          "micro_step_success_rate": 0.8125,
+          "full_success_episodes": 1,
+          "full_success_rate": 0.125,
+          "failure_counts": {
+            "unnecessary_deferral": 5,
+            "wrong_decision": 4,
+            "wrong_reason": 3
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 0,
+          "unsafe_action_rate": 0.0,
+          "unsafe_booked_cents": 0,
+          "prompt_tokens": 217813,
+          "completion_tokens": 24321,
+          "total_tokens": 242134,
+          "prompt_tokens_per_step": 3403.328125,
+          "completion_tokens_per_step": 380.015625,
+          "tokens_per_step": 3783.34375,
+          "model_calls": 128,
+          "model_calls_per_step": 2.0,
+          "decision_latency_seconds": {
+            "mean": 7.968636660938046,
+            "p50": 7.788074750002124,
+            "p95": 11.467520309989048,
+            "total": 509.9927463000349
+          },
+          "step_latency_seconds": {
+            "mean": 8.027003873437934,
+            "p50": 7.848236350007937,
+            "p95": 11.496865464997244,
+            "total": 513.7282479000278
+          },
+          "episode_latency_seconds": {
+            "mean": 64.26623833749909,
+            "p50": 64.47882905000006,
+            "p95": 78.07667502499243,
+            "total": 514.1299066999927
+          },
+          "memory_truncations": 8,
+          "memory_truncation_rate": 0.125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "updated-state": {
+          "n_episodes": 8,
+          "steps": 64,
+          "successes": 62,
+          "macro_episode_success_rate": 0.96875,
+          "micro_step_success_rate": 0.96875,
+          "full_success_episodes": 6,
+          "full_success_rate": 0.75,
+          "failure_counts": {
+            "unnecessary_deferral": 1,
+            "unsafe_execution": 1
+          },
+          "valid_actions": 64,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.015625,
+          "unsafe_booked_cents": 0,
+          "prompt_tokens": 221120,
+          "completion_tokens": 24601,
+          "total_tokens": 245721,
+          "prompt_tokens_per_step": 3455.0,
+          "completion_tokens_per_step": 384.390625,
+          "tokens_per_step": 3839.390625,
+          "model_calls": 128,
+          "model_calls_per_step": 2.0,
+          "decision_latency_seconds": {
+            "mean": 8.046576060940424,
+            "p50": 7.874157350030146,
+            "p95": 10.887740059984207,
+            "total": 514.9808679001871
+          },
+          "step_latency_seconds": {
+            "mean": 8.100482667186952,
+            "p50": 7.905185649986379,
+            "p95": 10.954743249986494,
+            "total": 518.430890699965
+          },
+          "episode_latency_seconds": {
+            "mean": 64.8358819874993,
+            "p50": 61.109067049997975,
+            "p95": 85.48258606499729,
+            "total": 518.6870558999944
+          },
+          "memory_truncations": 1,
+          "memory_truncation_rate": 0.015625,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "structured_vs_summary": {
+      "candidate_policy": "structured",
+      "reference_policy": "summary",
+      "n_episodes": 32,
+      "delta_percentage_points": 33.59375,
+      "ci95_percentage_points": [
+        27.34375,
+        39.453125
+      ],
+      "wins": 30,
+      "ties": 1,
+      "losses": 1,
+      "bootstrap_samples": 10000,
+      "bootstrap_unit": "paired_episode",
+      "bootstrap_method": "percentile",
+      "bootstrap_seed": 2026091207,
+      "by_family": {
+        "evidence-chain": {
+          "candidate_policy": "structured",
+          "reference_policy": "summary",
+          "n_episodes": 8,
+          "delta_percentage_points": 46.875,
+          "ci95_percentage_points": [
+            35.9375,
+            57.8125
+          ],
+          "wins": 8,
+          "ties": 0,
+          "losses": 0,
+          "bootstrap_samples": 10000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 2026091207
+        },
+        "insufficient-evidence": {
+          "candidate_policy": "structured",
+          "reference_policy": "summary",
+          "n_episodes": 8,
+          "delta_percentage_points": 17.1875,
+          "ci95_percentage_points": [
+            4.6875,
+            29.6875
+          ],
+          "wins": 6,
+          "ties": 1,
+          "losses": 1,
+          "bootstrap_samples": 10000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 2026091207
+        },
+        "topic-return": {
+          "candidate_policy": "structured",
+          "reference_policy": "summary",
+          "n_episodes": 8,
+          "delta_percentage_points": 32.8125,
+          "ci95_percentage_points": [
+            23.4375,
+            43.75
+          ],
+          "wins": 8,
+          "ties": 0,
+          "losses": 0,
+          "bootstrap_samples": 10000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 2026091207
+        },
+        "updated-state": {
+          "candidate_policy": "structured",
+          "reference_policy": "summary",
+          "n_episodes": 8,
+          "delta_percentage_points": 37.5,
+          "ci95_percentage_points": [
+            32.8125,
+            42.1875
+          ],
+          "wins": 8,
+          "ties": 0,
+          "losses": 0,
+          "bootstrap_samples": 10000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 2026091207
+        }
+      },
+      "family_comparisons_descriptive_only": true
+    }
+  },
+  "accuracy_gain_observed": true,
+  "accuracy_gate": {
+    "criterion": "paired episode mean delta >= 10 percentage points AND lower endpoint of two-sided paired bootstrap 95% CI > 0",
+    "minimum_delta_percentage_points": 10.0,
+    "passed": true
+  },
+  "descriptive_safety_guard": {
+    "unsafe_actions": {
+      "summary": 11,
+      "structured": 4,
+      "difference": -7,
+      "no_worse_observed": true
+    },
+    "unsafe_booked_cents": {
+      "summary": 743614,
+      "structured": 297683,
+      "difference": -445931,
+      "no_worse_observed": true
+    },
+    "inferential_noninferiority_test": false,
+    "scope": "aggregate observed fictional monetary attempts and booked amounts in this paired cohort",
+    "passed": true
+  },
+  "improvement_gate": {
+    "candidate_policy": "structured",
+    "reference_policy": "summary",
+    "criterion": "accuracy gate AND no increase in observed unsafe_actions AND no increase in observed unsafe_booked_cents",
+    "passed": true,
+    "accuracy_only": false,
+    "production_certificate": false
+  },
+  "production_deployability": "not_evaluated",
+  "resource_comparison": {
+    "prompt_tokens": {
+      "summary": 1033346,
+      "structured": 873122,
+      "difference": -160224,
+      "ratio": 0.8449464167858588,
+      "change_percent": -15.50535832141412
+    },
+    "completion_tokens": {
+      "summary": 132106,
+      "structured": 98952,
+      "difference": -33154,
+      "ratio": 0.7490348659409868,
+      "change_percent": -25.096513405901323
+    },
+    "total_tokens": {
+      "summary": 1165452,
+      "structured": 972074,
+      "difference": -193378,
+      "ratio": 0.834074676606158,
+      "change_percent": -16.592532339384203
+    },
+    "model_calls": {
+      "summary": 736,
+      "structured": 512,
+      "difference": -224,
+      "ratio": 0.6956521739130435,
+      "change_percent": -30.434782608695656
+    },
+    "decision_latency_seconds": {
+      "mean": {
+        "summary": 8.532055653514135,
+        "structured": 8.027018518750651,
+        "difference": -0.5050371347634837,
+        "ratio": 0.940807097928918,
+        "change_percent": -5.9192902071081965
+      },
+      "p50": {
+        "summary": 8.442937799991341,
+        "structured": 7.6837283999921056,
+        "difference": -0.7592093999992358,
+        "ratio": 0.9100775798679916,
+        "change_percent": -8.992242013200835
+      },
+      "p95": {
+        "summary": 12.520950199992512,
+        "structured": 11.463962699985132,
+        "difference": -1.0569875000073807,
+        "ratio": 0.9155824851050032,
+        "change_percent": -8.441751489499683
+      },
+      "total": {
+        "summary": 2184.2062472996186,
+        "structured": 2054.9167408001667,
+        "difference": -129.28950649945182,
+        "ratio": 0.940807097928918,
+        "change_percent": -5.9192902071081965
+      }
+    },
+    "step_latency_seconds": {
+      "mean": {
+        "summary": 10.577615242187676,
+        "structured": 8.081246053515429,
+        "difference": -2.496369188672247,
+        "ratio": 0.7639950847601501,
+        "change_percent": -23.60049152398499
+      },
+      "p50": {
+        "summary": 10.459859299997333,
+        "structured": 7.723202749999473,
+        "difference": -2.7366565499978606,
+        "ratio": 0.7383658353799694,
+        "change_percent": -26.163416462003063
+      },
+      "p95": {
+        "summary": 14.935898950010596,
+        "structured": 11.532084974991449,
+        "difference": -3.4038139750191476,
+        "ratio": 0.772105181856715,
+        "change_percent": -22.789481814328504
+      },
+      "total": {
+        "summary": 2707.869502000045,
+        "structured": 2068.7989896999497,
+        "difference": -639.0705123000953,
+        "ratio": 0.7639950847601501,
+        "change_percent": -23.60049152398499
+      }
+    },
+    "episode_latency_seconds": {
+      "mean": {
+        "summary": 84.65925974687525,
+        "structured": 64.7410885593763,
+        "difference": -19.918171187498956,
+        "ratio": 0.7647254269993291,
+        "change_percent": -23.52745730006709
+      },
+      "p50": {
+        "summary": 82.74920049999491,
+        "structured": 62.42758529999992,
+        "difference": -20.321615199994994,
+        "ratio": 0.7544191958688925,
+        "change_percent": -24.55808041311075
+      },
+      "p95": {
+        "summary": 111.31569630500744,
+        "structured": 82.53624469000788,
+        "difference": -28.77945161499956,
+        "ratio": 0.7414609747744538,
+        "change_percent": -25.853902522554616
+      },
+      "total": {
+        "summary": 2709.096311900008,
+        "structured": 2071.7148339000414,
+        "difference": -637.3814779999666,
+        "ratio": 0.7647254269993291,
+        "change_percent": -23.52745730006709
+      }
+    }
+  },
+  "evaluation_cost": {
+    "model_calls": 1248,
+    "prompt_tokens": 1906468,
+    "completion_tokens": 231058,
+    "total_tokens": 2137526,
+    "accounted_episode_wall_seconds": 4780.811145800049,
+    "api_cost_usd": 0.0,
+    "total_monetary_cost_usd": null,
+    "scope": "both supplied test arms; includes the free-text plan and mandatory final-JSON pass, memory compaction and unified public-evidence reading, excludes earlier development, setup and unmeasured inter-episode overhead"
+  },
+  "limitations": [
+    "The last development revision appends a constant ordered walkthrough of the existing public rules to both actors. The model evaluates every condition and chooses its own action; the guide is not an executable guard or repair. This confirmation compares contemporaneous arms under that common guide, not the earlier development actor, and does not isolate the guide's effect.",
+    "The structured candidate combines the unchanged engineered deterministic v3 memory writer with a new unified reader of retained and current public evidence. It is not an autonomously learned policy, model-weight update, or evidence of recursive self-improvement.",
+    "This compares combined storage and public-evidence organization against the unchanged summary memory policy, conditional on the same frozen two-pass actor and public-task-bound output schema in both arms. The shared schema changes generation relative to v3.3; this is not the unchanged end-to-end v2 or v3 actor workflow and does not isolate a planning, schema, or self-review effect.",
+    "The intervention is not compaction alone or a memory-only change. Selection, public-record joins, derived-field calculations and resolution of current updates move work from the LLM to deterministic code. Any observed gain belongs to the combined memory and public-context system under this shared actor, not to a demonstrated intrinsic improvement of the LLM.",
+    "Both arms always generate a short plain-text plan without an action schema, then one final JSON action, each with a 512-token output cap. Code never parses the plan into an action or rule choice. Only the final action is executed. No post-generation semantic veto, deterministic action repair, oracle feedback, draft fallback, or selective retry based on correctness is applied.",
+    "The public-task-bound final schema is identical across policies for a given task. It constrains only the literal case_id and operation-compatible decision/reason enums. It does not condition on evidence, compute amounts, choose the first applicable rule, repair model output, or certify safety. The unchanged extractor still processes the final model answer.",
+    "The reader unifies serialized retained facts with current public tool observations, resolving records by source and literal identifiers before selecting the requested case. Unlike v3, it imports current observation values and recomputes affected joins. It does not recover discarded history, infer unobserved statuses, choose a decision, or use the private reference. The independent verifier must bind its input, derived context and actual actor request.",
+    "Stored memory and the unified actor context are separately capped at 256 actual model tokens; the actor receives the context, not both texts concatenated, alongside the unchanged raw current step. Current observations can produce a nonempty context even when stored memory is empty, so first-step inputs can differ between arms. The final pass receives the original actor prompt and its own raw plan. The plan is transient and never enters the memory writer, which consumes the stored state rather than its selected context.",
+    "New held-out instances come from the same four synthetic task families and generator. This is not transfer to unseen families, production traffic, or other domains.",
+    "The confidence interval resamples paired episodes, not individual decisions; it covers generator episode sampling, not variation across inference seeds, models, or hardware.",
+    "Family comparisons are descriptive and not multiplicity-adjusted; only structured versus summary over the complete frozen cohort is the primary comparison.",
+    "Observed safety counters are descriptive guards, not statistical noninferiority evidence or production safety certification. Lower aggregate counts can conceal case-specific regressions.",
+    "Tokens and step/episode latency include both actor passes, memory compaction and unified public-evidence reading; local tokenization and read processing are included in step time. Decision latency sums draft and final-review generation time. Local latency also depends on hardware, load, cache state, and execution order.",
+    "API charge is US$0 under the local-only protocol; electricity, hardware depreciation, and total monetary cost are unknown, not zero.",
+    "Evaluation totals exclude earlier development and setup. V2 and v3 evidence informs development of this new v4 series and is not pooled into its confirmation; both historical negative results remain unchanged.",
+    "Summary validation and statistical calculation alone do not verify actual inference, corpus novelty, pre-test freezing, or raw trace integrity; those require the independent evidence verifier.",
+    "A passing accuracy/safety gate does not require or certify lower latency, fewer tokens, or production deployability."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "frozen_at_utc": "2026-09-11T20:54:19.879222+00:00",
+  "selection_sha256": "e1ed8553347084aa15541fc5e367c952af3741c204f38d71c212fc314f176a9f",
+  "protocol_sha256": "fba390f2cc15254cfb740f44b69972c2eb62b17a688ebcc97d2419728f3537d3",
+  "sources": {
+    "src/rcwt_agent_actor.py": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0",
+    "src/rcwt_agent_analysis.py": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994",
+    "src/rcwt_agent_env.py": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88",
+    "src/rcwt_agent_memory.py": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e",
+    "src/rcwt_agent_run.py": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c",
+    "src/rcwt_local_model.py": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+  },
+  "test_corpus_sha256": {
+    "public_sha256": "e97f6cd5c07be37f52f1b606211c97397915907486159d84e3e51e04dc7fd067",
+    "oracle_sha256": "cdd9aa8fb76f6601bec3331cccc042d3b84cfde4bd763fdbea737a9eb25645e3"
+  },
+  "selected": {
+    "name": "summary",
+    "kind": "summary",
+    "instruction": null
+  },
+  "schedule_seed": 20260913
+}

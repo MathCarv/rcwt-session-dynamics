@@ -5,6 +5,13 @@ __pycache__/
 .DS_Store
 *.log
 *.pid
+.runs/
+# Machine-local orchestration and custody are preserved locally, not published.
+/results/agent_v4_replication_runtime/
+/results/agent_v4_interrupted/runtime/
+/tools/start_v4_replication.ps1
+/tools/close_v4_replication_runtime.ps1
+/tests/test_close_v4_replication_runtime.ps1
 results/rcwt_controlled.png
 results/rcwt_cross_provider.png
 results/rcwt_curve_fits.png

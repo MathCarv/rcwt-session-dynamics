@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "classification": "exploratory_development_pilots_not_final_benchmark",
+  "scope": "Synthetic training cases and literal formatting fixtures only; no test/held-out cases used.",
+  "inference_policy": "local_only_no_paid_api",
+  "inference_endpoint": "http://127.0.0.1:18085",
+  "agency_boundary": "Model inference on loopback; financial actions exist only inside the local simulator, with no CloudWalk or external financial-system execution.",
+  "included_in_final_benchmark_metrics": false,
+  "known_metered_lower_bound": {
+    "calls": 28,
+    "input_tokens": 22195,
+    "output_tokens": 4664,
+    "total_tokens": 26859,
+    "summed_call_wall_seconds": 108.41132170008495,
+    "api_provider_cost_usd": 0,
+    "output_token_definition": "Server completion tokens, including hidden reasoning tokens in the thinking pilot.",
+    "wall_time_definition": "Sum of measured per-call wall durations; not total project elapsed time or setup/download duration."
+  },
+  "exclusions": [
+    {
+      "category": "four_additional_root_non_greedy_diagnostics",
+      "calls": 4,
+      "metering_available_in_this_package": false,
+      "input_tokens": null,
+      "output_tokens": null,
+      "wall_seconds": null
+    },
+    {
+      "category": "aborted_greedy_development_campaign",
+      "accounting": "Preserved separately by the campaign coordinator; excluded from these four pilot subtotals."
+    },
+    {
+      "category": "runtime_setup_downloads_warmup_and_other_unreceipted_probes",
+      "cost_and_duration": "Unknown; not inferred from the pilot receipts."
+    },
+    {
+      "category": "electricity_hardware_depreciation_and_human_time",
+      "cost_usd": null
+    }
+  ],
+  "redaction_policy": {
+    "replacement": "<LOCAL_RUNTIME>",
+    "description": "Only the absolute local runtime-directory prefix in 20 metadata string values was replaced. Requests, generated final outputs, evaluator scores, token counts, timing values and model/runtime hashes were preserved.",
+    "raw_hidden_reasoning": "Not present in the inspected originals; only existing SHA256/character counts are retained. No hidden reasoning text was copied or reconstructed.",
+    "credentials_and_personal_paths": "No credentials found in the inspected originals; all detected absolute local filesystem prefixes in these receipts were anonymized.",
+    "serialization_note": "JSON formatting/line endings are not identity guarantees; original and published byte hashes are listed separately."
+  },
+  "verification": {
+    "requests_outputs_and_metering_semantically_unchanged": true,
+    "only_declared_metadata_redactions": true,
+    "source_receipts_modified": false,
+    "new_inference_calls_for_packaging": 0,
+    "hash_limit": "SHA256 identifies the captured files; it does not independently attest that a particular model performed inference."
+  },
+  "receipts": [
+    {
+      "file": "action-schema-diagnostic-receipt.json",
+      "source_sha256": "91e938e9dc6aa43eaf23388168213d4f915b20ced0ce62f30f8e64b4ffa21f6c",
+      "published_sha256": "cdb614c1be39282bbbfea8b8f352fe2fc16dce1164ffd928d12e2d8285135615",
+      "source_bytes": 62212,
+      "published_bytes": 62082,
+      "calls": 10,
+      "input_tokens": 5404,
+      "output_tokens": 473,
+      "wall_seconds": 11.523884300055215,
+      "redacted_values": 5,
+      "task_successes": null,
+      "api_provider_cost_usd": 0,
+      "redacted_json_paths": [
+        "$.server.executable",
+        "$.server.model",
+        "$.server.arguments",
+        "$.server.log_stdout",
+        "$.server.log_stderr"
+      ],
+      "metering_fields": {
+        "input": "records[].response.usage.prompt_tokens",
+        "output": "records[].response.usage.completion_tokens",
+        "wall": "records[].wall_seconds"
+      }
+    },
+    {
+      "file": "thinking-pilot-receipt.json",
+      "source_sha256": "d7f98cef3dd265d21b4460d930fc472a8733f626829409581296ab4b0b27f4a3",
+      "published_sha256": "7b770c7d54fa67b6d558abe8bd500be72f084ee95db27de6ed873ed981bb6cd3",
+      "source_bytes": 51984,
+      "published_bytes": 51750,
+      "calls": 6,
+      "input_tokens": 5443,
+      "output_tokens": 2984,
+      "wall_seconds": 56.4406187000277,
+      "redacted_values": 9,
+      "task_successes": 4,
+      "api_provider_cost_usd": 0,
+      "redacted_json_paths": [
+        "$.server.executable",
+        "$.server.model",
+        "$.server.arguments",
+        "$.server.log_stdout",
+        "$.server.log_stderr",
+        "$.installation.runtime.binary_directory",
+        "$.installation.artifacts[0].path",
+        "$.installation.artifacts[1].path",
+        "$.installation.artifacts[2].path"
+      ],
+      "metering_fields": {
+        "input": "records[].usage.prompt_tokens",
+        "output": "records[].usage.completion_tokens",
+        "wall": "records[].wall_seconds"
+      }
+    },
+    {
+      "file": "qwen35-pilot-receipt.json",
+      "source_sha256": "75531708f62d1671c2b840208936358d1a101715a05d2fc8f8e17d9787ca467a",
+      "published_sha256": "2cf7d20573e7b92ff5df845e52b5726cdcc241765455a32eaefd4ee6b6b42220",
+      "source_bytes": 51478,
+      "published_bytes": 51322,
+      "calls": 6,
+      "input_tokens": 5521,
+      "output_tokens": 371,
+      "wall_seconds": 12.534446900011972,
+      "redacted_values": 6,
+      "task_successes": 3,
+      "api_provider_cost_usd": 0,
+      "redacted_json_paths": [
+        "$.server.executable",
+        "$.server.model",
+        "$.server.arguments",
+        "$.server.log_stdout",
+        "$.server.log_stderr",
+        "$.installation.model_path"
+      ],
+      "metering_fields": {
+        "input": "records[].usage.prompt_tokens",
+        "output": "records[].usage.completion_tokens",
+        "wall": "records[].wall_seconds"
+      }
+    },
+    {
+      "file": "evidence-action-pilot-receipt.json",
+      "source_sha256": "35113f5908cce6985c9081fccdc2300ccb58978d3f5d07740fc5790250d4af70",
+      "published_sha256": "35113f5908cce6985c9081fccdc2300ccb58978d3f5d07740fc5790250d4af70",
+      "source_bytes": 65282,
+      "published_bytes": 65282,
+      "calls": 6,
+      "input_tokens": 5827,
+      "output_tokens": 836,
+      "wall_seconds": 27.91237179999007,
+      "redacted_values": 0,
+      "task_successes": 5,
+      "api_provider_cost_usd": 0,
+      "redacted_json_paths": [],
+      "metering_fields": {
+        "input": "records[].call.prompt_tokens",
+        "output": "records[].call.completion_tokens",
+        "wall": "records[].call.wall_seconds"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4486 @@
+[
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-0",
+    "family": "updated-state",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801024,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-1",
+              "order_id": "ord-test-135282f-0-1",
+              "merchant_id": "merchant-test-135282f-0-1",
+              "account_id": "acct-test-135282f-0-1",
+              "total_cents": 10742,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-2",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-3",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-0-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-4",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-0",
+          "case_id": "inv-test-135282f-0-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-0-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-5",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-2",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-6",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-0-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-0-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-8",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-2",
+              "order_id": "ord-test-135282f-0-2",
+              "merchant_id": "merchant-test-135282f-0-2",
+              "account_id": "acct-test-135282f-0-2",
+              "total_cents": 16048,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-9",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-1",
+          "case_id": "inv-test-135282f-0-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-0-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-10",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-1",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-0-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-11",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-2",
+          "case_id": "inv-test-135282f-0-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-0-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-12",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-0-0",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-13",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-0",
+              "order_id": "ord-test-135282f-0-0",
+              "merchant_id": "merchant-test-135282f-0-0",
+              "account_id": "acct-test-135282f-0-0",
+              "total_cents": 99207,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-14",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-0-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-16",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-3",
+          "case_id": "inv-test-135282f-0-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-0-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-0-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-18",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-4",
+          "case_id": "inv-test-135282f-0-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-0-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-19",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-0-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-20",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-0-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-21",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-5",
+          "case_id": "inv-test-135282f-0-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-0-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-22",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-0-2",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-0-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-0-23",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-6",
+          "case_id": "inv-test-135282f-0-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-0-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-0-24",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-0-7",
+          "case_id": "inv-test-135282f-0-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-0-1 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-1",
+    "family": "evidence-chain",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801025,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-1",
+              "order_id": "ord-test-135282f-1-1",
+              "merchant_id": "merchant-test-135282f-1-1",
+              "account_id": "acct-test-135282f-1-1",
+              "total_cents": 120945,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-1-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-1-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-3",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-0",
+          "case_id": "inv-test-135282f-1-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-1-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-3",
+              "order_id": "ord-test-135282f-1-3",
+              "merchant_id": "merchant-test-135282f-1-3",
+              "account_id": "acct-test-135282f-1-3",
+              "total_cents": 105033,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-6",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-1",
+          "case_id": "inv-test-135282f-1-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-1-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-1-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-1-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-9",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-2",
+          "case_id": "inv-test-135282f-1-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-1-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-10",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-1-1",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-11",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-3",
+          "case_id": "inv-test-135282f-1-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-1-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-0",
+              "order_id": "ord-test-135282f-1-0",
+              "merchant_id": "merchant-test-135282f-1-0",
+              "account_id": "acct-test-135282f-1-0",
+              "total_cents": 116913,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-1-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-4",
+          "case_id": "inv-test-135282f-1-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-1-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-1-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-1-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-16",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-5",
+          "case_id": "inv-test-135282f-1-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-1-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-1-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-1-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-18",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-1-0",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-1-19",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-6",
+          "case_id": "inv-test-135282f-1-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-1-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-1-20",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-1-7",
+          "case_id": "inv-test-135282f-1-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-1-1 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-2",
+    "family": "topic-return",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801026,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-3",
+              "order_id": "ord-test-135282f-2-3",
+              "merchant_id": "merchant-test-135282f-2-3",
+              "account_id": "acct-test-135282f-2-3",
+              "total_cents": 37322,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-2",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-3",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-2-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-2-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-4",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-2-3",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-5",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-0",
+          "case_id": "inv-test-135282f-2-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-2-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-6",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-2-0",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-7",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-0",
+              "order_id": "ord-test-135282f-2-0",
+              "merchant_id": "merchant-test-135282f-2-0",
+              "account_id": "acct-test-135282f-2-0",
+              "total_cents": 95347,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-0",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-9",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-2-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-2-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-10",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-1",
+          "case_id": "inv-test-135282f-2-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-2-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-11",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-2-2",
+              "verification_status": "blocked",
+              "holder_merchant_id": "merchant-test-135282f-2-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-2",
+              "order_id": "ord-test-135282f-2-2",
+              "merchant_id": "merchant-test-135282f-2-2",
+              "account_id": "acct-test-135282f-2-2",
+              "total_cents": 58780,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-2",
+          "case_id": "inv-test-135282f-2-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-2-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-15",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-0",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-3",
+          "case_id": "inv-test-135282f-2-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-2-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-2-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-2-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-18",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-4",
+          "case_id": "inv-test-135282f-2-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-2-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-19",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-5",
+          "case_id": "inv-test-135282f-2-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-2-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-20",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-2-1",
+              "order_id": "ord-test-135282f-2-1",
+              "merchant_id": "merchant-test-135282f-2-1",
+              "account_id": "acct-test-135282f-2-1",
+              "total_cents": 83026,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-2-21",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-6",
+          "case_id": "inv-test-135282f-2-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-2-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-2-22",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-2-7",
+          "case_id": "inv-test-135282f-2-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-2-0 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-3",
+    "family": "insufficient-evidence",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801027,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-0",
+              "order_id": "ord-test-135282f-3-0",
+              "merchant_id": "merchant-test-135282f-3-0",
+              "account_id": "acct-test-135282f-3-0",
+              "total_cents": 65165,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-3-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-3-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-3",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-0",
+          "case_id": "inv-test-135282f-3-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-3-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-4",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-3-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-3-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-5",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-6",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-3",
+              "order_id": "ord-test-135282f-3-3",
+              "merchant_id": "merchant-test-135282f-3-3",
+              "account_id": "acct-test-135282f-3-3",
+              "total_cents": 93286,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-7",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-1",
+          "case_id": "inv-test-135282f-3-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-3-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-0",
+              "status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-9",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-2",
+          "case_id": "inv-test-135282f-3-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-3-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-10",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-2",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-11",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-3-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-3-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-2",
+              "order_id": "ord-test-135282f-3-2",
+              "merchant_id": "merchant-test-135282f-3-2",
+              "account_id": "acct-test-135282f-3-2",
+              "total_cents": 106292,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-13",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-3-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-14",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-3",
+          "case_id": "inv-test-135282f-3-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-3-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-15",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-3-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-4",
+          "case_id": "inv-test-135282f-3-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-3-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-3-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-18",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-5",
+          "case_id": "inv-test-135282f-3-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-3-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-19",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-3-3",
+              "inspection_status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-20",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-6",
+          "case_id": "inv-test-135282f-3-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-3-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-3-21",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-3-3",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-3-22",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-3-7",
+          "case_id": "inv-test-135282f-3-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-3-3 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-4",
+    "family": "updated-state",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801028,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-1",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-4-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-2",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-2",
+              "order_id": "ord-test-135282f-4-2",
+              "merchant_id": "merchant-test-135282f-4-2",
+              "account_id": "acct-test-135282f-4-2",
+              "total_cents": 44835,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-3",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-4",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-0",
+          "case_id": "inv-test-135282f-4-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-4-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-5",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-4-3",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-6",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-4-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-7",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-3",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-8",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-3",
+              "order_id": "ord-test-135282f-4-3",
+              "merchant_id": "merchant-test-135282f-4-3",
+              "account_id": "acct-test-135282f-4-3",
+              "total_cents": 131974,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-9",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-1",
+          "case_id": "inv-test-135282f-4-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-4-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-10",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-2",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-4-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-11",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-2",
+          "case_id": "inv-test-135282f-4-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-4-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-12",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-4-1",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-14",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-4-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-15",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-1",
+              "order_id": "ord-test-135282f-4-1",
+              "merchant_id": "merchant-test-135282f-4-1",
+              "account_id": "acct-test-135282f-4-1",
+              "total_cents": 70846,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-3",
+          "case_id": "inv-test-135282f-4-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-4-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-4-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-18",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-4",
+          "case_id": "inv-test-135282f-4-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-4-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-19",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-4-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-20",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-4-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-21",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-5",
+          "case_id": "inv-test-135282f-4-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-4-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-22",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-4-3",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-4-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-4-23",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-6",
+          "case_id": "inv-test-135282f-4-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-4-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-4-24",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-4-7",
+          "case_id": "inv-test-135282f-4-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-4-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-5",
+    "family": "evidence-chain",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801029,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-3",
+              "order_id": "ord-test-135282f-5-3",
+              "merchant_id": "merchant-test-135282f-5-3",
+              "account_id": "acct-test-135282f-5-3",
+              "total_cents": 31724,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-5-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-5-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-3",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-0",
+          "case_id": "inv-test-135282f-5-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-5-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-1",
+              "order_id": "ord-test-135282f-5-1",
+              "merchant_id": "merchant-test-135282f-5-1",
+              "account_id": "acct-test-135282f-5-1",
+              "total_cents": 33510,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-6",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-1",
+          "case_id": "inv-test-135282f-5-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-5-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-5-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-5-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-9",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-2",
+          "case_id": "inv-test-135282f-5-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-5-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-10",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-5-3",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-11",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-3",
+          "case_id": "inv-test-135282f-5-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-5-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-2",
+              "order_id": "ord-test-135282f-5-2",
+              "merchant_id": "merchant-test-135282f-5-2",
+              "account_id": "acct-test-135282f-5-2",
+              "total_cents": 49608,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-5-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-4",
+          "case_id": "inv-test-135282f-5-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-5-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-5-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-5-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-16",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-5",
+          "case_id": "inv-test-135282f-5-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-5-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-5-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-5-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-18",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-5-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-5-19",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-6",
+          "case_id": "inv-test-135282f-5-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-5-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-5-20",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-5-7",
+          "case_id": "inv-test-135282f-5-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-5-3 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-6",
+    "family": "topic-return",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801030,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-1",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-6-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-6-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-3",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-0",
+              "order_id": "ord-test-135282f-6-0",
+              "merchant_id": "merchant-test-135282f-6-0",
+              "account_id": "acct-test-135282f-6-0",
+              "total_cents": 22981,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-4",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-6-0",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-5",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-0",
+          "case_id": "inv-test-135282f-6-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-6-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-6",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-6-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-7",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-2",
+              "order_id": "ord-test-135282f-6-2",
+              "merchant_id": "merchant-test-135282f-6-2",
+              "account_id": "acct-test-135282f-6-2",
+              "total_cents": 116577,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-2",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-9",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-6-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-6-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-10",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-1",
+          "case_id": "inv-test-135282f-6-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-6-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-11",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-3",
+              "order_id": "ord-test-135282f-6-3",
+              "merchant_id": "merchant-test-135282f-6-3",
+              "account_id": "acct-test-135282f-6-3",
+              "total_cents": 113788,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-12",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-13",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-6-3",
+              "verification_status": "blocked",
+              "holder_merchant_id": "merchant-test-135282f-6-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-14",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-2",
+          "case_id": "inv-test-135282f-6-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-6-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-15",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-3",
+          "case_id": "inv-test-135282f-6-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-6-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-6-3",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-6-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-18",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-4",
+          "case_id": "inv-test-135282f-6-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-6-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-19",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-5",
+          "case_id": "inv-test-135282f-6-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-6-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-20",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-6-1",
+              "order_id": "ord-test-135282f-6-1",
+              "merchant_id": "merchant-test-135282f-6-1",
+              "account_id": "acct-test-135282f-6-1",
+              "total_cents": 36353,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-6-21",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-6",
+          "case_id": "inv-test-135282f-6-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-6-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-6-22",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-6-7",
+          "case_id": "inv-test-135282f-6-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-6-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-7",
+    "family": "insufficient-evidence",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801031,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-0",
+              "order_id": "ord-test-135282f-7-0",
+              "merchant_id": "merchant-test-135282f-7-0",
+              "account_id": "acct-test-135282f-7-0",
+              "total_cents": 78993,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-7-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-7-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-3",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-0",
+          "case_id": "inv-test-135282f-7-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-7-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-4",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-2",
+              "order_id": "ord-test-135282f-7-2",
+              "merchant_id": "merchant-test-135282f-7-2",
+              "account_id": "acct-test-135282f-7-2",
+              "total_cents": 106504,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-5",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-7-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-7-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-6",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-7",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-1",
+          "case_id": "inv-test-135282f-7-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-7-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-0",
+              "status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-9",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-2",
+          "case_id": "inv-test-135282f-7-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-7-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-10",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-1",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-11",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-7-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-1",
+              "order_id": "ord-test-135282f-7-1",
+              "merchant_id": "merchant-test-135282f-7-1",
+              "account_id": "acct-test-135282f-7-1",
+              "total_cents": 81339,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-13",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-7-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-7-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-14",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-3",
+          "case_id": "inv-test-135282f-7-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-7-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-15",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-7-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-4",
+          "case_id": "inv-test-135282f-7-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-7-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-7-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-18",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-5",
+          "case_id": "inv-test-135282f-7-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-7-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-19",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-7-2",
+              "inspection_status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-20",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-6",
+          "case_id": "inv-test-135282f-7-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-7-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-7-21",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-7-2",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-7-22",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-7-7",
+          "case_id": "inv-test-135282f-7-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-7-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-8",
+    "family": "updated-state",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801032,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-1",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-8-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-3",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-2",
+              "order_id": "ord-test-135282f-8-2",
+              "merchant_id": "merchant-test-135282f-8-2",
+              "account_id": "acct-test-135282f-8-2",
+              "total_cents": 29144,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-4",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-0",
+          "case_id": "inv-test-135282f-8-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-8-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-5",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-8-3",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-6",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-3",
+              "order_id": "ord-test-135282f-8-3",
+              "merchant_id": "merchant-test-135282f-8-3",
+              "account_id": "acct-test-135282f-8-3",
+              "total_cents": 62358,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-7",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-3",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-8",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-8-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-9",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-1",
+          "case_id": "inv-test-135282f-8-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-8-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-10",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-2",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-8-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-11",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-2",
+          "case_id": "inv-test-135282f-8-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-8-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-12",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-8-1",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-13",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-1",
+              "order_id": "ord-test-135282f-8-1",
+              "merchant_id": "merchant-test-135282f-8-1",
+              "account_id": "acct-test-135282f-8-1",
+              "total_cents": 18278,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-14",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-8-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-16",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-3",
+          "case_id": "inv-test-135282f-8-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-8-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-8-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-18",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-4",
+          "case_id": "inv-test-135282f-8-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-8-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-19",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-8-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-20",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-8-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-21",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-5",
+          "case_id": "inv-test-135282f-8-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-8-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-22",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-8-3",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-8-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-8-23",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-6",
+          "case_id": "inv-test-135282f-8-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-8-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-8-24",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-8-7",
+          "case_id": "inv-test-135282f-8-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-8-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-9",
+    "family": "evidence-chain",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801033,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-1",
+              "order_id": "ord-test-135282f-9-1",
+              "merchant_id": "merchant-test-135282f-9-1",
+              "account_id": "acct-test-135282f-9-1",
+              "total_cents": 105127,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-9-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-9-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-3",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-0",
+          "case_id": "inv-test-135282f-9-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-9-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-3",
+              "order_id": "ord-test-135282f-9-3",
+              "merchant_id": "merchant-test-135282f-9-3",
+              "account_id": "acct-test-135282f-9-3",
+              "total_cents": 69334,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-6",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-1",
+          "case_id": "inv-test-135282f-9-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-9-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-9-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-9-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-9",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-2",
+          "case_id": "inv-test-135282f-9-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-9-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-10",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-9-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-11",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-3",
+          "case_id": "inv-test-135282f-9-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-9-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-2",
+              "order_id": "ord-test-135282f-9-2",
+              "merchant_id": "merchant-test-135282f-9-2",
+              "account_id": "acct-test-135282f-9-2",
+              "total_cents": 83312,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-9-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-4",
+          "case_id": "inv-test-135282f-9-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-9-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-9-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-9-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-16",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-5",
+          "case_id": "inv-test-135282f-9-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-9-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-9-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-9-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-18",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-9-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-9-19",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-6",
+          "case_id": "inv-test-135282f-9-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-9-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-9-20",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-9-7",
+          "case_id": "inv-test-135282f-9-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-9-1 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-a",
+    "family": "topic-return",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801034,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-2",
+              "order_id": "ord-test-135282f-a-2",
+              "merchant_id": "merchant-test-135282f-a-2",
+              "account_id": "acct-test-135282f-a-2",
+              "total_cents": 103254,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-2",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-a-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-3",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-a-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-a-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-5",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-0",
+          "case_id": "inv-test-135282f-a-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-a-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-6",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-a-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-a-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-7",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-a-3",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-8",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-3",
+              "order_id": "ord-test-135282f-a-3",
+              "merchant_id": "merchant-test-135282f-a-3",
+              "account_id": "acct-test-135282f-a-3",
+              "total_cents": 122804,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-9",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-3",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-10",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-1",
+          "case_id": "inv-test-135282f-a-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-a-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-11",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-1",
+              "order_id": "ord-test-135282f-a-1",
+              "merchant_id": "merchant-test-135282f-a-1",
+              "account_id": "acct-test-135282f-a-1",
+              "total_cents": 33926,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-12",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-13",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-a-1",
+              "verification_status": "blocked",
+              "holder_merchant_id": "merchant-test-135282f-a-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-2",
+          "case_id": "inv-test-135282f-a-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-a-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-15",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-3",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-16",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-3",
+          "case_id": "inv-test-135282f-a-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-a-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-a-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-a-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-18",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-4",
+          "case_id": "inv-test-135282f-a-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-a-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-19",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-5",
+          "case_id": "inv-test-135282f-a-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-a-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-20",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-a-0",
+              "order_id": "ord-test-135282f-a-0",
+              "merchant_id": "merchant-test-135282f-a-0",
+              "account_id": "acct-test-135282f-a-0",
+              "total_cents": 31239,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-a-21",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-6",
+          "case_id": "inv-test-135282f-a-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-a-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-a-22",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-a-7",
+          "case_id": "inv-test-135282f-a-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-a-3 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-b",
+    "family": "insufficient-evidence",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801035,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-0",
+              "order_id": "ord-test-135282f-b-0",
+              "merchant_id": "merchant-test-135282f-b-0",
+              "account_id": "acct-test-135282f-b-0",
+              "total_cents": 120917,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-b-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-b-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-3",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-0",
+          "case_id": "inv-test-135282f-b-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-b-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-2",
+              "order_id": "ord-test-135282f-b-2",
+              "merchant_id": "merchant-test-135282f-b-2",
+              "account_id": "acct-test-135282f-b-2",
+              "total_cents": 122666,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-6",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-b-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-b-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-7",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-1",
+          "case_id": "inv-test-135282f-b-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-b-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-0",
+              "status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-9",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-2",
+          "case_id": "inv-test-135282f-b-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-b-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-10",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-1",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-11",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-b-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-b-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-1",
+              "order_id": "ord-test-135282f-b-1",
+              "merchant_id": "merchant-test-135282f-b-1",
+              "account_id": "acct-test-135282f-b-1",
+              "total_cents": 23823,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-13",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-b-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-3",
+          "case_id": "inv-test-135282f-b-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-b-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-15",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-b-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-16",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-4",
+          "case_id": "inv-test-135282f-b-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-b-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-b-0",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-18",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-5",
+          "case_id": "inv-test-135282f-b-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-b-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-19",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-b-2",
+              "inspection_status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-20",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-6",
+          "case_id": "inv-test-135282f-b-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-b-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-b-21",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-b-2",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-b-22",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-b-7",
+          "case_id": "inv-test-135282f-b-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-b-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-c",
+    "family": "updated-state",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801036,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-2",
+              "order_id": "ord-test-135282f-c-2",
+              "merchant_id": "merchant-test-135282f-c-2",
+              "account_id": "acct-test-135282f-c-2",
+              "total_cents": 146099,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-c-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-3",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-4",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-0",
+          "case_id": "inv-test-135282f-c-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-c-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-5",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-1",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-6",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-c-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-c-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-8",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-1",
+              "order_id": "ord-test-135282f-c-1",
+              "merchant_id": "merchant-test-135282f-c-1",
+              "account_id": "acct-test-135282f-c-1",
+              "total_cents": 91298,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-9",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-1",
+          "case_id": "inv-test-135282f-c-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-c-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-10",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-2",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-c-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-11",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-2",
+          "case_id": "inv-test-135282f-c-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-c-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-12",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-13",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-3",
+              "order_id": "ord-test-135282f-c-3",
+              "merchant_id": "merchant-test-135282f-c-3",
+              "account_id": "acct-test-135282f-c-3",
+              "total_cents": 3205,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-14",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-c-3",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-c-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-16",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-3",
+          "case_id": "inv-test-135282f-c-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-c-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-c-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-18",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-4",
+          "case_id": "inv-test-135282f-c-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-c-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-19",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-c-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-20",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-c-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-21",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-5",
+          "case_id": "inv-test-135282f-c-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-c-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-22",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-c-1",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-c-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-c-23",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-6",
+          "case_id": "inv-test-135282f-c-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-c-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-c-24",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-c-7",
+          "case_id": "inv-test-135282f-c-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-c-2 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-d",
+    "family": "evidence-chain",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801037,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-3",
+              "order_id": "ord-test-135282f-d-3",
+              "merchant_id": "merchant-test-135282f-d-3",
+              "account_id": "acct-test-135282f-d-3",
+              "total_cents": 102522,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-d-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-d-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-3",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-0",
+          "case_id": "inv-test-135282f-d-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-d-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-3",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-2",
+              "order_id": "ord-test-135282f-d-2",
+              "merchant_id": "merchant-test-135282f-d-2",
+              "account_id": "acct-test-135282f-d-2",
+              "total_cents": 42197,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-6",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-1",
+          "case_id": "inv-test-135282f-d-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-d-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-7",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-d-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-d-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-9",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-2",
+          "case_id": "inv-test-135282f-d-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-d-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-10",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-d-3",
+              "inspection_status": "rejected"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-11",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-3",
+          "case_id": "inv-test-135282f-d-3",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-d-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-0",
+              "order_id": "ord-test-135282f-d-0",
+              "merchant_id": "merchant-test-135282f-d-0",
+              "account_id": "acct-test-135282f-d-0",
+              "total_cents": 140835,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-d-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-14",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-4",
+          "case_id": "inv-test-135282f-d-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-d-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-15",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-d-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-d-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-16",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-5",
+          "case_id": "inv-test-135282f-d-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-d-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-d-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-d-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-18",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-d-0",
+              "inspection_status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-d-19",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-6",
+          "case_id": "inv-test-135282f-d-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-d-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-d-20",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-d-7",
+          "case_id": "inv-test-135282f-d-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-d-3 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-e",
+    "family": "topic-return",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801038,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-1",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-e-2",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-e-2"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-2",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-e-2",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-3",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-2",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-4",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-2",
+              "order_id": "ord-test-135282f-e-2",
+              "merchant_id": "merchant-test-135282f-e-2",
+              "account_id": "acct-test-135282f-e-2",
+              "total_cents": 73858,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-5",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-0",
+          "case_id": "inv-test-135282f-e-2",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-e-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-6",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-0",
+              "order_id": "ord-test-135282f-e-0",
+              "merchant_id": "merchant-test-135282f-e-0",
+              "account_id": "acct-test-135282f-e-0",
+              "total_cents": 44794,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-7",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-0",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-8",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-e-0",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-9",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-e-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-e-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-10",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-1",
+          "case_id": "inv-test-135282f-e-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-e-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-11",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-e-1",
+              "verification_status": "blocked",
+              "holder_merchant_id": "merchant-test-135282f-e-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-1",
+              "order_id": "ord-test-135282f-e-1",
+              "merchant_id": "merchant-test-135282f-e-1",
+              "account_id": "acct-test-135282f-e-1",
+              "total_cents": 113515,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-13",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-1",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-14",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-2",
+          "case_id": "inv-test-135282f-e-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-e-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-15",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-0",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-16",
+            "source": "message",
+            "content": "Support queue reviewed. Delivery address correction remains with the shipping team."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-3",
+          "case_id": "inv-test-135282f-e-2",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-e-2 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-17",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-e-1",
+              "verification_status": "revoked",
+              "holder_merchant_id": "merchant-test-135282f-e-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-18",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-4",
+          "case_id": "inv-test-135282f-e-0",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-e-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-19",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-5",
+          "case_id": "inv-test-135282f-e-1",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-e-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-20",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-e-3",
+              "order_id": "ord-test-135282f-e-3",
+              "merchant_id": "merchant-test-135282f-e-3",
+              "account_id": "acct-test-135282f-e-3",
+              "total_cents": 48191,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-e-21",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-6",
+          "case_id": "inv-test-135282f-e-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-e-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-e-22",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-e-7",
+          "case_id": "inv-test-135282f-e-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-e-0 using the latest known evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema_version": "rcwt-agent-env/1",
+    "episode_id": "rcwta-test-135282f-f",
+    "family": "insufficient-evidence",
+    "split": "test",
+    "seed": 1020847100762815390390210842245436801039,
+    "steps": [
+      {
+        "step_index": 0,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-1",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-3",
+              "order_id": "ord-test-135282f-f-3",
+              "merchant_id": "merchant-test-135282f-f-3",
+              "account_id": "acct-test-135282f-f-3",
+              "total_cents": 75132,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-2",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-f-3",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-f-3"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-3",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-0",
+          "case_id": "inv-test-135282f-f-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-f-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 1,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-4",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-0",
+              "status": "cleared"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-5",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-0",
+              "order_id": "ord-test-135282f-f-0",
+              "merchant_id": "merchant-test-135282f-f-0",
+              "account_id": "acct-test-135282f-f-0",
+              "total_cents": 78186,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-6",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-f-0",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-f-0"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-7",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-1",
+          "case_id": "inv-test-135282f-f-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-f-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 2,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-8",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-3",
+              "status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-9",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-2",
+          "case_id": "inv-test-135282f-f-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-f-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 3,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-10",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-1",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-11",
+            "source": "tool",
+            "tool": "read_account",
+            "content": {
+              "account_id": "acct-test-135282f-f-1",
+              "verification_status": "active",
+              "holder_merchant_id": "merchant-test-135282f-f-1"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-12",
+            "source": "tool",
+            "tool": "read_invoice",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-1",
+              "order_id": "ord-test-135282f-f-1",
+              "merchant_id": "merchant-test-135282f-f-1",
+              "account_id": "acct-test-135282f-f-1",
+              "total_cents": 54907,
+              "currency": "BRL"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-13",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-f-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-14",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-3",
+          "case_id": "inv-test-135282f-f-1",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-f-1 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 4,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-15",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-f-1",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-16",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-4",
+          "case_id": "inv-test-135282f-f-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-f-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 5,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-17",
+            "source": "tool",
+            "tool": "read_payment",
+            "content": {
+              "invoice_id": "inv-test-135282f-f-3",
+              "status": "pending"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-18",
+            "source": "message",
+            "content": "Weekly reconciliation note: merchant statement layout will change next month."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-5",
+          "case_id": "inv-test-135282f-f-3",
+          "operation": "payout",
+          "instruction": "Record the payout decision for invoice inv-test-135282f-f-3 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 6,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-19",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-f-0",
+              "inspection_status": "unknown"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-20",
+            "source": "message",
+            "content": "Customer service asked for a receipt copy; no payment status update was supplied."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-6",
+          "case_id": "inv-test-135282f-f-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-f-0 using the latest known evidence."
+        }
+      },
+      {
+        "step_index": 7,
+        "observations": [
+          {
+            "event_id": "obs-test-135282f-f-21",
+            "source": "tool",
+            "tool": "read_return",
+            "content": {
+              "order_id": "ord-test-135282f-f-0",
+              "inspection_status": "accepted"
+            }
+          },
+          {
+            "event_id": "obs-test-135282f-f-22",
+            "source": "message",
+            "content": "Warehouse sent its opening-hours update. The document contains no return inspection."
+          }
+        ],
+        "task": {
+          "request_id": "req-test-135282f-f-7",
+          "case_id": "inv-test-135282f-f-0",
+          "operation": "refund",
+          "instruction": "Record the refund decision for invoice inv-test-135282f-f-0 using the latest known evidence."
+        }
+      }
+    ]
+  }
+]

@@ -1,256 +1,174 @@
-# RCWT + RCWT-S: Measuring Coordination Overhead and Session-State Survival
+# RCWT-S Online: Memory and Public Context for a Stateful Agent
 
 [![Verify](https://github.com/MathCarv/rcwt-session-dynamics/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/MathCarv/rcwt-session-dynamics/actions/workflows/verify.yml)
 
 An independent extension of [CloudWalk's RCWT artifact](https://github.com/cloudwalk/rcwt-agent-coordination)
-by [Matheus Carvalho](https://github.com/MathCarv). The original authors' MIT
-license and attribution are preserved.
+by [Matheus Carvalho](https://github.com/MathCarv). The original authors' attribution
+and [MIT license](LICENSE) are preserved.
 
-This repository contains the code and aggregate data needed to reproduce the
-reported RCWT measurements.
+An agent can retain a readable summary while losing the facts needed for its
+next action. This repository tests that problem with a local LLM making
+successive decisions over a fictional financial ledger.
 
-## RCWT-S: critical-state survival under session compaction
+**The completed R1 confirmation improved exact actions from 152/256 (59.38%) to
+238/256 (92.97%): +33.59 percentage points, with a paired-episode bootstrap
+95% interval of [+27.34, +39.45] pp.** The gain belongs to an engineered memory
+and public-context system under a common frozen actor. It is not autonomous
+learning or an intrinsic improvement of the model.
 
-RCWT-S extends the original single-call RCWT artifact into one of the
-session-level gaps named by its authors: whether long agent traces retain the
-facts needed for the next decision. It compares three deterministic context
-policies under identical maximum token caps:
+Start with the [short case study](docs/rcwt_r1_case_study.md),
+[complete results](results/agent_v4_replication/RESULTS.md), or
+[small first-episode demo](results/agent_v4_replication_demo/README.md).
 
-- transcript tail;
-- versioned latest state with dependency closure;
-- versioned first state, an intentionally stale ablation.
+## The agent, the failure, and the change
 
-The confirmatory run contains 64 synthetic sessions, 4,096 events, 256
-checkpoints, three budgets, and 2,304 scored contexts. The protocol and decision
-gates were frozen before the full run.
+A real Qwen3.5-4B model receives public observations about invoices, accounts,
+payments and returns. It produces a text plan and then a JSON action. Only
+the final action executes in the simulator; its consequences affect later
+decisions. All identities, tools and money are synthetic.
 
-| Treatment | Decision-ready | 95% case-cluster CI | Mean tokens |
-|---|---:|---:|---:|
-| **Latest state** | **83.3%** | 79.0–87.6% | 541.1 |
-| Transcript tail | 54.2% | 47.0–61.3% | 525.8 |
-| First state (ablation) | 37.5% | 28.5–46.9% | 537.7 |
+The baseline uses an active LLM rolling summary. In the first recorded episode,
+the fifth request returns to an earlier invoice. The summary contains another
+invoice, and the agent asks for information that had already been observed.
+The structured arm retains the earlier record, joins it to the new payment
+update, and approves the correct fictional amount. This is an inspectable
+example, not proof that memory caused every error.
 
-The paired latest-state gain over tail was **+29.2 percentage points** (95%
-cluster-bootstrap CI +24.6 to +33.6). At 1,024 tokens, latest state reached
-100.0% decision readiness versus 65.6% for tail. The result did not come from
-giving latest state less content: it used 15.3 more tokens than tail on average
-while filling residual capacity with recent, dependency-closed events.
+The candidate combines a deterministic structured-memory writer with a reader
+that organizes retained and current public facts by their identifiers. Both
+arms use the same frozen actor, public rules, output schema and local model:
+two passes capped at 512 tokens each, with 256-token memory/context caps.
+No private reference selects the action, no semantic repair overrides it, and
+no correctness-triggered retry is allowed. Record joining and derived-field
+calculation move work into deterministic code, so this tests the combined
+system rather than compaction alone.
 
-![RCWT-S decision readiness and stale exposure](results/session_v1/decision_readiness.svg)
+## A fresh, fixed confirmation
 
-### Closed-loop evidence path
+R1 used **32 paired episodes**, eight from each of four synthetic families,
+with eight decisions per arm: **512 decisions and 1,248 model generations**.
+The runtime was Qwen3.5-4B, Unsloth Q4_K_M, on llama.cpp b10809.
 
-```mermaid
-flowchart LR
-    P[Public sessions<br/>64 × 64 events] --> T[Tail]
-    P --> L[State · latest]
-    P --> F[State · first ablation]
-    T --> C[2,304 sealed contexts]
-    L --> C
-    F --> C
-    P --> S[Fail-closed scorer]
-    O[Independent private oracle] --> S
-    C --> S
-    M[Preregistered manifest<br/>hashes + source binding] --> S
-    S --> A[Clustered inference<br/>aggregate + SVG]
-```
+The [prospective registration](docs/rcwt_v4_replication_protocol.md) froze the
+selected development candidate before generating the new cohort. The accuracy
+criterion required a mean gain of at least 10 pp and a strictly positive lower
+endpoint of a two-sided 95% interval. The interval uses 10,000 bootstrap
+resamples of **paired episodes**, not 512 independent decisions.
 
-The builder never receives the oracle. The runner seals the generated context
-digest before interpretation, and the scorer reconstructs every header, query,
-event line, token count, source-case hash, and treatment cell from the public
-corpus. Re-hashing an altered query or invented event still fails validation.
+| Complete R1 cohort | Rolling summary | Structured memory + public context |
+| --- | ---: | ---: |
+| Exact actions | 152/256 (59.38%) | 238/256 (92.97%) |
+| Entirely correct episodes | 2/32 | 19/32 |
+| Unsafe fictional action attempts | 11 | 4 |
+| Unsafe fictional cents actually booked | 743,614 | 297,683 |
+| Prompt + completion tokens | 1,165,452 | 972,074 |
+| Model calls, including compaction | 736 | 512 |
+| Step latency: median / p95 | 10.460 / 14.936 s | 7.723 / 11.532 s |
 
-### Reproduce RCWT-S
+The candidate made **86 additional correct decisions**, used **16.59% fewer
+tokens**, and reduced median step latency from **10.46 to 7.72 seconds**.
+Tokens and step times include both actor passes and memory compaction; step
+time also includes tokenization and context processing. These are descriptive
+measurements on the local hardware and load. API charges were US$0;
+electricity, hardware and total monetary cost remain unknown.
 
-No model API key is used.
+Both **aggregate descriptive** safety guards passed, but four unsafe attempts
+remain. In `insufficient-evidence`, unsafe attempts increased from 1 to 2 and
+unsafe booked cents from 142,330 to 160,695. In `updated-state`, attempts
+increased from 0 to 1, with no unsafe money booked. Memory truncations increased
+from 8 to 10. This is not a production-safety certificate.
 
-```bash
-make verify-session
-```
+## Inspect the saved evidence
 
-The expanded commands are locked in the
-[preregistration](docs/rcwt_session_preregistration.md). The full confirmatory
-[result report](results/session_v1/RESULTS.md), aggregate JSON, public corpus,
-separate oracle, sealed contexts, manifest, and deterministic SVG are committed.
-
-### What the result means — and does not mean
-
-Within these fixtures, versioning and dependency closure preserve current
-decision-critical evidence materially better than transcript recency alone.
-All preregistered checks passed, including zero fabricated sufficiency across
-576 insufficient-evidence contexts and a positive chronology control.
-
-This is an isolated memory-compaction primitive, not a claim about general LLM
-quality or production agent performance. Events are synthetic and structured;
-entity, field, supersession, and dependency metadata already exist. RCWT-S does
-not measure semantic extraction from raw conversations, tool reliability,
-customer outcomes, or the net value of multi-agent coordination. A cold first
-load may populate tiktoken's pinned vocabulary cache over HTTPS.
-
-Each checkpoint is rebuilt from the original session prefix. The previous
-compacted context is not fed into the next checkpoint, so this version does
-not measure accumulated loss from repeated online compaction.
-
-## Contents
-
-```text
-src/                         experiment runners and analysis scripts
-results/                     aggregate CSV/JSON summaries and figures
-docs/                        preregistered session protocol
-requirements.txt             pinned Python dependencies
-Makefile                     local verification entrypoints
-```
-
-## Original RCWT findings represented by the artifact
-
-1. **Fixed-budget RCWT:** at `W=4096`, the main context-dependent recall task
-   stays near baseline through moderate overhead and degrades sharply when the
-   residual reference block falls to a few hundred tokens.
-2. **Residual-budget interpretation:** window-scaling summaries are consistent
-   with a task-specific remaining-task-budget estimate, not a fixed percentage
-   threshold. Corrected full-budget logistic midpoints are `0.838` for Gemini,
-   `0.841` for Haiku, and `0.861` for GPT, corresponding to approximately
-   `665`, `650`, and `568` residual task tokens. This is descriptive, not a
-   universal law.
-3. **Intact-task ablation:** when the full task/reference block is kept intact
-   and coordination tokens are added by increasing total prompt length, all
-   150 calls return every scored field correctly (1200/1200 fields) across
-   tested coordination ratios up to 95%. This is evidence against a large
-   cliff-sized semantic-interference effect in this extraction-style setup, not
-   proof of zero effect or of behavior on harder open-ended tasks.
-4. **Boundary tasks:** self-contained algorithmic tasks remain stable, while
-   passage-heavy packs require larger residual task budgets. Claude Haiku 4.5
-   on the untruncated GSM8K pack is a reported exception to a truncation-only
-   account.
-
-## Suggested applications
-
-- **Context-budget regression tests:** run RCWT-style checks when prompt
-  templates, tool outputs, memory summaries, or agent transcripts grow over
-  time. The useful signal is not only accuracy, but the residual task budget at
-  which accuracy starts to fall.
-- **Coordination-format comparisons:** compare free-form transcripts,
-  structured state, retrieved documents, and compact summaries under the same
-  task block. This helps separate "more coordination content" from "better
-  coordination representation."
-- **Provider and model selection:** evaluate whether a model keeps task evidence
-  usable under the coordination overhead expected in a deployment, instead of
-  relying only on advertised context length.
-- **Prompt and memory compaction:** measure whether summarization, schema
-  compression, retrieval filtering, or task-first ordering preserves the facts
-  needed for the downstream answer.
-- **Follow-up benchmark design:** extend the intact-evidence ablation to harder
-  open-ended tasks, alternative graders, and domain-specific coordination packs
-  before making broader semantic-interference claims.
-
-## Setup
+With Python 3.12, run from the repository root:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+python tools/verify_v4_replication_report.py --run-dir results/agent_v4_replication
+python tools/replay_v4_replication.py --run-dir results/agent_v4_replication
 ```
 
-Provider API keys are read from environment variables when live reruns are
-requested:
+The verifier replays every recorded decision with the frozen code, checks the
+source/corpus/schedule bindings, and compares the recomputed analysis and report
+byte for byte. The replay always displays the **first manifest episode**, both
+arms and all eight steps, including failures. Neither command starts a model
+or requires an API key.
+
+For a browser-friendly view, the [small demo](results/agent_v4_replication_demo/README.md)
+shows all eight decisions in both arms. Its [focused step 5 JSON](results/agent_v4_replication_demo/step5.json)
+contains the public inputs, memory/context, actions and grades, with original
+trace hashes and line numbers. Selection is fixed to manifest index 0 and step
+index 4, never a search for a favorable score. Optionally verify its exact bytes:
 
 ```bash
-export OPENAI_API_KEY=...
-export ANTHROPIC_API_KEY=...
-export GEMINI_API_KEY=...
+python tools/export_r1_demo.py --verify
 ```
 
-No API keys, credentials, local machine paths, or institution-specific files are
-included.
+The [analysis](results/agent_v4_replication/analysis.json),
+[replay receipt](results/agent_v4_replication/verification.json) and
+[registered protocol](docs/rcwt_v4_replication_protocol.md) support the public
+report checks. An integrity PASS is separate from the accuracy and safety
+verdicts. The original R1 closure also passed **583 Python regression tests**;
+tests of the implementation are not additional model experiments.
 
-## Main-task token accounting
-
-The historical runner stores `proportion = q = c/(W-u)`, where `u=337` is the
-fixed task-instruction block. Paper analyses use the realized full-budget share
-`p=c/W`. At `W=4096`, target `q=0.90` produces `c=3383`, `p=0.8259`, a
-376-token reference block, and `W-c=713` residual task tokens. The raw scores
-are unchanged; this conversion corrects the axis and all derived midpoint and
-reserve values.
-
-
-## Reproducing the intact-task ablation
+The complete [derived runtime log](results/agent_v4_replication_public_runtime/server.redacted.txt)
+is also publicly verifiable. Exactly **one local directory prefix in model-load
+metadata** is redacted; every task line, timestamp and recorded timing remains
+unchanged. The unchanged auditor reconciles **1,248 server starts, final timing
+pairs and recorded calls** against the public traces; see the
+[public accounting report](results/agent_v4_replication_public_accounting/CALL-ACCOUNTING.md).
+Recheck it without model calls or the private runtime bundle:
 
 ```bash
-PYTHONPATH=src python src/rcwt_intact_ablation.py \
-  --models gpt-4.1-mini,claude-haiku-4-5-20251001,gemini-2.5-flash \
-  --ratios 0,0.5,0.75,0.9,0.95 \
-  --orders coord_first,reason_first \
-  --n-trials 5 \
-  --output-dir results/intact_ablation
-
-PYTHONPATH=src python src/rescore_intact_ablation.py \
-  --responses results/intact_ablation/rcwt_intact_ablation_responses.jsonl \
-  --output-dir results/intact_ablation
+python tools/audit_v4_replication_calls.py --run-dir results/agent_v4_replication --server-log results/agent_v4_replication_public_runtime/server.redacted.txt --output-dir results/agent_v4_replication_public_accounting --verify
 ```
 
-Outputs:
+The [derived-log manifest](results/agent_v4_replication_public_runtime/manifest.json)
+binds the public log to hashes of the original private log, custody receipt and
+accounting. Public verification checks the derived log's consistency with the
+recorded calls; it does **not** independently reproduce private custody or prove
+the redaction against unavailable original bytes. Neither check is independent
+physical attestation of inference or proof that no unlisted runs occurred.
 
-- `results/intact_ablation/rcwt_intact_ablation.csv`
-- `results/intact_ablation/rcwt_intact_ablation_aggregates.json`
-- `results/intact_ablation/rcwt_intact_ablation_responses.jsonl`
+## Limits
 
-In the intact ablation, `target_ratio = c/(c+t)`, where `t=698` is the intact
-task/reference block. Ratios `0,0.5,0.75,0.9,0.95` correspond to estimated
-prompt sizes `702,1401,2797,6985,13965` construction tokens. Each model-ratio
-cell pools 10 calls and 80 binary field decisions. Deterministic scoring is
-strictly isolated by JSON field, preventing one field's value from satisfying
-another field's criterion.
+The confirmation tests new parameter instances from the **same four synthetic
+families**, one quantized model and one inference seed. It does not establish
+transfer to unseen domains, other models or seeds, CloudWalk customer data,
+or production traffic. Each arm is graded against its own actual prior
+simulated ledger, so later references can differ after different actions.
 
-## Existing result summaries
+There are no model-weight updates, autonomously learned policies or recursive
+self-improvement. The confidence interval concerns the registered comparison;
+the criterion does not prove a population-wide minimum gain of 10 pp. Local
+hashes and recorded telemetry establish consistency, not independent
+attestation that no unlisted runs occurred.
 
-- `results/rcwt_controlled.csv`
-- `results/rcwt_controlled_aggregates.json`
-- `results/rcwt_curve_fits.json`
-- `results/cliff_n20/rcwt_controlled_aggregates.json`
-- `results/w8192/rcwt_controlled_aggregates.json`
-- `results/w8192_cliff/rcwt_controlled_aggregates.json`
-- `results/w16384/rcwt_controlled_aggregates.json`
-- `results/cross_benchmark_pack_summary_with_drop.csv`
-- `results/w32768_summary.csv`
-- `results/output_length_analysis.csv`
-- `results/intact_ablation/rcwt_intact_ablation_aggregates.json`
+## Preserved experiments and attribution
 
-## Model availability note
+Earlier negative and incomplete outcomes remain part of the evidence:
 
-The historical fixed-budget Gemini rows used `gemini-2.0-flash`. That model was
-unavailable during later reruns, so the intact-task ablation uses
-`gemini-2.5-flash`. Historical aggregate files are retained for reproducibility
-of the reported tables; new confirmatory reruns should use current public model
-IDs.
+| Experiment | What it measures or concluded | Evidence |
+| --- | --- | --- |
+| Original RCWT and intact-task ablation | Coordination-token overhead in single-call tasks | [Upstream artifact](https://github.com/cloudwalk/rcwt-agent-coordination), [local aggregates](results/rcwt_controlled_aggregates.json), [intact-task results](results/intact_ablation/rcwt_intact_ablation_aggregates.json) |
+| Static RCWT-S `session_v1` | Retained-evidence scoring, **not LLM action accuracy** or cumulative online memory | [Registration](docs/rcwt_session_preregistration.md), [results](results/session_v1/RESULTS.md) |
+| Online v2 | No learned-memory improvement; selection retained the summary baseline | [Results](results/agent_v2/RESULTS.md), [diagnosis](results/agent_v2/DIAGNOSIS.md), [demo](docs/rcwt_agent_demo.md) |
+| Online v3 | Five failed development screens; no held-out confirmation | [Closure](results/agent_v3_development/RESULTS.md), [all attempts](results/agent_v3_development/DEVELOPMENT.md), [demo](docs/rcwt_online_v3_demo.md) |
+| Online v4 development | First revision failed safety guards; the second passed development | [Both attempts](results/agent_v4_development/RESULTS.md), [registered revision](docs/rcwt_online_v4_revision_02.md) |
+| Original v4 confirmation | Interrupted at 173/512 decisions; remains incomplete | [Interruption record](results/agent_v4_interrupted/INTERRUPTION.md) |
 
-## Verification
+R1 was a separately authorized fresh cohort after that interruption was
+disclosed. It did not resume, pool or replace the 173-decision prefix, and no
+candidate was retuned for R1. The prefix retains 421 completed calls and one
+additional canceled task without final persisted response/usage. Historical
+costs are disclosed separately from the R1 comparison.
 
-```bash
-make verify
-```
+The [Makefile](Makefile) retains the legacy reproduction and verification
+entrypoints. `make verify-session` rebuilds the static session experiment;
+`make verify` rebuilds and checks the legacy deterministic artifacts and runs
+the Python tests. `make replication-verify` checks the complete R1 report.
+Those experiments answer different questions and their scores must not be pooled.
 
-This compiles all Python scripts, runs regression tests, reconstructs and scores
-RCWT-S, regenerates its deterministic SVG, reruns deterministic scoring for the
-intact-task ablation, regenerates the main curve fits over realized `c/W`, and
-checks call-level bootstrap and window-scaling summaries.
-
-CI requires byte-identical regeneration of the deterministic artifacts,
-including all RCWT-S evidence. The legacy SciPy curve-fit JSON is compared
-numerically with the committed baseline: structure and empirical data must
-match exactly, all numbers must be finite, and the best AIC model must remain
-unchanged. Only one unit of the last published decimal place is allowed for
-fit outputs (`1e-5` for parameters, predictions, R-squared and RMSE; `1e-4`
-for AIC and c-star). Larger differences fail verification.
-
-For the legacy piecewise-linear fit, the declining segment has constant slope,
-so a unique steepest point cannot be identified. Its reported c-star now uses
-the explicit decline-onset convention, p-star. This replaces a finite-difference
-argmin that selected numerical noise within the ramp. The original emailed
-version remains available at tag `rcwt-session-v1`; RCWT-S results are unchanged.
-
-## Scope
-
-The original RCWT is a local single-call measurement primitive. RCWT-S adds a
-controlled session-memory experiment, but neither study measures the net benefit
-of multi-agent coordination, production turn scheduling, tool reliability, or
-end-to-end long-running agent quality. Those require separate experiments.
+The original RCWT is by **Brenda Carolina Belmiro Lelis and Rodrigo
+Cabral-Carvalho**. This extension preserves their copyright notice and MIT
+license; it does not represent an endorsement by the original authors.

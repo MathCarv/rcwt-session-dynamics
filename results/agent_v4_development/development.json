@@ -1,0 +1,478 @@
+{
+  "attempt_count": 2,
+  "attempts": [
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Trusted local project sources only; hashes do not authenticate authorship. No independent model, token or hardware attestation.",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "6a06ce29e1f793a931f40990b71e7ba9ea06e56d750a3ae1897d183a17a78fc0",
+        "read_only": true,
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 128
+        },
+        "verified_steps": 128
+      },
+      "attempt": "attempt_01",
+      "baseline": "Original summary reducer, public rules, simulator and sampler; shared text-plan then task-bound JSON actor in both arms. The schema binds case and operation, never factual eligibility or a chosen action",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.828125,
+          "completion_tokens": 23307,
+          "episode_wall_seconds": 467.9469837999786,
+          "episodes": 8,
+          "inference_seconds": 464.6366363999259,
+          "model_calls": 128,
+          "prompt_tokens": 157266,
+          "steps": 64,
+          "successes": 53,
+          "total_tokens": 180573,
+          "unsafe_actions": 5,
+          "unsafe_booked_cents": 131738
+        },
+        "summary": {
+          "accuracy": 0.484375,
+          "completion_tokens": 33877,
+          "episode_wall_seconds": 731.4600579999678,
+          "episodes": 8,
+          "inference_seconds": 730.2783351001272,
+          "model_calls": 184,
+          "prompt_tokens": 200750,
+          "steps": 64,
+          "successes": 31,
+          "total_tokens": 234627,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 89182
+        }
+      },
+      "calculated_screen": {
+        "passed": false,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 64,
+            "successes": 53,
+            "unsafe_actions": 5,
+            "unsafe_booked_cents": 131738
+          },
+          "summary": {
+            "steps": 64,
+            "successes": 31,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 89182
+          }
+        }
+      },
+      "dataset_seed": 2026091205,
+      "expenditure_total": {
+        "completion_tokens": 57184,
+        "episode_wall_seconds": 1199.4070417999465,
+        "inference_seconds": 1194.914971500053,
+        "model_calls": 312,
+        "prompt_tokens": 358016,
+        "total_tokens": 415200
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_01/protocol.json",
+          "sha256": "6a06ce29e1f793a931f40990b71e7ba9ea06e56d750a3ae1897d183a17a78fc0"
+        },
+        {
+          "path": "attempt_01/public.json",
+          "sha256": "125dd865119bd2c7a7abe91766fafaff18bb02fd7dfc07bace6594d6817e59d7"
+        },
+        {
+          "path": "attempt_01/oracle.json",
+          "sha256": "584ca5320d23c2936fccd62441d3bf60e2435a1f0a7539662aacb11de7e7b2e9"
+        },
+        {
+          "path": "attempt_01/schedule.json",
+          "sha256": "308c3cb321ae41cd30fde9275cc45b5b6d1a3ffcc8156ba73acdfa0719ddfd31"
+        },
+        {
+          "path": "attempt_01/freeze.json",
+          "sha256": "4884c31f376ad510c5a5389a01fe0613d69683e94b2f7606bf993f1da2465672"
+        },
+        {
+          "path": "attempt_01/started.json",
+          "sha256": "2529095c1a0db76b4977931035c5169b214d189a5f0abe8e8fd3cf2d8e5166c2"
+        },
+        {
+          "path": "attempt_01/traces.jsonl",
+          "sha256": "c484c5c4b810b42f7419fc96c05879b22075c431e6220967c376b9cd0d72f937"
+        },
+        {
+          "path": "attempt_01/episodes.jsonl",
+          "sha256": "9a1fc55a8826a6601bddb1806f1590df372e1b7a5f7b5947177dc7ee9545b83c"
+        },
+        {
+          "path": "attempt_01/completion.json",
+          "sha256": "9bac7482b8389ceb0a5e0d86c6a30e14f68b13287666598e7da954e8b1d120d3"
+        },
+        {
+          "path": "attempt_01/development-screen.json",
+          "sha256": "2bf0be1755a59cd82e2f414984a500ece4a812fc9b37eb648013dc023445369a"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_analysis_v3.py",
+          "sha256": "d1b6e29f1fba0011c0783bd3f3f6ffd37f7bf8bf9ec1fbc117133c9db6fb589c"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_analysis_v4.py",
+          "sha256": "d902b1d27c42609f0c28abad67af68e0c28f7e925b27f080e34a203fca03dd2c"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_context_v4.py",
+          "sha256": "ad8dd1feed21700a1d3889e2f7ca93adb9932b9be421fc01f6f5e1e6bf4ecc22"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_decision_v4.py",
+          "sha256": "367a35950bb29b8e15a5d8bbb032d86ebe0af86144402bee6b03d5eb0b49cb16"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_online_v3.py",
+          "sha256": "e09d8f98a42da5fb9b3ddeafeb22d0e1d5109747f54f93f10e57bc052c478465"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_online_v4.py",
+          "sha256": "c1d15ac39da74da5490014a04cee10627282bafb1f86fd852518fbc43454a664"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_retrieval_v3.py",
+          "sha256": "7ebad5d41b2e6a2b71940ac402245eb803877164c9beb6f0ca7e15eee3306a62"
+        },
+        {
+          "path": "attempt_01/sources/rcwt_review_v3.py",
+          "sha256": "c16a865da6f9e448d56f34f44700f7f1c48afead153694d6df56ae8699095033"
+        }
+      ],
+      "intervention": "Original structured post-action storage plus a transient context that overlays current public tool records onto retained state and joins the requested case before projection; may change the first-step input",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/4",
+      "protocol_sha256": "6a06ce29e1f793a931f40990b71e7ba9ea06e56d750a3ae1897d183a17a78fc0",
+      "run_path": "attempt_01",
+      "screen_status": "FAIL",
+      "total_monetary_cost_usd": null
+    },
+    {
+      "api_cost_usd": 0,
+      "archive_verification": {
+        "inference_calls": 0,
+        "limit": "Trusted local project sources only; hashes do not authenticate authorship. No independent model, token or hardware attestation.",
+        "mode": "trusted archived source / offline replay",
+        "protocol_sha256": "750768b5615a15c6a0c0542bf7464045116fa8587dd3f7b61f894dba124de73b",
+        "read_only": true,
+        "status": "PASS",
+        "verification": {
+          "limitations": [
+            "Token IDs and elapsed times are recorded local-server claims, not independent hardware attestation",
+            "No causal attribution of every failure; no production or cross-model claim"
+          ],
+          "scope": "Frozen sources/corpus/order; exact actor inputs, raw completions, tokenization requests, cumulative compaction, tool execution, grades and every counter replayed offline",
+          "status": "PASS",
+          "verified_steps": 128
+        },
+        "verified_steps": 128
+      },
+      "attempt": "attempt_02",
+      "baseline": "Original summary reducer, public rules, simulator and sampler; shared text-plan then task-bound JSON actor with a constant ordered-public-rule walkthrough in both arms. The schema binds case and operation, never factual eligibility or a chosen action",
+      "by_policy": {
+        "structured": {
+          "accuracy": 0.9375,
+          "completion_tokens": 23118,
+          "episode_wall_seconds": 367.107834000024,
+          "episodes": 8,
+          "inference_seconds": 363.591842399881,
+          "model_calls": 128,
+          "prompt_tokens": 219633,
+          "steps": 64,
+          "successes": 60,
+          "total_tokens": 242751,
+          "unsafe_actions": 3,
+          "unsafe_booked_cents": 158285
+        },
+        "summary": {
+          "accuracy": 0.59375,
+          "completion_tokens": 34755,
+          "episode_wall_seconds": 536.3013098999509,
+          "episodes": 8,
+          "inference_seconds": 535.0801068999572,
+          "model_calls": 184,
+          "prompt_tokens": 263579,
+          "steps": 64,
+          "successes": 38,
+          "total_tokens": 298334,
+          "unsafe_actions": 4,
+          "unsafe_booked_cents": 362341
+        }
+      },
+      "calculated_screen": {
+        "passed": true,
+        "scope": "development-only screening; not held-out evidence",
+        "totals": {
+          "structured": {
+            "steps": 64,
+            "successes": 60,
+            "unsafe_actions": 3,
+            "unsafe_booked_cents": 158285
+          },
+          "summary": {
+            "steps": 64,
+            "successes": 38,
+            "unsafe_actions": 4,
+            "unsafe_booked_cents": 362341
+          }
+        }
+      },
+      "dataset_seed": 2026091205,
+      "expenditure_total": {
+        "completion_tokens": 57873,
+        "episode_wall_seconds": 903.4091438999749,
+        "inference_seconds": 898.6719492998382,
+        "model_calls": 312,
+        "prompt_tokens": 483212,
+        "total_tokens": 541085
+      },
+      "inference_seed": 20260911,
+      "input_manifest": [
+        {
+          "path": "attempt_02/protocol.json",
+          "sha256": "750768b5615a15c6a0c0542bf7464045116fa8587dd3f7b61f894dba124de73b"
+        },
+        {
+          "path": "attempt_02/public.json",
+          "sha256": "125dd865119bd2c7a7abe91766fafaff18bb02fd7dfc07bace6594d6817e59d7"
+        },
+        {
+          "path": "attempt_02/oracle.json",
+          "sha256": "584ca5320d23c2936fccd62441d3bf60e2435a1f0a7539662aacb11de7e7b2e9"
+        },
+        {
+          "path": "attempt_02/schedule.json",
+          "sha256": "308c3cb321ae41cd30fde9275cc45b5b6d1a3ffcc8156ba73acdfa0719ddfd31"
+        },
+        {
+          "path": "attempt_02/freeze.json",
+          "sha256": "75982bda83c91ef0204cd936936dec7ed284d98c2aa29cf0c02f5cc85d550584"
+        },
+        {
+          "path": "attempt_02/started.json",
+          "sha256": "bc61c84b77646fa0d6073ed17a79fcf6551cef04406e3c6a7ed09d40a40eb8b9"
+        },
+        {
+          "path": "attempt_02/traces.jsonl",
+          "sha256": "bad3fa5b203f2f50d7956d112c7a1c8f6f8bd642fd75e163bb7392e7572ae0d8"
+        },
+        {
+          "path": "attempt_02/episodes.jsonl",
+          "sha256": "20128e3ae04644700cad72df4aa3c0cc4ab32ad89a57a6d50a6d8e17f66bbd6e"
+        },
+        {
+          "path": "attempt_02/completion.json",
+          "sha256": "cb93faa3777b3e30ae9f40560b5c1dea4178639dca41e582c19540449ee5b794"
+        },
+        {
+          "path": "attempt_02/development-screen.json",
+          "sha256": "a89c028cbacefcbeb4eda552a5cc05b2972ea2cebeb60623c0e5eb2202a21232"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_actor.py",
+          "sha256": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_analysis.py",
+          "sha256": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_env.py",
+          "sha256": "98a32d0b6e58511fb5f587a0a8c29174f2c36963873c3bf3c93844c72ffddb88"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_memory.py",
+          "sha256": "9d4605e2c79dcf1021e35ccb63952bd43d2bc8cfd6ed66ef52b8ca584c16b32e"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_agent_run.py",
+          "sha256": "737698a53e06d5fe8b03a953ad1256209f16f99042b1fb54361caa76a9f86c0c"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_analysis_v3.py",
+          "sha256": "d1b6e29f1fba0011c0783bd3f3f6ffd37f7bf8bf9ec1fbc117133c9db6fb589c"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_analysis_v4.py",
+          "sha256": "cbc210dd297fb0c2ca3cff77e68eae54476d9fc98f5898cf0e83193bcc98228b"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_context_v4.py",
+          "sha256": "ad8dd1feed21700a1d3889e2f7ca93adb9932b9be421fc01f6f5e1e6bf4ecc22"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_decision_v4.py",
+          "sha256": "a3baf2fb791a46f5c555e57f6f27921ea0e2398ca891d017646051a55230f634"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_local_model.py",
+          "sha256": "8e8f30e605e4263b72f3bf45a604b6da12a1566ad4456c91bbb16d67812c81b7"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_memory_v3.py",
+          "sha256": "3f5439272376a4a030ef850dc56b0c632cce23a33f42d6ad4c3e9644007f1862"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_online_v3.py",
+          "sha256": "e09d8f98a42da5fb9b3ddeafeb22d0e1d5109747f54f93f10e57bc052c478465"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_online_v4.py",
+          "sha256": "1df89e60550107afe54b36cfd355d4cb65787b017793ddea0660a4014c959547"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_retrieval_v3.py",
+          "sha256": "7ebad5d41b2e6a2b71940ac402245eb803877164c9beb6f0ca7e15eee3306a62"
+        },
+        {
+          "path": "attempt_02/sources/rcwt_review_v3.py",
+          "sha256": "c16a865da6f9e448d56f34f44700f7f1c48afead153694d6df56ae8699095033"
+        }
+      ],
+      "intervention": "Original structured post-action storage plus a transient context that overlays current public tool records onto retained state and joins the requested case before projection; may change the first-step input",
+      "memory_budget": 256,
+      "model": "rcwt-local-qwen35-4b",
+      "protocol_schema": "rcwt-online-memory/4",
+      "protocol_sha256": "750768b5615a15c6a0c0542bf7464045116fa8587dd3f7b61f894dba124de73b",
+      "run_path": "attempt_02",
+      "screen_status": "PASS",
+      "total_monetary_cost_usd": null
+    }
+  ],
+  "development_expenditure": {
+    "all_policies": {
+      "completion_tokens": 115057,
+      "episode_wall_seconds": 2102.8161856999213,
+      "inference_seconds": 2093.5869207998912,
+      "model_calls": 624,
+      "prompt_tokens": 841228,
+      "total_tokens": 956285
+    },
+    "api_cost_usd": 0,
+    "by_policy": {
+      "structured": {
+        "completion_tokens": 46425,
+        "episode_wall_seconds": 835.0548178000026,
+        "inference_seconds": 828.2284787998069,
+        "model_calls": 256,
+        "prompt_tokens": 376899,
+        "total_tokens": 423324
+      },
+      "summary": {
+        "completion_tokens": 68632,
+        "episode_wall_seconds": 1267.7613678999187,
+        "inference_seconds": 1265.3584420000843,
+        "model_calls": 368,
+        "prompt_tokens": 464329,
+        "total_tokens": 532961
+      }
+    },
+    "scope": "Costs only; repeated tasks are counted as actual recorded work, not independent evidence",
+    "total_monetary_cost_usd": null
+  },
+  "limitations": [
+    "Development-only index, not a confirmatory analysis, confidence interval, or generalization claim.",
+    "Each attempt is reported separately. Reused training episodes and adaptive revisions must not be pooled as independent quality evidence.",
+    "PASS/FAIL denotes the development screen, not held-out success. Failed attempts remain visible.",
+    "Only expenditure is summed across attempts; no pooled accuracy, unsafe-attempt rate, or unsafe-booking total is reported.",
+    "Episode wall time is the sum of recorded episode_seconds, including episode overhead; it is not elapsed calendar time across runs.",
+    "Token/call/inference totals include all completion calls recorded by the archived runner, including compression and draft/review stages when present.",
+    "API charges are zero under the local-only protocol; energy, hardware and total monetary cost are not measured.",
+    "Verification replays trusted archived project code and recorded local telemetry, not independent attestation of physical inference or token counts.",
+    "The index covers exactly the explicitly supplied run directories; it does not discover or silently omit additional attempts."
+  ],
+  "new_model_calls_for_this_report": 0,
+  "provenance": {
+    "archive_verifier_baseline_inputs": [
+      {
+        "path": "../agent_v2/protocol.json",
+        "sha256": "fba390f2cc15254cfb740f44b69972c2eb62b17a688ebcc97d2419728f3537d3"
+      },
+      {
+        "path": "../agent_v2/RESULTS.md",
+        "sha256": "0cb52e7ed1639c0e9af7d64e2b2f28c9c6e629786f04127dfd39dc759efde990"
+      },
+      {
+        "path": "../agent_v2/DIAGNOSIS.md",
+        "sha256": "04af4372d572774ed9fb8d278b2b8546139b8a577451e86749e150ca8efd592f"
+      }
+    ],
+    "archive_verifier_source": {
+      "path": "../../tools/verify_online_v4_archive.py",
+      "sha256": "eb07f68c9c4a824d7d0daa89d529ed9d18b1b5d89ce31f41eaf4829a0c61d8d3"
+    },
+    "historical_v3_inputs": [
+      {
+        "path": "../agent_v3_development/attempt_05/protocol.json",
+        "sha256": "949624e0c1f59efd40f6dd10e0b3b06acc8b601559dc536342ef07a2ae4701df"
+      },
+      {
+        "path": "../agent_v3_development/development.json",
+        "sha256": "80b4d19a7f9b7b8f730c5df6fa9168135b97260a5923821b2abc434efb6ef36e"
+      },
+      {
+        "path": "../agent_v3_development/RESULTS.md",
+        "sha256": "ed36c609fd161af65e7d3178fc80bf12b78ce7b7e8505bca1e84359ca5cec662"
+      }
+    ],
+    "registered_final_revision": {
+      "path": "../../docs/rcwt_online_v4_revision_02.md",
+      "sha256": "f56c44d3cf62f99b8fd01d00d731d240f9372ff0aaf846390282acaf7c03582d"
+    },
+    "registered_series_plan": {
+      "path": "../../docs/rcwt_online_v4_protocol.md",
+      "sha256": "2f959e5a0724a71f84c6c48914a8f507d29016f2edbc50612068cd2be0ebfa25"
+    },
+    "report_source": {
+      "path": "../../tools/report_online_v4_development.py",
+      "sha256": "3429c06974ffbf61b01534fbf0d4bb4b75e650049c841fbc9138af7b69056506"
+    }
+  },
+  "schema": "rcwt-online-development-index/4",
+  "scope": "adaptive development accounting only; no pooled quality or confirmatory inference"
+}

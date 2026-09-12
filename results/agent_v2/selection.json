@@ -1,0 +1,31 @@
+{
+  "selected_at_utc": "2026-09-11T20:54:19.838405+00:00",
+  "selected": {
+    "name": "summary",
+    "kind": "summary",
+    "instruction": null
+  },
+  "rankings": [
+    {
+      "policy": "summary",
+      "success_rate": 0.375,
+      "unsafe_actions": 3,
+      "completion_tokens": 7119
+    },
+    {
+      "policy": "repair_proposed",
+      "success_rate": 0.375,
+      "unsafe_actions": 4,
+      "completion_tokens": 7672
+    },
+    {
+      "policy": "repair_template",
+      "success_rate": 0.3125,
+      "unsafe_actions": 4,
+      "completion_tokens": 7476
+    }
+  ],
+  "validation_traces_sha256": "7281599eb654bb1635d0796d985e09103f1f29f3da98fa472063b83a2809b17c",
+  "candidate_policies_sha256": "3410c7ea146823ffbf5dd77041601aa3433b329d41c121bb36a8a70078dbd1bb",
+  "training_traces_sha256": "a0c947e0fb26f183c49ef85720852229595ff11e173145da426de8617f783afe"
+}

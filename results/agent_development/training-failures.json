@@ -1,0 +1,56 @@
+[
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "unnecessary_deferral",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "unsafe_execution",
+    "count": 6
+  },
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "wrong_reason",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "insufficient-evidence",
+    "failure_class": "unsafe_execution",
+    "count": 8
+  },
+  {
+    "split": "train",
+    "family": "topic-return",
+    "failure_class": "invalid_action",
+    "count": 4
+  },
+  {
+    "split": "train",
+    "family": "topic-return",
+    "failure_class": "unsafe_execution",
+    "count": 2
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "unsafe_execution",
+    "count": 2
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "wrong_amount",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "wrong_reason",
+    "count": 1
+  }
+]

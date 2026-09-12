@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "integrity_only": true,
+  "gain": "NOT_EVALUATED",
+  "verified_steps": 512,
+  "verified_episode_summaries": 64,
+  "generation_calls": 1248,
+  "generation_calls_by_policy": {
+    "summary": 736,
+    "structured": 512
+  },
+  "prompt_tokens": 1906468,
+  "completion_tokens": 231058,
+  "protocol_sha256": "5fdb1fcb9b81bd4fc073d9429c90e199a44688dfbdf9b2bdfedc74f1c9092524",
+  "last_trace_sha256": "2e760f2febe5ca0b9fe5d7f6a747ffcc93e25aaf283f2eaebcfd41a9361f4252",
+  "inference_calls": 0,
+  "read_only": true,
+  "scope": "Registered R1 sources, runtime configuration, history, corpus and schedule; exact offline replay of every actor input, raw completion, tokenization, action, ledger effect, grade, counter and recorded timing",
+  "limitations": [
+    "Token IDs and times are local runtime claims, not independent hardware attestation",
+    "Integrity PASS is separate from the accuracy and descriptive safety gates",
+    "Server generation reconciliation and process identity require the separate runtime receipts",
+    "One new authorized cohort; the interrupted confirmation remains incomplete and unpooled"
+  ]
+}

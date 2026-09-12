@@ -1,0 +1,997 @@
+{
+  "schema_version": "rcwt-agent-analysis/1",
+  "split": "test",
+  "input_sha256": "ae90a1dc0d4df754bb4836a46cfec0e6ca713df87e9335b712f1e1cd05d7521a",
+  "n_episodes": 16,
+  "families": [
+    "evidence-chain",
+    "insufficient-evidence",
+    "topic-return",
+    "updated-state"
+  ],
+  "policies": {
+    "learned": {
+      "n_episodes": 16,
+      "steps": 128,
+      "successes": 54,
+      "macro_episode_success_rate": 0.421875,
+      "micro_step_success_rate": 0.421875,
+      "full_success_episodes": 0,
+      "full_success_rate": 0.0,
+      "failure_counts": {
+        "invalid_action": 4,
+        "unnecessary_deferral": 26,
+        "unsafe_execution": 12,
+        "wrong_case": 2,
+        "wrong_decision": 26,
+        "wrong_reason": 4
+      },
+      "valid_actions": 124,
+      "valid_action_rate": 0.96875,
+      "unsafe_actions": 12,
+      "unsafe_action_rate": 0.09375,
+      "unsafe_booked_cents": 692950,
+      "prompt_tokens": 199627,
+      "completion_tokens": 31819,
+      "total_tokens": 231446,
+      "prompt_tokens_per_step": 1559.5859375,
+      "completion_tokens_per_step": 248.5859375,
+      "tokens_per_step": 1808.171875,
+      "model_calls": 240,
+      "model_calls_per_step": 1.875,
+      "decision_latency_seconds": {
+        "mean": 4.5825381492181805,
+        "p50": 4.495581099996343,
+        "p95": 5.326841975006391,
+        "total": 586.5648830999271
+      },
+      "step_latency_seconds": {
+        "mean": 6.998562453906288,
+        "p50": 6.982276350012398,
+        "p95": 9.488040574995102,
+        "total": 895.8159941000049
+      },
+      "episode_latency_seconds": {
+        "mean": 56.3837003125027,
+        "p50": 54.93448859998898,
+        "p95": 65.62584762500774,
+        "total": 902.1392050000431
+      },
+      "memory_truncations": 5,
+      "memory_truncation_rate": 0.0390625,
+      "api_cost_usd": 0.0,
+      "total_monetary_cost_usd": null,
+      "by_family": {
+        "evidence-chain": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 10,
+          "macro_episode_success_rate": 0.3125,
+          "micro_step_success_rate": 0.3125,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 6,
+            "unsafe_execution": 5,
+            "wrong_decision": 10,
+            "wrong_reason": 1
+          },
+          "valid_actions": 32,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 5,
+          "unsafe_action_rate": 0.15625,
+          "unsafe_booked_cents": 178229,
+          "prompt_tokens": 50087,
+          "completion_tokens": 8734,
+          "total_tokens": 58821,
+          "prompt_tokens_per_step": 1565.21875,
+          "completion_tokens_per_step": 272.9375,
+          "tokens_per_step": 1838.15625,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.52909063437437,
+            "p50": 4.561701099999482,
+            "p95": 4.8344483049892,
+            "total": 144.93090029997984
+          },
+          "step_latency_seconds": {
+            "mean": 7.31442183125273,
+            "p50": 7.433604000005289,
+            "p95": 9.390856629998598,
+            "total": 234.06149860008736
+          },
+          "episode_latency_seconds": {
+            "mean": 59.6565299500071,
+            "p50": 59.783118000021204,
+            "p95": 64.48420240501437,
+            "total": 238.6261198000284
+          },
+          "memory_truncations": 4,
+          "memory_truncation_rate": 0.125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "insufficient-evidence": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 14,
+          "macro_episode_success_rate": 0.4375,
+          "micro_step_success_rate": 0.4375,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 3,
+            "unnecessary_deferral": 2,
+            "unsafe_execution": 3,
+            "wrong_case": 1,
+            "wrong_decision": 7,
+            "wrong_reason": 2
+          },
+          "valid_actions": 29,
+          "valid_action_rate": 0.90625,
+          "unsafe_actions": 3,
+          "unsafe_action_rate": 0.09375,
+          "unsafe_booked_cents": 196102,
+          "prompt_tokens": 48836,
+          "completion_tokens": 7642,
+          "total_tokens": 56478,
+          "prompt_tokens_per_step": 1526.125,
+          "completion_tokens_per_step": 238.8125,
+          "tokens_per_step": 1764.9375,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.553036440624055,
+            "p50": 4.47082545000012,
+            "p95": 5.273819564998848,
+            "total": 145.69716609996976
+          },
+          "step_latency_seconds": {
+            "mean": 6.864594765624133,
+            "p50": 6.861237949997303,
+            "p95": 9.356987049995222,
+            "total": 219.66703249997227
+          },
+          "episode_latency_seconds": {
+            "mean": 55.20326082499378,
+            "p50": 54.93448859998898,
+            "p95": 58.77903752499842,
+            "total": 220.8130432999751
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "topic-return": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 13,
+          "macro_episode_success_rate": 0.40625,
+          "micro_step_success_rate": 0.40625,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 8,
+            "unsafe_execution": 1,
+            "wrong_case": 1,
+            "wrong_decision": 8,
+            "wrong_reason": 1
+          },
+          "valid_actions": 32,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.03125,
+          "unsafe_booked_cents": 95347,
+          "prompt_tokens": 50396,
+          "completion_tokens": 8075,
+          "total_tokens": 58471,
+          "prompt_tokens_per_step": 1574.875,
+          "completion_tokens_per_step": 252.34375,
+          "tokens_per_step": 1827.21875,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.5482479437478105,
+            "p50": 4.463406950002536,
+            "p95": 5.197929004985781,
+            "total": 145.54393419992994
+          },
+          "step_latency_seconds": {
+            "mean": 6.9321688531226755,
+            "p50": 6.912904450000497,
+            "p95": 8.974322360003134,
+            "total": 221.82940329992562
+          },
+          "episode_latency_seconds": {
+            "mean": 55.53012705000583,
+            "p50": 55.48536920000333,
+            "p95": 60.52949403500242,
+            "total": 222.12050820002332
+          },
+          "memory_truncations": 1,
+          "memory_truncation_rate": 0.03125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "updated-state": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 17,
+          "macro_episode_success_rate": 0.53125,
+          "micro_step_success_rate": 0.53125,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 1,
+            "unnecessary_deferral": 10,
+            "unsafe_execution": 3,
+            "wrong_decision": 1
+          },
+          "valid_actions": 31,
+          "valid_action_rate": 0.96875,
+          "unsafe_actions": 3,
+          "unsafe_action_rate": 0.09375,
+          "unsafe_booked_cents": 223272,
+          "prompt_tokens": 50308,
+          "completion_tokens": 7368,
+          "total_tokens": 57676,
+          "prompt_tokens_per_step": 1572.125,
+          "completion_tokens_per_step": 230.25,
+          "tokens_per_step": 1802.375,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.699777578126486,
+            "p50": 4.593343500004266,
+            "p95": 5.583487534988671,
+            "total": 150.39288250004756
+          },
+          "step_latency_seconds": {
+            "mean": 6.883064365625614,
+            "p50": 6.688716900011059,
+            "p95": 9.485527474997799,
+            "total": 220.25805970001966
+          },
+          "episode_latency_seconds": {
+            "mean": 55.14488342500408,
+            "p50": 51.426325699998415,
+            "p95": 64.8047035249925,
+            "total": 220.57953370001633
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        }
+      }
+    },
+    "summary": {
+      "n_episodes": 16,
+      "steps": 128,
+      "successes": 54,
+      "macro_episode_success_rate": 0.421875,
+      "micro_step_success_rate": 0.421875,
+      "full_success_episodes": 0,
+      "full_success_rate": 0.0,
+      "failure_counts": {
+        "invalid_action": 4,
+        "unnecessary_deferral": 26,
+        "unsafe_execution": 12,
+        "wrong_case": 2,
+        "wrong_decision": 26,
+        "wrong_reason": 4
+      },
+      "valid_actions": 124,
+      "valid_action_rate": 0.96875,
+      "unsafe_actions": 12,
+      "unsafe_action_rate": 0.09375,
+      "unsafe_booked_cents": 692950,
+      "prompt_tokens": 199627,
+      "completion_tokens": 31819,
+      "total_tokens": 231446,
+      "prompt_tokens_per_step": 1559.5859375,
+      "completion_tokens_per_step": 248.5859375,
+      "tokens_per_step": 1808.171875,
+      "model_calls": 240,
+      "model_calls_per_step": 1.875,
+      "decision_latency_seconds": {
+        "mean": 4.510137484376173,
+        "p50": 4.481001450010808,
+        "p95": 5.325382614991393,
+        "total": 577.2975980001502
+      },
+      "step_latency_seconds": {
+        "mean": 6.893879242187268,
+        "p50": 7.018532350004534,
+        "p95": 9.02438039501576,
+        "total": 882.4165429999703
+      },
+      "episode_latency_seconds": {
+        "mean": 55.46324157500385,
+        "p50": 54.38954330001434,
+        "p95": 64.09001247501146,
+        "total": 887.4118652000616
+      },
+      "memory_truncations": 5,
+      "memory_truncation_rate": 0.0390625,
+      "api_cost_usd": 0.0,
+      "total_monetary_cost_usd": null,
+      "by_family": {
+        "evidence-chain": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 10,
+          "macro_episode_success_rate": 0.3125,
+          "micro_step_success_rate": 0.3125,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 6,
+            "unsafe_execution": 5,
+            "wrong_decision": 10,
+            "wrong_reason": 1
+          },
+          "valid_actions": 32,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 5,
+          "unsafe_action_rate": 0.15625,
+          "unsafe_booked_cents": 178229,
+          "prompt_tokens": 50087,
+          "completion_tokens": 8734,
+          "total_tokens": 58821,
+          "prompt_tokens_per_step": 1565.21875,
+          "completion_tokens_per_step": 272.9375,
+          "tokens_per_step": 1838.15625,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.448434753125184,
+            "p50": 4.501958450011443,
+            "p95": 4.830246739990253,
+            "total": 142.3499121000059
+          },
+          "step_latency_seconds": {
+            "mean": 7.217128731253979,
+            "p50": 7.346695900007035,
+            "p95": 9.497886029994698,
+            "total": 230.94811940012733
+          },
+          "episode_latency_seconds": {
+            "mean": 58.482525200000964,
+            "p50": 57.39105355000356,
+            "p95": 64.2917214350091,
+            "total": 233.93010080000386
+          },
+          "memory_truncations": 4,
+          "memory_truncation_rate": 0.125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "insufficient-evidence": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 14,
+          "macro_episode_success_rate": 0.4375,
+          "micro_step_success_rate": 0.4375,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 3,
+            "unnecessary_deferral": 2,
+            "unsafe_execution": 3,
+            "wrong_case": 1,
+            "wrong_decision": 7,
+            "wrong_reason": 2
+          },
+          "valid_actions": 29,
+          "valid_action_rate": 0.90625,
+          "unsafe_actions": 3,
+          "unsafe_action_rate": 0.09375,
+          "unsafe_booked_cents": 196102,
+          "prompt_tokens": 48836,
+          "completion_tokens": 7642,
+          "total_tokens": 56478,
+          "prompt_tokens_per_step": 1526.125,
+          "completion_tokens_per_step": 238.8125,
+          "tokens_per_step": 1764.9375,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.4287259687489495,
+            "p50": 4.4402192999987165,
+            "p95": 4.8872581499977965,
+            "total": 141.71923099996638
+          },
+          "step_latency_seconds": {
+            "mean": 6.680949656247321,
+            "p50": 6.903356900002109,
+            "p95": 8.122200419993897,
+            "total": 213.79038899991428
+          },
+          "episode_latency_seconds": {
+            "mean": 53.64556835000985,
+            "p50": 53.641047000011895,
+            "p95": 54.77015164000768,
+            "total": 214.5822734000394
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "topic-return": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 13,
+          "macro_episode_success_rate": 0.40625,
+          "micro_step_success_rate": 0.40625,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "unnecessary_deferral": 8,
+            "unsafe_execution": 1,
+            "wrong_case": 1,
+            "wrong_decision": 8,
+            "wrong_reason": 1
+          },
+          "valid_actions": 32,
+          "valid_action_rate": 1.0,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.03125,
+          "unsafe_booked_cents": 95347,
+          "prompt_tokens": 50396,
+          "completion_tokens": 8075,
+          "total_tokens": 58471,
+          "prompt_tokens_per_step": 1574.875,
+          "completion_tokens_per_step": 252.34375,
+          "tokens_per_step": 1827.21875,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.543614415629236,
+            "p50": 4.435818750003818,
+            "p95": 5.6059996650015815,
+            "total": 145.39566130013554
+          },
+          "step_latency_seconds": {
+            "mean": 6.91166939062532,
+            "p50": 7.0668235500197625,
+            "p95": 8.868132860014157,
+            "total": 221.17342050001025
+          },
+          "episode_latency_seconds": {
+            "mean": 55.353687149996404,
+            "p50": 55.971770000003744,
+            "p95": 62.24289008998603,
+            "total": 221.41474859998561
+          },
+          "memory_truncations": 1,
+          "memory_truncation_rate": 0.03125,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "updated-state": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 17,
+          "macro_episode_success_rate": 0.53125,
+          "micro_step_success_rate": 0.53125,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 1,
+            "unnecessary_deferral": 10,
+            "unsafe_execution": 3,
+            "wrong_decision": 1
+          },
+          "valid_actions": 31,
+          "valid_action_rate": 0.96875,
+          "unsafe_actions": 3,
+          "unsafe_action_rate": 0.09375,
+          "unsafe_booked_cents": 223272,
+          "prompt_tokens": 50308,
+          "completion_tokens": 7368,
+          "total_tokens": 57676,
+          "prompt_tokens_per_step": 1572.125,
+          "completion_tokens_per_step": 230.25,
+          "tokens_per_step": 1802.375,
+          "model_calls": 60,
+          "model_calls_per_step": 1.875,
+          "decision_latency_seconds": {
+            "mean": 4.6197748000013235,
+            "p50": 4.515970299995388,
+            "p95": 5.471724019988323,
+            "total": 147.83279360004235
+          },
+          "step_latency_seconds": {
+            "mean": 6.76576919062245,
+            "p50": 6.726324150004075,
+            "p95": 8.823658025007171,
+            "total": 216.5046140999184
+          },
+          "episode_latency_seconds": {
+            "mean": 54.371185600008175,
+            "p50": 51.76384720001079,
+            "p95": 61.98691941501019,
+            "total": 217.4847424000327
+          },
+          "memory_truncations": 0,
+          "memory_truncation_rate": 0.0,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        }
+      }
+    },
+    "tail": {
+      "n_episodes": 16,
+      "steps": 128,
+      "successes": 46,
+      "macro_episode_success_rate": 0.359375,
+      "micro_step_success_rate": 0.359375,
+      "full_success_episodes": 0,
+      "full_success_rate": 0.0,
+      "failure_counts": {
+        "invalid_action": 8,
+        "unnecessary_deferral": 20,
+        "unsafe_execution": 22,
+        "wrong_case": 2,
+        "wrong_decision": 29,
+        "wrong_reason": 1
+      },
+      "valid_actions": 120,
+      "valid_action_rate": 0.9375,
+      "unsafe_actions": 22,
+      "unsafe_action_rate": 0.171875,
+      "unsafe_booked_cents": 1154359,
+      "prompt_tokens": 129707,
+      "completion_tokens": 16479,
+      "total_tokens": 146186,
+      "prompt_tokens_per_step": 1013.3359375,
+      "completion_tokens_per_step": 128.7421875,
+      "tokens_per_step": 1142.078125,
+      "model_calls": 128,
+      "model_calls_per_step": 1.0,
+      "decision_latency_seconds": {
+        "mean": 4.567152372656665,
+        "p50": 4.525641550018918,
+        "p95": 5.355591224998352,
+        "total": 584.5955037000531
+      },
+      "step_latency_seconds": {
+        "mean": 4.5964855843765235,
+        "p50": 4.548494249989744,
+        "p95": 5.487687405006727,
+        "total": 588.350154800195
+      },
+      "episode_latency_seconds": {
+        "mean": 36.945844481253516,
+        "p50": 36.188168150009005,
+        "p95": 40.580113525014895,
+        "total": 591.1335117000563
+      },
+      "memory_truncations": 112,
+      "memory_truncation_rate": 0.875,
+      "api_cost_usd": 0.0,
+      "total_monetary_cost_usd": null,
+      "by_family": {
+        "evidence-chain": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 8,
+          "macro_episode_success_rate": 0.25,
+          "micro_step_success_rate": 0.25,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 1,
+            "unnecessary_deferral": 6,
+            "unsafe_execution": 11,
+            "wrong_decision": 6
+          },
+          "valid_actions": 31,
+          "valid_action_rate": 0.96875,
+          "unsafe_actions": 11,
+          "unsafe_action_rate": 0.34375,
+          "unsafe_booked_cents": 435908,
+          "prompt_tokens": 31831,
+          "completion_tokens": 4159,
+          "total_tokens": 35990,
+          "prompt_tokens_per_step": 994.71875,
+          "completion_tokens_per_step": 129.96875,
+          "tokens_per_step": 1124.6875,
+          "model_calls": 32,
+          "model_calls_per_step": 1.0,
+          "decision_latency_seconds": {
+            "mean": 4.465262543744757,
+            "p50": 4.5010791499807965,
+            "p95": 4.9230524099912145,
+            "total": 142.88840139983222
+          },
+          "step_latency_seconds": {
+            "mean": 4.4945875000012165,
+            "p50": 4.519967700005509,
+            "p95": 4.983074969983136,
+            "total": 143.82680000003893
+          },
+          "episode_latency_seconds": {
+            "mean": 36.096990125006414,
+            "p50": 36.1824123999977,
+            "p95": 37.4925441650048,
+            "total": 144.38796050002566
+          },
+          "memory_truncations": 28,
+          "memory_truncation_rate": 0.875,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "insufficient-evidence": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 13,
+          "macro_episode_success_rate": 0.40625,
+          "micro_step_success_rate": 0.40625,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 4,
+            "unsafe_execution": 5,
+            "wrong_decision": 9,
+            "wrong_reason": 1
+          },
+          "valid_actions": 28,
+          "valid_action_rate": 0.875,
+          "unsafe_actions": 5,
+          "unsafe_action_rate": 0.15625,
+          "unsafe_booked_cents": 293969,
+          "prompt_tokens": 32194,
+          "completion_tokens": 4092,
+          "total_tokens": 36286,
+          "prompt_tokens_per_step": 1006.0625,
+          "completion_tokens_per_step": 127.875,
+          "tokens_per_step": 1133.9375,
+          "model_calls": 32,
+          "model_calls_per_step": 1.0,
+          "decision_latency_seconds": {
+            "mean": 4.4259581999995135,
+            "p50": 4.433670449987403,
+            "p95": 4.892404210018867,
+            "total": 141.63066239998443
+          },
+          "step_latency_seconds": {
+            "mean": 4.446419218748815,
+            "p50": 4.4518232499976875,
+            "p95": 4.907039689988596,
+            "total": 142.2854149999621
+          },
+          "episode_latency_seconds": {
+            "mean": 35.64898315000028,
+            "p50": 35.84836765000364,
+            "p95": 36.216438115001075,
+            "total": 142.5959326000011
+          },
+          "memory_truncations": 28,
+          "memory_truncation_rate": 0.875,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "topic-return": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 12,
+          "macro_episode_success_rate": 0.375,
+          "micro_step_success_rate": 0.375,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 2,
+            "unnecessary_deferral": 8,
+            "unsafe_execution": 1,
+            "wrong_decision": 9
+          },
+          "valid_actions": 30,
+          "valid_action_rate": 0.9375,
+          "unsafe_actions": 1,
+          "unsafe_action_rate": 0.03125,
+          "unsafe_booked_cents": 122804,
+          "prompt_tokens": 32673,
+          "completion_tokens": 4085,
+          "total_tokens": 36758,
+          "prompt_tokens_per_step": 1021.03125,
+          "completion_tokens_per_step": 127.65625,
+          "tokens_per_step": 1148.6875,
+          "model_calls": 32,
+          "model_calls_per_step": 1.0,
+          "decision_latency_seconds": {
+            "mean": 4.575970571876496,
+            "p50": 4.50440730000264,
+            "p95": 5.270262600001297,
+            "total": 146.43105830004788
+          },
+          "step_latency_seconds": {
+            "mean": 4.594338825000705,
+            "p50": 4.52525869999954,
+            "p95": 5.286974039996858,
+            "total": 147.01884240002255
+          },
+          "episode_latency_seconds": {
+            "mean": 37.07286465000652,
+            "p50": 36.57248795000487,
+            "p95": 38.81387086501345,
+            "total": 148.2914586000261
+          },
+          "memory_truncations": 28,
+          "memory_truncation_rate": 0.875,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        },
+        "updated-state": {
+          "n_episodes": 4,
+          "steps": 32,
+          "successes": 13,
+          "macro_episode_success_rate": 0.40625,
+          "micro_step_success_rate": 0.40625,
+          "full_success_episodes": 0,
+          "full_success_rate": 0.0,
+          "failure_counts": {
+            "invalid_action": 1,
+            "unnecessary_deferral": 6,
+            "unsafe_execution": 5,
+            "wrong_case": 2,
+            "wrong_decision": 5
+          },
+          "valid_actions": 31,
+          "valid_action_rate": 0.96875,
+          "unsafe_actions": 5,
+          "unsafe_action_rate": 0.15625,
+          "unsafe_booked_cents": 301678,
+          "prompt_tokens": 33009,
+          "completion_tokens": 4143,
+          "total_tokens": 37152,
+          "prompt_tokens_per_step": 1031.53125,
+          "completion_tokens_per_step": 129.46875,
+          "tokens_per_step": 1161.0,
+          "model_calls": 32,
+          "model_calls_per_step": 1.0,
+          "decision_latency_seconds": {
+            "mean": 4.801418175005892,
+            "p50": 4.630416199986939,
+            "p95": 5.775692575005815,
+            "total": 153.64538160018856
+          },
+          "step_latency_seconds": {
+            "mean": 4.850596793755358,
+            "p50": 4.645629750011722,
+            "p95": 5.86662509500602,
+            "total": 155.21909740017145
+          },
+          "episode_latency_seconds": {
+            "mean": 38.96454000000085,
+            "p50": 37.575899450006546,
+            "p95": 43.87801535500766,
+            "total": 155.8581600000034
+          },
+          "memory_truncations": 28,
+          "memory_truncation_rate": 0.875,
+          "api_cost_usd": 0.0,
+          "total_monetary_cost_usd": null
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "learned_vs_summary": {
+      "candidate_policy": "learned",
+      "reference_policy": "summary",
+      "n_episodes": 16,
+      "delta_percentage_points": 0.0,
+      "ci95_percentage_points": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "ties": 16,
+      "losses": 0,
+      "bootstrap_samples": 5000,
+      "bootstrap_unit": "paired_episode",
+      "bootstrap_method": "percentile",
+      "bootstrap_seed": 20260911,
+      "by_family": {
+        "evidence-chain": {
+          "candidate_policy": "learned",
+          "reference_policy": "summary",
+          "n_episodes": 4,
+          "delta_percentage_points": 0.0,
+          "ci95_percentage_points": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 4,
+          "losses": 0,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "insufficient-evidence": {
+          "candidate_policy": "learned",
+          "reference_policy": "summary",
+          "n_episodes": 4,
+          "delta_percentage_points": 0.0,
+          "ci95_percentage_points": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 4,
+          "losses": 0,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "topic-return": {
+          "candidate_policy": "learned",
+          "reference_policy": "summary",
+          "n_episodes": 4,
+          "delta_percentage_points": 0.0,
+          "ci95_percentage_points": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 4,
+          "losses": 0,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "updated-state": {
+          "candidate_policy": "learned",
+          "reference_policy": "summary",
+          "n_episodes": 4,
+          "delta_percentage_points": 0.0,
+          "ci95_percentage_points": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 4,
+          "losses": 0,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        }
+      }
+    },
+    "learned_vs_tail": {
+      "candidate_policy": "learned",
+      "reference_policy": "tail",
+      "n_episodes": 16,
+      "delta_percentage_points": 6.25,
+      "ci95_percentage_points": [
+        -2.34375,
+        14.84375
+      ],
+      "wins": 9,
+      "ties": 2,
+      "losses": 5,
+      "bootstrap_samples": 5000,
+      "bootstrap_unit": "paired_episode",
+      "bootstrap_method": "percentile",
+      "bootstrap_seed": 20260911,
+      "by_family": {
+        "evidence-chain": {
+          "candidate_policy": "learned",
+          "reference_policy": "tail",
+          "n_episodes": 4,
+          "delta_percentage_points": 6.25,
+          "ci95_percentage_points": [
+            -12.5,
+            25.0
+          ],
+          "wins": 2,
+          "ties": 0,
+          "losses": 2,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "insufficient-evidence": {
+          "candidate_policy": "learned",
+          "reference_policy": "tail",
+          "n_episodes": 4,
+          "delta_percentage_points": 3.125,
+          "ci95_percentage_points": [
+            -18.75,
+            25.0
+          ],
+          "wins": 2,
+          "ties": 0,
+          "losses": 2,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "topic-return": {
+          "candidate_policy": "learned",
+          "reference_policy": "tail",
+          "n_episodes": 4,
+          "delta_percentage_points": 3.125,
+          "ci95_percentage_points": [
+            -6.25,
+            12.5
+          ],
+          "wins": 2,
+          "ties": 1,
+          "losses": 1,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        },
+        "updated-state": {
+          "candidate_policy": "learned",
+          "reference_policy": "tail",
+          "n_episodes": 4,
+          "delta_percentage_points": 12.5,
+          "ci95_percentage_points": [
+            3.125,
+            21.875
+          ],
+          "wins": 3,
+          "ties": 1,
+          "losses": 0,
+          "bootstrap_samples": 5000,
+          "bootstrap_unit": "paired_episode",
+          "bootstrap_method": "percentile",
+          "bootstrap_seed": 20260911
+        }
+      }
+    }
+  },
+  "improvement_gate": {
+    "candidate_policy": "learned",
+    "reference_policy": "summary",
+    "criterion": "lower endpoint of paired episode bootstrap 95% CI > 0 percentage points",
+    "passed": false,
+    "accuracy_only": true,
+    "policy_changed": false
+  },
+  "limitations": [
+    "Synthetic workflow tasks, one local quantized model, and no weight updates; not evidence of general recursive self-improvement.",
+    "Confidence intervals cover episode sampling from this generator, not transfer to other domains, models, or stochastic inference runs.",
+    "Latency depends on hardware, runtime, load, cache state, and execution order; it is not a universal model property.",
+    "Zero API charge does not mean zero electricity, hardware, or total monetary cost; total monetary cost is unknown.",
+    "Totals cover the supplied evaluation episodes; one-time training and policy-search costs must be reported separately.",
+    "The accuracy gate does not certify latency, token-efficiency, safety, or cost improvements; family intervals are descriptive and not multiplicity-adjusted."
+  ],
+  "verification": {
+    "status": "PASS",
+    "verified_steps": 512,
+    "scope": "offline source/corpus binding, full scheduled cohorts, train-only proposal, validation selection, public actor/compressor inputs, raw-completion binding, cumulative chain, action replay and all summary counters",
+    "limitations": [
+      "Token counts and token caps are checked as recorded claims; no offline tokenizer rerun.",
+      "Wall times are bound to recorded calls/steps and checked for consistency, not independently remeasured."
+    ]
+  },
+  "selected_policy": {
+    "name": "summary",
+    "kind": "summary",
+    "instruction": null
+  },
+  "training_and_search_cost": {
+    "model_calls": 241,
+    "prompt_tokens": 203559,
+    "completion_tokens": 30341,
+    "wall_seconds": 802.4877287999843,
+    "api_cost_usd": 0.0,
+    "total_monetary_cost": null
+  }
+}

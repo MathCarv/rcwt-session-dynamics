@@ -1,0 +1,97 @@
+# Offline inspection of the R1 recording
+
+These commands inspect an already completed R1 archive. They do not start a
+server, call a model, create another cohort, or alter the saved evidence. All
+identities, observations, accounts, tools and monetary effects are fictional.
+The complete R1 archive passed the registered accuracy criterion and aggregate
+descriptive safety guards; see the [result](../results/agent_v4_replication/RESULTS.md)
+and [closure with residual failures](rcwt_v4_replication_closure.md). This replay
+is an inspection procedure, not an additional experiment or an independent
+confirmation of generalization.
+
+Run from the repository root and set the path to the complete R1 directory.
+An absent, partial, aborted or incompatible archive fails verification; do not
+substitute a new run or use the interrupted v4 prefix as a complete R1 result.
+
+```powershell
+$r1Directory = 'results/agent_v4_replication'
+python tools/verify_v4_replication_report.py --run-dir $r1Directory
+python tools/replay_v4_replication.py --run-dir $r1Directory
+```
+
+The independent report verifier replays all 512 decisions, requires the fixed
+32 paired episodes, checks all fifteen selected development source hashes and
+the R1 orchestration pins, and recomputes the frozen analysis using 10000
+paired-episode bootstrap resamples with seed 2026091207. It compares exact
+`analysis.json`, `RESULTS.md` and `verification.json` bytes and checks that the
+original evidence and source files did not change during verification.
+`status: PASS` is report integrity. The separate `accuracy_gate_passed`,
+`descriptive_safety_guard_passed` and `improvement_gate_passed` fields state
+whether the recorded cohort met those endpoints. An honestly reported
+negative experiment can pass the integrity check.
+
+The demonstration always selects index zero in the frozen public manifest.
+For a compact browser-readable view, open the [eight-step comparison](../results/agent_v4_replication_demo/README.md)
+and its [step-five evidence extract](../results/agent_v4_replication_demo/step5.json).
+These derived display files disclose their omissions and bind the complete
+original archive. Verify their exact bytes with:
+
+```powershell
+python -B tools/export_r1_demo.py --run-dir results/agent_v4_replication --output-dir results/agent_v4_replication_demo --verify
+```
+
+There is no best-case search; only `--episode-index 0` is accepted. It shows all eight
+steps in both policies: public inputs, stored memory, exact actor context,
+unexecuted raw plan, raw final response, extracted action, fictional tool
+receipt, private grade, retained memory and recorded generation costs. Invalid
+or unsuccessful actions remain visible. Only the final actor response was
+executed; neither the plan nor the private grade supplied a fallback action.
+The grade follows each arm's actual prior simulated ledger.
+
+The final display includes the first pair's costs and whole-R1 resource totals
+for each policy. These totals include both actor passes and summary compaction.
+They exclude the preserved interrupted confirmation and earlier development.
+Consult `RESULTS.md` for the complete paired accuracy analysis, interval,
+descriptive safety guards and separate earlier-run cost disclosure. Consult
+the runtime receipts for the new process start/stop and server generation
+reconciliation; a transcript replay alone does not reconcile server logs.
+
+### Verify the public derived server-call accounting
+
+The original server log was copied after the exact owned server process exited.
+A separately labeled public derivative replaces one local directory prefix in
+model-loading metadata. Every line remains, in the same order; all task events,
+timestamps, tokens and timings remain byte-identical. Original private custody
+and accounting were verified before export. The following command recomputes
+all 1,248 ordered call matches against the public derivative and compares the
+exact saved public accounting bytes without inference:
+
+```powershell
+python -B tools/audit_v4_replication_calls.py --run-dir results/agent_v4_replication --server-log results/agent_v4_replication_public_runtime/server.redacted.txt --output-dir results/agent_v4_replication_public_accounting --verify
+```
+
+See the [public call accounting](../results/agent_v4_replication_public_accounting/CALL-ACCOUNTING.md)
+and [export manifest](../results/agent_v4_replication_public_runtime/manifest.json).
+This is verification of a derived recording, not independent physical attestation
+or the original private custody. The original `*.log` files, machine-bound
+receipts and launch/stop helpers are intentionally excluded from Git. The
+exporter's `--verify` mode requires those private originals and is not the
+public verification command above. Do not add files to, move or alter the
+finalized R1 tree after accounting: its complete file snapshot and relative
+directory are hash-bound.
+
+The interrupted confirmation remains a separate, incomplete 173/512-decision
+record with 421 persisted calls plus an additional canceled server task whose
+final response and usage were not persisted. It is not pooled with R1.
+
+R1 uses new parameter instances from the same four synthetic families, one
+local model and one inference seed. A single displayed episode cannot prove
+cohort-level gain. Neither the complete experiment nor an integrity check
+establishes production safety, transfer to unseen domains, customer-data
+performance, autonomous learning, weight updates or recursive improvement.
+API charge is US$0; electricity, hardware and total monetary cost are unknown.
+Recorded timings depend on local hardware and load, and are not independent
+physical attestation. No command here publishes or submits the recording.
+
+The design and limits are fixed in the
+[R1 registration](rcwt_v4_replication_protocol.md).

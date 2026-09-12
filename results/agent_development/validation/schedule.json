@@ -1,0 +1,22 @@
+[
+  [
+    "repair_proposed",
+    "repair_template",
+    "summary"
+  ],
+  [
+    "repair_template",
+    "summary",
+    "repair_proposed"
+  ],
+  [
+    "summary",
+    "repair_proposed",
+    "repair_template"
+  ],
+  [
+    "repair_proposed",
+    "repair_template",
+    "summary"
+  ]
+]

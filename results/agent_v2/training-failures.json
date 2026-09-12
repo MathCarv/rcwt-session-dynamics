@@ -1,0 +1,80 @@
+[
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "unnecessary_deferral",
+    "count": 3
+  },
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "unsafe_execution",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "wrong_decision",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "evidence-chain",
+    "failure_class": "wrong_reason",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "insufficient-evidence",
+    "failure_class": "invalid_action",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "insufficient-evidence",
+    "failure_class": "unnecessary_deferral",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "insufficient-evidence",
+    "failure_class": "wrong_decision",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "topic-return",
+    "failure_class": "unnecessary_deferral",
+    "count": 4
+  },
+  {
+    "split": "train",
+    "family": "topic-return",
+    "failure_class": "wrong_decision",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "unnecessary_deferral",
+    "count": 2
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "unsafe_execution",
+    "count": 2
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "wrong_case",
+    "count": 1
+  },
+  {
+    "split": "train",
+    "family": "updated-state",
+    "failure_class": "wrong_decision",
+    "count": 1
+  }
+]

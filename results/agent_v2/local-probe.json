@@ -1,0 +1,61 @@
+{
+  "health": {
+    "status": "ok"
+  },
+  "models": {
+    "models": [
+      {
+        "name": "rcwt-local-qwen35-4b",
+        "model": "rcwt-local-qwen35-4b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "rcwt-local-qwen35-4b",
+        "aliases": [
+          "rcwt-local-qwen35-4b"
+        ],
+        "tags": [],
+        "object": "model",
+        "created": 1789159257,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": true,
+          "n_vocab": 248320,
+          "n_ctx": 4096,
+          "n_ctx_train": 262144,
+          "n_embd": 2560,
+          "n_params": 4205751296,
+          "size": 2729969664,
+          "ftype": "Q4_K - Medium"
+        }
+      }
+    ]
+  },
+  "endpoint": "http://127.0.0.1:18085",
+  "remote_inference": false,
+  "api_cost_usd": 0.0
+}
