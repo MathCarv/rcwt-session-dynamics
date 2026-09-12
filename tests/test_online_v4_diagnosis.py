@@ -664,6 +664,8 @@ class OnlineV4DiagnosisArtifactTests(unittest.TestCase):
     def test_unused_current_context_is_not_reexecuted_but_its_snapshot_is_bound(self):
         target = runner.ROOT / "src/rcwt_context_v4.py"
         original_hash, seen = inspector._hash, []
+        # Exercise a path alias on every OS; Windows CI also uses 8.3 temp names.
+        input_alias = self.run_dir / ".." / self.run_dir.name
 
         def mocked_hash(path):
             seen.append(path)
@@ -671,9 +673,9 @@ class OnlineV4DiagnosisArtifactTests(unittest.TestCase):
 
         with patch.object(inspector, "_hash", side_effect=mocked_hash), \
                 patch("rcwt_context_v4.build_context", side_effect=AssertionError("No context reconstruction in diagnosis")):
-            diagnosis = inspector.inspect_run(self.run_dir, self.output_dir)
+            diagnosis = inspector.inspect_run(input_alias, self.output_dir)
         self.assertNotIn(target, seen)
-        self.assertIn(self.run_dir / "sources/rcwt_context_v4.py", seen)
+        self.assertIn((input_alias / "sources/rcwt_context_v4.py").resolve(), seen)
         self.assertIn("src/rcwt_context_v4.py", diagnosis["provenance"]["frozen_sources_sha256"])
 
     def test_episode_cost_summaries_cannot_override_raw_call_costs(self):
