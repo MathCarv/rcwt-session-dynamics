@@ -120,8 +120,13 @@ pairs and recorded calls** against the public traces; see the
 Recheck it without model calls or the private runtime bundle:
 
 ```bash
-python tools/audit_v4_replication_calls.py --run-dir results/agent_v4_replication --server-log results/agent_v4_replication_public_runtime/server.redacted.txt --output-dir results/agent_v4_replication_public_accounting --verify
+python tools/verify_r1_public_accounting.py
 ```
+
+The portable verifier checks the released receipt hashes and recomputes every
+field through the unchanged auditor. JSON object-key order is canonicalized;
+no values, array order or numerical tolerances are changed. This accommodates
+the original Windows receipt's path ordering without rewriting it.
 
 The [derived-log manifest](results/agent_v4_replication_public_runtime/manifest.json)
 binds the public log to hashes of the original private log, custody receipt and

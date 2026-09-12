@@ -158,6 +158,33 @@ class ExportR1DemoTests(unittest.TestCase):
         self.assertEqual(original, demo._snapshot(self.run))
         self.assertEqual(self.mocks["gate"].call_count, 2)
 
+    def test_windows_and_posix_snapshot_order_produce_identical_demo_bytes(self):
+        self.data["RESULTS.md"] = {"notice": "EXPLICIT FAKE ORDER FIXTURE, NOT R1 EVIDENCE"}
+        self.write_fixture()
+        original_snapshot = demo._snapshot
+
+        def windows_order(directory):
+            return dict(sorted(original_snapshot(directory).items(), key=lambda item: item[0].lower()))
+
+        def posix_order(directory):
+            return dict(sorted(original_snapshot(directory).items()))
+
+        self.assertNotEqual(list(windows_order(self.run)), list(posix_order(self.run)))
+        with patch.object(demo, "_snapshot", side_effect=windows_order):
+            windows_bundle = demo.build_demo(self.run)
+            created = demo.export_demo(self.run, self.output)
+        saved_before = original_snapshot(self.output)
+        with patch.object(demo, "_snapshot", side_effect=posix_order):
+            posix_bundle = demo.build_demo(self.run)
+            verified = demo.export_demo(self.run, self.output, verify=True)
+        self.assertEqual(windows_bundle.artifacts, posix_bundle.artifacts)
+        document = json.loads(windows_bundle.artifacts["step5.json"])
+        keys = list(document["provenance"]["files_sha256"])
+        self.assertEqual(keys, sorted(keys))
+        self.assertEqual(created["files_sha256"], verified["files_sha256"])
+        self.assertEqual(saved_before, original_snapshot(self.output))
+        self.assertEqual(verified["display_files_written"], 0)
+
     def test_existing_destination_is_never_overwritten(self):
         self.output.mkdir()
         (self.output / "KEEP.txt").write_bytes(b"EXPLICIT FAKE USER DATA")

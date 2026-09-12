@@ -11,6 +11,7 @@
   "provenance": {
     "source_directory_name": "agent_v4_replication",
     "files_sha256": {
+      "RESULTS.md": "e790f88a839362534e6b776150a03969e267051feede9ba710f84788f50f18fb",
       "analysis.json": "5841fa137bf2ea45d6257bf8a47cc6f3882816186242345ea4cf5c0ae0634ce1",
       "completion.json": "575283d1ca997218d60caca8eb5900a8156fb066b969e64490e8af1eeb1f7692",
       "episodes.jsonl": "c5295e80e942b06eb74790aab91d38de5303de26c11998d800ed86121cc0e723",
@@ -23,7 +24,6 @@
       "public.json": "d1295b465ecfe5120a84e5dc0790d642cd95ac746088ed4aba8003b88c660c32",
       "registration.md": "0afb3d5b4ce22f27c06a91a963914be409ec61d51ea57f192a9469a0f1282f12",
       "report-started.json": "aed22f3ca7adca0cbcc99470dbc0fe099733fdd18609b836c376e34001a47704",
-      "RESULTS.md": "e790f88a839362534e6b776150a03969e267051feede9ba710f84788f50f18fb",
       "schedule.json": "19673db3abafebea623772acdc0c54208d9080519a32a334f18aa748c156952a",
       "sources/rcwt_agent_actor.py": "502fc21bef944de8d98b64584a42cb052584136803e916dc664e47ebe4e075c0",
       "sources/rcwt_agent_analysis.py": "5d2c4fc56ea9f2704051ffde064b84071276fec7f875f251246474b972173994",
@@ -44,7 +44,7 @@
       "traces.jsonl": "5d54c01d2911ee42f0f69c47c05ba053d5796912726ff8277d92da8e3ce6b8d9",
       "verification.json": "0c886a8c6b502967814d038231abe0746de50b33f80d8cd5f135f05c1a2c7e5a"
     },
-    "exporter_sha256": "988d3a459e52154f867dce1c7f426c0e5d7a7e67cadb8790d936459ce0070831",
+    "exporter_sha256": "791c27e7535cd4d4daf5f11fa5c54fafe0decc84ed7c2b851269c91ab8a70550",
     "full_report_integrity": "PASS",
     "verified_steps": 512,
     "recorded_generation_calls": 1248,

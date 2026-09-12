@@ -112,8 +112,11 @@ redacted; all task lines, timestamps and recorded timings remain unchanged.
 This additional check requires no private runtime bundle:
 
 ```bash
-python tools/audit_v4_replication_calls.py --run-dir results/agent_v4_replication --server-log results/agent_v4_replication_public_runtime/server.redacted.txt --output-dir results/agent_v4_replication_public_accounting --verify
+python tools/verify_r1_public_accounting.py
 ```
+
+The verifier checks the exact released receipt hashes and all recomputed values;
+only JSON object-key order is canonicalized for Linux/Windows portability.
 
 The [manifest](../results/agent_v4_replication_public_runtime/manifest.json) binds
 hashes of the original private log, custody and accounting to the derived log.

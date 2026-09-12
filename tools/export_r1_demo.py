@@ -209,7 +209,8 @@ def build_demo(run_dir: Path) -> DemoBundle:
         "scope": "Derived display from fully verified recorded R1 evidence; not a new experiment or standalone gain verdict.",
         "selection": {"manifest_episode_index": EPISODE_INDEX, "episode_id": episode_id,
                       "family": selected["family"], "step_index": STEP_INDEX, "score_search": False},
-        "provenance": {"source_directory_name": run_dir.name, "files_sha256": before,
+        # Sort POSIX-path strings, not platform-dependent Path objects.
+        "provenance": {"source_directory_name": run_dir.name, "files_sha256": dict(sorted(before.items())),
                        "exporter_sha256": exporter_sha256,
                        "full_report_integrity": "PASS", "verified_steps": 512,
                        "recorded_generation_calls": 1248, "export_inference_calls": 0,
