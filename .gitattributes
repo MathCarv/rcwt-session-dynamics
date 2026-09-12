@@ -14,6 +14,7 @@ Makefile text eol=lf
 # Never normalize these files while adding or checking out the public archive.
 /src/*.py -text
 /tools/*.py -text
+/tools/*.ps1 -text
 /docs/rcwt_*.md -text
 /docs/rcwt_agent_runtime.json -text
 /results/agent*/** -text

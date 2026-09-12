@@ -135,7 +135,30 @@ recorded calls; it does **not** independently reproduce private custody or prove
 the redaction against unavailable original bytes. Neither check is independent
 physical attestation of inference or proof that no unlisted runs occurred.
 
-## Limits
+## Prospective R2: bounded policy learning and execution controls
+
+The new [R2 protocol](docs/rcwt_r2_protocol.md) tests whether completed training
+experience can generate a useful restricted retention policy. Five independent
+training blocks compare the existing fixed writer, a six-weight policy proposed
+from real training feedback, and the same proposer given shuffled feedback.
+Policies and validation selection must be frozen before fresh test instances
+are generated. The planned campaign uses only the local model: 2,250 generations,
+with no paid API, retries or changes to the preserved R1 experiment.
+
+Every arm uses a separate execution controller. It allows the exact proposed
+action or rejects it with zero new fictional monetary effect; it never invents
+a correct replacement action. Raw proposal quality, unsafe attempts, actual
+effects, false financial blocks, tokens and latency are reported separately.
+The [bounded safety case](docs/rcwt_r2_safety_case.md) states the trust assumptions,
+finite tests, missing production controls and route to a separately authorized
+shadow pilot.
+
+**R2 passed its synthetic integration checks; no completed R2 model result
+or production-safety claim is reported here yet.** Different
+retention weights, successful test doubles and blocked unsafe proposals are
+not evidence of useful autonomous learning.
+
+## R1 limits
 
 The confirmation tests new parameter instances from the **same four synthetic
 families**, one quantized model and one inference seed. It does not establish
@@ -143,8 +166,8 @@ transfer to unseen domains, other models or seeds, CloudWalk customer data,
 or production traffic. Each arm is graded against its own actual prior
 simulated ledger, so later references can differ after different actions.
 
-There are no model-weight updates, autonomously learned policies or recursive
-self-improvement. The confidence interval concerns the registered comparison;
+R1 has no model-weight updates, autonomously learned policies or recursive
+self-improvement. Its confidence interval concerns the registered comparison;
 the criterion does not prove a population-wide minimum gain of 10 pp. Local
 hashes and recorded telemetry establish consistency, not independent
 attestation that no unlisted runs occurred.
